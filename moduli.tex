@@ -1,0 +1,170 @@
+
+\documentclass[reqno,11pt]{amsart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[all,pdf]{xy}
+\usepackage[a4paper,left=3cm,right=3cm]{geometry}
+\usepackage[table,xcdraw]{xcolor} % before tikz-cd
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem*{fact}{Facts}
+\newtheorem{eg}[theorem]{Example}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+%\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+
+\DeclareMathOperator{\Flagd}{\operatorname{Flag}_{d}}
+\DeclareMathOperator{\Flagdstr}{\operatorname{Flag}_{d,str}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Grr}{\operatorname{Gr}}
+\newcommand{\Grq}{\operatorname{Gr}^{KQ}}
+\newcommand{\Flag}[1]{\operatorname{Flag}_{#1}}
+\newcommand{\Flagstr}[1]{\operatorname{Flag}_{#1,str}}
+\newcommand{\dimvec}[1]{#1}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\orde}{\operatorname{ord}_e }
+\newcommand{\representation}[2]{\genfrac{}{}{0pt}{3}{\phantom{000}#2\phantom{00}}{#1}}
+
+\setlength\intextsep{0cm}
+\setlength\textfloatsep{0cm}
+\begin{document}
+\date{}
+
+\title
+{Moduli in Algebraic Geometry}
+
+
+\author{Xiaoxiang Zhou}
+\address{School of Mathematical Sciences\\
+University of Bonn\\
+Bonn, 53115\\ Germany\\} 
+\email{email:xx352229@mail.ustc.edu.cn}
+
+
+
+
+
+\begin{abstract}
+In this personal survey, we conclude the definitions of moduli functors in the algebraic geometry. Most of the results are in the black box, so it's very possible that they're wrong. And also I'm not responsible for the completeness of the whole theory. However, I'm still happy to improve this document, and make it better over time.
+\end{abstract}
+
+\setcounter{tocdepth}{1}
+\maketitle
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Goal and related concepts}
+The personal survey is motivated by the three courses in Bonn: \href{https://johannesschmitt.gitlab.io/moduli_of_curves}{``the moduli space of curves"}, \href{https://www.math.uni-bonn.de/people/mihatsch/21u22\%20WS/moduli/}{``moduli of elliptic curves"} and \href{https://www.math.uni-bonn.de/people/ydutta/v5a4}{``moduli of vector bundles"}. I want to construct my personal understanding on the moduli, and find out the details I missed in the courses. 
+
+``Some mathematicians are birds, others
+are frogs." This document is devoted to those ``birds" from a ``frog" who gets stuck in the mud. 
+\subsection{representable functor}
+\subsection{coarse moduli space}
+We need to define the fine moduli space, coarse moduli space and some related concepts.
+\subsection{stack}
+We need to define stack, algebraic stack, Deligne-Munford stack and some related concepts.
+\subsection{goal}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Basic object}
+In this section, we present some algebraic geometric objects which can be viewed as moduli.
+
+Here is a picture showing the relationships of these objects:
+
+???
+\subsection{projective space}
+\subsection{Grassmannian}
+It's well-written in \cite[16.7]{FOAG}.
+\subsection{flag variety, partial flag variety}
+\subsection{Hilbert scheme}
+\subsection{Quot scheme}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{moduli of curve}
+The content of this section is already well written in the course \href{https://johannesschmitt.gitlab.io/moduli_of_curves}{``the moduli space of curves"}. This section is just for the completeness of the survey.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{moduli of elliptic curve}
+The elliptic curve theory is especially rich compared to the other curves. That's why we'd like to put it a special section.
+\subsection{differential}
+\subsection{level structure}
+\subsection{complex case}
+In this subsection, we will show that how the moduli is connected to the modular curve $\mathcal{H}/\SL_2(\mathbb{Z})$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{moduli of vector bundle}
+Here we refer to \cite{huybrechts2010geometry}. It's not easy to read, but I don't know the other better reference.
+\bibliographystyle{plain}
+\bibliography{reference}
+
+
+
+
+
+\end{document}
+
+
+
+
