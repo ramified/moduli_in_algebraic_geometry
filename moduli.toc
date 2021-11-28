@@ -9,6 +9,7 @@
 \contentsline {subsection}{\tocsubsection {}{2.3}{flag variety, partial flag variety}}{2}{subsection.2.3}% 
 \contentsline {subsection}{\tocsubsection {}{2.4}{Hilbert scheme}}{2}{subsection.2.4}% 
 \contentsline {subsection}{\tocsubsection {}{2.5}{Quot scheme}}{2}{subsection.2.5}% 
+\contentsline {subsection}{\tocsubsection {}{2.6}{Misc}}{2}{subsection.2.6}% 
 \contentsline {section}{\tocsection {}{3}{moduli of curve}}{2}{section.3}% 
 \contentsline {section}{\tocsection {}{4}{moduli of elliptic curve}}{2}{section.4}% 
 \contentsline {subsection}{\tocsubsection {}{4.1}{differential}}{2}{subsection.4.1}% 
