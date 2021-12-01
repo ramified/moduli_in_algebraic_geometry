@@ -89,6 +89,8 @@
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\orde}{\operatorname{ord}_e }
 \newcommand{\representation}[2]{\genfrac{}{}{0pt}{3}{\phantom{000}#2\phantom{00}}{#1}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Psh}{\operatorname{Psh}}
 \newcommand{\Schk}{\operatorname{Sch}_{k}}
 \newcommand{\Set}{\operatorname{Set}}
 \newcommand{\Ob}{\operatorname{Ob}}
@@ -121,7 +123,7 @@ In this personal survey, we conclude the definitions of moduli functors in the a
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Goal and related concepts}
-The personal survey is motivated by the three courses in Bonn: \href{https://johannesschmitt.gitlab.io/moduli_of_curves}{``the moduli space of curves"}, \href{https://www.math.uni-bonn.de/people/mihatsch/21u22\%20WS/moduli/}{``moduli of elliptic curves"} and \href{https://www.math.uni-bonn.de/people/ydutta/v5a4}{``moduli of vector bundles"}. I want to construct my personal understanding on the moduli, and find out the details I missed in the courses. 
+The personal survey is motivated by the three courses in Bonn: \href{https://johannesschmitt.gitlab.io/moduli_of_curves}{``the moduli space of curves"}, \href{https://www.math.uni-bonn.de/people/mihatsch/21u22\%20WS/moduli/}{``moduli of elliptic curves"} and \href{https://www.math.uni-bonn.de/people/ydutta/v5a4}{``moduli of vector bundles"}. I would also highly recommend the course \href{https://userpage.fu-berlin.de/hoskins/moduli_and_GIT.html}{``Moduli and GIT"} in Freie Universität Berlin. I want to construct my personal understanding on the moduli, and find out the details I missed in the courses. 
 
 ``Some mathematicians are birds, others
 are frogs." This document is devoted to those ``birds" from a ``frog" who gets stuck in the mud. 
@@ -140,12 +142,16 @@ $$\Ob(\mathcal{C}'):=\left\{  \text{functors }\mathcal{C}^{op}\longrightarrow \S
 	\arrow[shorten <=2pt, shorten >=2pt, Rightarrow, from=1, to=0]
 \end{tikzcd}
 \right\}$$
-In brief, $\mathcal{C}'=\operatorname{Functor} (\mathcal{C}^{op},\Set)$.
+In brief, $\mathcal{C}'=\operatorname{Functor} (\mathcal{C}^{op},\Set)$.\footnote{From  \href{https://userpage.fu-berlin.de/hoskins/moduli_and_GIT.html}{here} we can also write $\mathcal{C}'=\Psh(C)$, notice that here it is the presheaf on \textbf{category}, not on a specific scheme $X/k$.}
 \end{defn}
 \begin{proposition}
 We have a canonical functor 
-$$\iota: \mathcal{C} \longrightarrow \mathcal{C}' \qquad X \longmapsto h_X:=\Mor_{\mathcal{C}}(-,X)$$ which embeds $\mathcal{C}$ as a full subcategory of $\mathcal{C}'$.
+$$\iota: \mathcal{C} \longrightarrow \mathcal{C}' \qquad X \longmapsto h_X:=\Mor_{\mathcal{C}}(-,X)$$ which embeds $\mathcal{C}$ as a full subcategory of $\mathcal{C}'$.\footnote{$h_X$ is called the functor of points of a scheme $X$ from  \href{https://userpage.fu-berlin.de/hoskins/moduli_and_GIT.html}{here}. For example, $h_X(\Spec \mathbb{Q})=X(\mathbb{Q})$ gives us the set of rational points in $X$(under certain conditions). Notice that $h_{-}(-)$ is a bifunctor.}
 \end{proposition}
+\begin{proof}
+Recall that the Yoneda's lemma gives us the isomorphism
+$$\Mor_{\mathcal{C}'}(h_X,F)\cong F(X).$$
+\end{proof}
 \begin{defn}[representable functor]
 The functor $F\in \Ob(\mathcal{C}')$ is called represented by $X$ if $F\cong h_X$.
 \end{defn}
@@ -155,10 +161,8 @@ From this proposition, we can always view the object as some functor satisfying 
 \item We can define scheme canonically, without explicit constructions;
 \item We can enlarge our area of research, and think them as the defective schemes. We will see some reasonable functors which is represented not by schemes, but by stacks.
 \end{itemize}
-\subsection{coarse moduli space}
-We need to define the fine moduli space, coarse moduli space and some related concepts.
 \subsection{corepresentable functor}
-Now this is the second concept "dual to" the representable functor. To motivate, we begin with the equivalent definition of representable functor:
+This is the concept "dual to" the representable functor. To motivate, we begin with the equivalent definition of representable functor:
 \begin{defn}[representatable functor, equivalent definition]
 内容...
 \end{defn}
@@ -183,9 +187,22 @@ $$\begin{tikzcd}
 \begin{proposition}
 Suppose a functor $F\in \Ob(\mathcal{C}')$ is corepresented by $X \in \Ob(C)$, then it is represented by $X$ if and only if $\alpha:F \longrightarrow h_X$ is a $\mathcal{C}'$-isomorphism.
 \end{proposition}
+\subsection{coarse moduli space}
+You need to see the definition of the naïve moduli problem, extended moduli problem, moduli functor, fine moduli space and corresponding universal family from  \href{https://userpage.fu-berlin.de/hoskins/moduli_and_GIT.html}{here}. I don't want to copy, and it's well-written.
+
+coarse moduli space and some related concepts. 
 \subsection{stack}
 We need to define stack, algebraic stack, Deligne-Munford stack and some related concepts.
 \subsection{goal}
+???
+
+We will frequently use the quotient. Here is the list of quotients we've already seen:
+\begin{itemize}
+\item (We could begin at topology:quotient by a subset) linear space-> Abelian category,group,ring(Notice that for this item, we don't take quotient by a group, so sometimes it looks easier)
+\item topology(This gives us an categorical quotient!)
+\item manifold
+\item scheme(Categorical quotient; GIT quotient)
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic object}
 In this section, we present some algebraic geometric objects which can be viewed as moduli.
@@ -199,6 +216,7 @@ It's well-written in \cite[16.7]{FOAG}.
 \subsection{flag variety, partial flag variety}
 \subsection{Hilbert scheme}
 \subsection{Quot scheme}
+Maybe the moduli space of projective hypersurfaces is a special case for this.
 \subsection{Misc}The representable functor is also used to construct the fibered product of schemes, see \cite[9.1.6-7]{FOAG} for more details.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{moduli of curve}
