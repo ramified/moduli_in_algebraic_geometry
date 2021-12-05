@@ -60,6 +60,7 @@
 \newtheorem{remarks}{Remarks}
 \newtheorem*{remarkstar}{Remark}
 \newtheorem*{problem}{Question}
+\newtheorem*{answer}{Answer}
 \newtheorem*{easyex}{Easy exercise}
 %\renewcommand\thefootnote{\fnsymbol{footnote}}
 %dont use number as footnote symbol, use this command to change
@@ -129,7 +130,9 @@ In this personal survey, we conclude the definitions of moduli functors in the a
 The personal survey is motivated by the three courses in Bonn: \href{https://johannesschmitt.gitlab.io/moduli_of_curves}{``the moduli space of curves"}, \href{https://www.math.uni-bonn.de/people/mihatsch/21u22\%20WS/moduli/}{``moduli of elliptic curves"} and \href{https://www.math.uni-bonn.de/people/ydutta/v5a4}{``moduli of vector bundles"}. I would also highly recommend the course \href{https://userpage.fu-berlin.de/hoskins/moduli_and_GIT.html}{``Moduli and GIT"} in Freie Universität Berlin. I want to construct my personal understanding on the moduli, and find out the details I missed in the courses. 
 
 ``Some mathematicians are birds, others
-are frogs." This document is devoted to those ``birds" from a ``frog" who gets stuck in the mud. 
+are frogs." This document is devoted to those ``birds" from a ``frog" who gets stuck in the mud.
+\subsection{Conventions and Notations}
+In this survey,  $\Schk$ is denoted as the category of \textbf{locally Noetherian} schemes over $k$.
 \subsection{Representable functor}
 In this subsection we would follow on \cite[Definition 2.2.1]{huybrechts2010geometry} in full generality, but you can always think 
 $$\mathcal{C}=\Schk \qquad \mathcal{C}'=\operatorname{Functor} (\Schk^{op},\Set)$$
@@ -257,8 +260,8 @@ $$\mathcal{A}_S:=\left\{(X,\pi,\sigma_1,\sigma_2,\sigma_3)  \;\middle|\; \begin{
    	\arrow["{\Id_T}"', curve={height=12pt}, from=1-3, to=3-4]
    	\arrow["{\sigma_{i}}"', curve={height=6pt}, dashed, from=3-5, to=2-5]
    	\arrow[from=2-1, to=2-2]
-   	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=2-1, to=3-2]
-   	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=2-4, to=3-5]
+   	\arrow["\ulcorner"{anchor=center, pos=0.125}, draw=none, from=2-1, to=3-2]
+   	\arrow["\ulcorner"{anchor=center, pos=0.125}, draw=none, from=2-4, to=3-5]
    \end{tikzcd}\]
  \begin{adjustwidth}{10mm}{0em}
  \begin{remarkstar}
@@ -270,6 +273,23 @@ $$\mathcal{A}_S:=\left\{(X,\pi,\sigma_1,\sigma_2,\sigma_3)  \;\middle|\; \begin{
  \end{aligned}
  \end{equation*}
  \end{remarkstar}
+ \begin{remarkstar}
+ In some textbooks, they require $\pi:X \longrightarrow S$ to be a smooth, proper, surjective, locally finitely presented (l.f.p.)
+ morphism of relative dimension $\leqslant 1$ with geometric fibres isomorphic to $\mathbb{P}^1$. These extra conditions are automatically satisfied, since
+ % https://q.uiver.app/?q=WzAsNixbMCwwLCJcXGJ1bGxldCJdLFsxLDAsIlxcdGV4dHtzdXJqZWN0aXZlfSJdLFsxLDEsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMSwyLCJcXGJ1bGxldCJdLFswLDIsIlxcYnVsbGV0Il0sWzAsMV0sWzAsMl0sWzMsMl0sWzMsNF0sWzUsNF1d
+ \[\begin{tikzcd}[/tikz/column 1/.append style={anchor=base east},/tikz/column 2/.append style={anchor=base west}, column sep=3cm, row sep=-2mm,start anchor=east,end anchor=west]
+ 	\pi^{-1}(p)\cong\mathbb{P}_{\kappa(p)}^1 & {\text{surjective}} \\
+ 	{\text{proper}} & {\text{relative dimension $\leqslant 1$}} \\
+ 	{\text{locally Noetherian}} & {\text{locally finitely presented}}
+ 	\arrow[from=1-1, to=1-2]
+ 	\arrow[from=1-1, to=2-2]
+ 	\arrow[from=2-1, to=2-2]
+ 	\arrow[from=2-1, to=3-2]
+ 	\arrow[from=3-1, to=3-2]
+ \end{tikzcd}\]
+ and by \cite[25.2.2]{FOAG}, flat + fiberwise $\mathbb{P}^1$ + l.f.p. $\Rightarrow$ smooth. 
+ 
+ \end{remarkstar}
 \begin{problem}\hspace{1cm}
 
 Can we find $(X,\pi,\sigma_1,\sigma_2,\sigma_3)$ satisfying all conditions in $\mathcal{A}_S$ except $\pi$ is proper? 
@@ -278,7 +298,7 @@ Can we find $(X,\pi,\sigma_1,\sigma_2,\sigma_3)$ satisfying all conditions in $\
 \end{problem}
 \begin{easyex}\hspace{1cm}
 
-Verify that $(\mathcal{A}_S,\sim_S)$ and pullback satisfy (i)-(iv) in \cite[Definition 2.10]{huybrechts2010geometry}???not the same cite
+Verify that $(\mathcal{A}_S,\sim_S)$ and pullback satisfy (i)-(iv) in \cite[Definition 2.10]{moduliGIT}.
 \end{easyex}
 
 
@@ -290,12 +310,17 @@ Verify that $(\mathcal{A}_S,\sim_S)$ and pullback satisfy (i)-(iv) in \cite[Defi
 \textbf{Moduli functor} $\mathcal{M}_{0,3}$:
 The moduli functor $\mathcal{M}_{0,3}: \Schk^{op}\longrightarrow \Set$ is defined as
 $$\mathcal{M}_{0,3}(S)=\mathcal{A}_S/\sim_S \qquad \mathcal{M}_{0,3}(f:T\longrightarrow S)=f^*: \mathcal{A}_S/\sim_S \longrightarrow \mathcal{A}_T/\sim_T.$$
+\vspace{-1.1cm}
 \begin{adjustwidth}{10mm}{0em}
-??? environment set
+
 \begin{problem}\hspace{1cm}
 
 Why is the moduli functor $\mathcal{M}_{0,3}$ represented by $\Spec k$?
 \end{problem}
+\begin{answer}\hspace{1cm}
+
+Yes, but it's pretty hard to prove it. The proof of \cite[Proposition 4.1]{modulicurve} uses \cite[Proposition 4.2]{modulicurve} whose proof is quite technical.
+\end{answer}
 \end{adjustwidth}
 \textbf{Universal family}:
 \end{eg}
@@ -335,6 +360,7 @@ The content of this section is already well written in the course \href{https://
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Moduli of elliptic curve}
 The elliptic curve theory is especially rich compared to the other curves. That's why we'd like to put it a special section.
+\cite[\href{https://stacks.math.columbia.edu/tag/072J}{Tag 072J}]{stacks-project}
 \subsection{Differential}
 \subsection{Level structure}
 \subsection{Complex case}
