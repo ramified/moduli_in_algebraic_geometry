@@ -22,6 +22,7 @@
 \usepackage{hyperref}
 \usepackage{quiver} 
 \usepackage{changepage}
+\usepackage{extpfeil} %for longer arrows
 %\usepackage[notcite,notref]{showkeys}
 
 % showkeys  make label explicit on the paper
@@ -94,11 +95,18 @@
 \newcommand{\orde}{\operatorname{ord}_e }
 \newcommand{\representation}[2]{\genfrac{}{}{0pt}{3}{\phantom{000}#2\phantom{00}}{#1}}
 \newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Coh}{\operatorname{Coh}}
 \newcommand{\Psh}{\operatorname{Psh}}
 \newcommand{\Schk}{\operatorname{Sch}_{k}}
+\newcommand{\SchX}{\operatorname{Sch}_{X}}
 \newcommand{\Set}{\operatorname{Set}}
 \newcommand{\Ob}{\operatorname{Ob}}
 \newcommand{\Mor}{\operatorname{Mor}}
+\newcommand{\Hilb}{\operatorname{Hilb}}
+\newcommand{\Quot}{\operatorname{Quot}}
+\newcommand{\Sym}{\operatorname{Sym}}
 \setlength\intextsep{0cm}
 \setlength\textfloatsep{0cm}
 \begin{document}
@@ -349,14 +357,89 @@ We will frequently use the quotient. Here is the list of quotients we've already
 In this section, we present some algebraic geometric objects which can be viewed as moduli.
 
 Here is a picture showing the relationships of these objects:
-
-???
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12BbOnACwBGA4AAUAvgDUQY0uky58hFGQCMVWoxZtOPfkNFidvPgGNGwAGJjpskBmx4CRFaTXV6zVog7sA4gCcACn9SCQBKGzkHRWdSACZ1Dy1vTgBFJggcSLt5RyUSeMTNLx8ACSwGAWz7BScUOML3Yu12CwY6AHMoQPDpdRgoDvgiUAAzfwguJDIQHAgkFRkxianEGbmkOKWQccnN6g3EAGZt3dWXWfnj05WkABYDq5PbM-3LpABWMQoxIA
+\[\begin{tikzcd}[row sep={12mm,between origins}, column sep={15mm,between origins}]
+\mathbb{P}V \arrow[d] \arrow[rd] &                                 &           \\
+\mathbb{P}\mathcal{F} \arrow[rd] & {\Gr(r,V)} \arrow[d] \arrow[rd] &           \\
+\Hilb \arrow[r]                  & \Quot                           & \Flagd(V)
+\end{tikzcd}\]
 \subsection{Projective space}
+We begin with a basic extended moduli problem, and then gradually make some variations.
+\begin{eg}[Moduli of line bundle with base-point-free sections is represented by $\mathbb{P}_k^n$]
+Fix $n \geqslant 0$, we define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{L},s_0,\ldots,s_n)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{L} \in \Pic(S)\\[-1mm]
+& s_i \in \Gamma(S,\mathcal{L}) \text{ with no common zero }
+\end{aligned}
+ \right\}$$
+ 
+  $(\mathcal{L},s_0,\ldots,s_n) \sim_S (\mathcal{L}',s_0',\ldots,s_n')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\phi(S):\Gamma(S,\mathcal{L}) \longrightarrow \Gamma(S,\mathcal{L}')$ sends $s_i$ to $s_i'$.
+  
+  For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+     $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},s_0,\ldots,s_n) \longmapsto (f^*\mathcal{L},f^*s_0,\ldots,f^*s_n)$$
+     
+By \cite[15.3.F, 16.4.1]{FOAG}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}_k^n$.
+\end{eg}
+We also have the coordinate-free version.
+\begin{eg}[{Coordinate-free projective space $\mathbb{P}V^{\vee}=\Proj(\Sym^{\bullet} V)$, see \cite[4.5.12]{FOAG}}]
+Fix a $k$-vector spcace $V$ of finite dimension. We define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{L},\lambda)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{L} \in \Pic(S)\\[-1mm]
+& \lambda:V \longrightarrow \Gamma(S,\mathcal{L}) \text{ is base-point-free }
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{L},\lambda) \sim_S (\mathcal{L}',\lambda')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\lambda'=\phi(S) \circ \lambda$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},\lambda) \longmapsto \big(f^*\mathcal{L},f^*\circ \lambda:V \rightarrow \Gamma(T,f^*\mathcal{L})\big)$$
+      
+      By \cite[16.4.E]{FOAG}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}V^{\vee}$.
+\end{eg}
+Now we generalize it to the projective bundle, for this we should fix a scheme $X \in \Ob(\Schk)$ and a locally free coherent sheaf $\mathcal{F} \in \Coh(X)$, and consider the moduli problem in the category $\SchX$ of locally Noetherian schemes over $X$, rather than $\Schk$.
+
+\begin{eg}[{Projective bundle\footnote{There is an notational abuse in \cite{FOAG}. From my personal point of view, it's better to replace $\mathbb{P}\mathcal{F}$ with $\mathbb{P}\mathcal{F}^{\vee}$ or $\mathbb{P}V^{\vee}$ with $\mathbb{P}V$ to make symbols consistent. } $\mathbb{P}\mathcal{F}=\Proj(\Sym^{\bullet} \mathcal{F})$, see \cite[17.2.3]{FOAG}}]\hspace{1cm}
+
+For $(S,\pi_S: S \longrightarrow X) \in \Ob(\SchX)$, we define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{L},\lambda)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{L} \in \Pic(S)\\[-1mm]
+& \lambda:\pi_S^* \mathcal{F} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{L}
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{L},\lambda) \sim_S (\mathcal{L}',\lambda')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\lambda'=\phi \circ \lambda$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},\lambda) \longmapsto \big(f^*\mathcal{L},f^* \lambda:\pi_T^*\mathcal{F} \twoheadrightarrow f^*\mathcal{L}\big)$$
+      
+      By \cite[Proposition 7.12]{hartshorne2013algebraic}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}\mathcal{F}$.
+\end{eg}
+
+Finally, there is also "another" natural moduli problem of $\mathbb{P}_k^n$, see \cite[Example 2.4]{modulicurve}. For the convinience of comparison with Grassmannian, we exhibit it and make some small variations here.\footnote{The reason of the variation is already explained in \cite[16.7, page 442]{FOAG}.}
+
+\begin{eg}[{Moduli of lines through the origin in $\mathbb{A}_k^{n+1}$ is represented by $\mathbb{P}_k^n$}]
+For $n \geqslant 0$, we define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{L},\iota)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{L} \in \Pic(S)\\[-1mm]
+& \iota:\mathcal{O}_S^{\oplus n+1} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{L}
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{L},\iota) \sim_S (\mathcal{L}',\iota')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\iota'=\phi \circ \iota$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},\iota) \longmapsto \big(f^*\mathcal{L},f^* \iota:\mathcal{O}_T^{\oplus n+1} \twoheadrightarrow f^*\mathcal{L}\big)$$
+      
+      By \cite[Proposition 7.12]{hartshorne2013algebraic}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}\mathcal{F}$.
+\end{eg}
 \subsection{Grassmannian}
 It's well-written in \cite[16.7]{FOAG}.
 \subsection{Flag variety, partial flag variety}
 \subsection{Hilbert scheme}
-\subsection{Projective space bundle}
 \subsection{Quot scheme}
 Maybe the moduli space of projective hypersurfaces is a special case for this.
 \subsection{Misc}The representable functor is also used to construct the fibered product of schemes, see \cite[9.1.6-7]{FOAG} for more details.
