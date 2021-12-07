@@ -422,22 +422,41 @@ Finally, there is also "another" natural moduli problem of $\mathbb{P}_k^n$, see
 
 \begin{eg}[{Moduli of lines through the origin in $\mathbb{A}_k^{n+1}$ is represented by $\mathbb{P}_k^n$}]
 For $n \geqslant 0$, we define a moduli problem:
-$$\mathcal{A}_S:=\left\{(\mathcal{L},\iota)  \;\middle|\; \begin{aligned}
+$$\mathcal{A}_S:=\left\{(\mathcal{L},\pi)  \;\middle|\; \begin{aligned}
 &\\[-5mm]
 &\mathcal{L} \in \Pic(S)\\[-1mm]
-& \iota:\mathcal{O}_S^{\oplus n+1} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{L}
+& \pi:\mathcal{O}_S^{\oplus n+1} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{L}
 \end{aligned}
  \right\}$$
  
-   $(\mathcal{L},\iota) \sim_S (\mathcal{L}',\iota')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\iota'=\phi \circ \iota$.
+   $(\mathcal{L},\pi) \sim_S (\mathcal{L}',\pi')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\pi'=\phi \circ \pi$.
    
    For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
-      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},\iota) \longmapsto \big(f^*\mathcal{L},f^* \iota:\mathcal{O}_T^{\oplus n+1} \twoheadrightarrow f^*\mathcal{L}\big)$$
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},\pi) \longmapsto \big(f^*\mathcal{L},f^* \pi:\mathcal{O}_T^{\oplus n+1} \twoheadrightarrow f^*\mathcal{L}\big)$$
       
       By \cite[Proposition 7.12]{hartshorne2013algebraic}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}\mathcal{F}$.
 \end{eg}
 \subsection{Grassmannian}
-It's well-written in \cite[16.7]{FOAG}.
+It's well-written in \cite[16.7]{FOAG}. We just exhibit(copy) the moduli problem and make a short remark about the existence proof (prove the representability without explicite construction of the scheme)
+\begin{eg}[{Grassmannian $\Gr(k,n)$}]
+For $n \geqslant k \geqslant 0$, we define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{F},\pi)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{F} \in \Coh(S) \text{ locally free of rank $k$ }\\[-1mm]
+& \pi:\mathcal{O}_S^{\oplus n} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{F}
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{F},\pi) \sim_S (\mathcal{F}',\pi')$ if there exists an isomorphism of line bundles $\phi:\mathcal{F} \longrightarrow \mathcal{F}'$ such that $\pi'=\phi \circ \pi$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{F},\pi) \longmapsto \big(f^*\mathcal{F},f^* \pi:\mathcal{O}_T^{\oplus n} \twoheadrightarrow f^*\mathcal{F}\big)$$
+      
+      By \cite[16.7, page 442-443]{FOAG}, the moduli functor defined by this extended moduli problem is representable, and we denote it by $\Gr(k,n)$.
+\end{eg}
+\begin{remark}
+内容...
+\end{remark}
 \subsection{Flag variety, partial flag variety}
 \subsection{Hilbert scheme}
 \subsection{Quot scheme}
