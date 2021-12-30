@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  8 DEC 2021 00:17
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  30 DEC 2021 11:19
 entering extended mode
 **./moduli.tex
 (moduli.tex
@@ -1113,21 +1113,21 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 File: figures/moduliofcurve.png Graphic file (type bmp)
 <figures/moduliofcurve.png>
  [8] (moduli.bbl) [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 567.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 567.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 574.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 574.
 
 (moduli.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 567.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 567.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 574.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 574.
 Package rerunfilecheck Info: File `moduli.out' has not changed.
-(rerunfilecheck)             Checksum: 076D5B5D3A0387B505ECF523F8795724.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 567.
+(rerunfilecheck)             Checksum: 0A9011E3286562DAE07DF61251D95159.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 574.
  ) 
 Here is how much of TeX's memory you used:
- 26000 strings out of 427748
- 460007 string characters out of 3150981
- 591957 words of memory out of 3000000
- 29424 multiletter control sequences out of 15000+200000
+ 26001 strings out of 427748
+ 460025 string characters out of 3150981
+ 591997 words of memory out of 3000000
+ 29425 multiletter control sequences out of 15000+200000
  18857 words of font info for 91 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,20n,82p,3255b,1173s stack positions out of 5000i,500n,10000p,200000b,50000s

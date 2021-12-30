@@ -19,5 +19,8 @@
 \contentsline {subsection}{\tocsubsection {}{4.1}{Differential}}{9}{subsection.4.1}% 
 \contentsline {subsection}{\tocsubsection {}{4.2}{Level structure}}{9}{subsection.4.2}% 
 \contentsline {subsection}{\tocsubsection {}{4.3}{Complex case}}{9}{subsection.4.3}% 
-\contentsline {section}{\tocsection {}{5}{Moduli of vector bundle}}{9}{section.5}% 
+\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{9}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{9}{subsection.5.1}% 
+\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{9}{subsection.5.2}% 
+\contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{9}{section.6}% 
 \contentsline {section}{\tocsection {}{}{References}}{9}{section*.2}% 
