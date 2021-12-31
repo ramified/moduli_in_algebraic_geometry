@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{frăţilă2020revisiting}
+Dragoş Frăţilă.
+\newblock Revisiting the moduli space of semistable g-bundles over elliptic
+  curves.
+\newblock \url{https://arxiv.org/pdf/1703.09959.pdf}, 2020.
+
 \bibitem{hartshorne2013algebraic}
 Robin Hartshorne.
 \newblock {\em Algebraic geometry}, volume~52.
@@ -29,9 +35,11 @@ The {Stacks project authors}.
 \bibitem{FOAG}
 Ravi Vakil.
 \newblock {MATH 216: Foundations of Algebraic Geometry}.
+\newblock \url{https://math.stanford.edu/\textasciitilde vakil/216blog/}.
 
 \bibitem{xu2020kstability}
 Chenyang Xu.
-\newblock K-stability of fano varieties: an algebro-geometric approach, 2020.
+\newblock K-stability of fano varieties: an algebro-geometric approach.
+\newblock \url{https://arxiv.org/pdf/2011.10477.pdf}, 2020.
 
 \end{thebibliography}
