@@ -349,7 +349,7 @@ coarse moduli space and some related concepts.
 We need to define stack, algebraic stack, Deligne-Munford stack and some related concepts.
 \subsection{Goal}
 ???
-
+\subsection{Quotient}
 We will frequently use the quotient. Here is the list of quotients we've already seen:
 \begin{itemize}
 \item (We could begin at topology:quotient by a subset) linear space-> Abelian category,group,ring(Notice that for this item, we don't take quotient by a group, so sometimes it looks easier)
@@ -357,6 +357,31 @@ We will frequently use the quotient. Here is the list of quotients we've already
 \item manifold
 \item scheme(Categorical quotient; GIT quotient)
 \end{itemize}
+See \cite{moduliGIT} for the following concepts:
+\begin{itemize}
+\item categorical quotients, good quotients, geometric quotients, and GIT quotients.
+\item reductive, linearly reductive, and geometrically reductive.(see \cite[Theorem 4.16]{moduliGIT})
+\item stable, semistable, unstable, and polystable.
+\item Hilbert-Mumford Criterion and Fundamental Theorem in GIT.
+\end{itemize}
+
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHRleHR7Z2VvbWV0cmljIHF1b3RpZW50fSJdLFsxLDAsIlxcdGV4dHtnb29kIHF1b3RpZW50fSJdLFsyLDAsIlxcdGV4dHtjYXRlZ29yaWNhbCBxdW90aWVudH0iXSxbMSwxLCJcXHRleHR7cmVkdWN0aXZlIEdJVCBxdW90aWVudH0iXSxbMCwxLCIiLDAseyJsZXZlbCI6Mn1dLFsxLDIsIiIsMCx7ImxldmVsIjoyfV0sWzMsMSwiXFx0ZXh0e1RobSA0LjMwfSIsMix7ImxldmVsIjoyfV0sWzMsMCwiXFx0ZXh0e3N0YWJsZX0iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\[\begin{tikzcd}
+	{\text{geometric quotient}} & {\text{good quotient}} & {\text{categorical quotient}} \\
+	& {\text{reductive GIT quotient}}
+	\arrow[Rightarrow, from=1-1, to=1-2]
+	\arrow[Rightarrow, from=1-2, to=1-3]
+	\arrow["{\text{\cite[Thm 4.30]{moduliGIT}}}"', Rightarrow, from=2-2, to=1-2]
+	\arrow["{\text{stable}}", dashed, from=2-2, to=1-1]
+\end{tikzcd}\]
+
+% https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHRleHR7c3RhYmxlfSJdLFsxLDAsIlxcdGV4dHtwb2x5c3RhYmxlfSJdLFsyLDAsIlxcdGV4dHtzZW1pc3RhYmxlfSJdLFsyLDEsIlxcdGV4dHt1bnN0YWJsZX0iXSxbMCwxLCIiLDAseyJsZXZlbCI6Mn1dLFsxLDIsIiIsMCx7ImxldmVsIjoyfV1d
+\[\begin{tikzcd}[row sep=0mm]
+	{\text{stable}} & {\text{polystable}} & {\text{semistable}} \\
+	&& {\text{unstable}}
+	\arrow[Rightarrow, from=1-1, to=1-2]
+	\arrow[Rightarrow, from=1-2, to=1-3]
+\end{tikzcd}\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic object}
 In this section, we present some algebraic geometric objects which can be viewed as moduli.
@@ -465,8 +490,61 @@ The idea of the proof comes from \cite[9.1.I]{FOAG}. First we prove it to be the
 \subsection{Flag variety, partial flag variety}
 \subsection{Hilbert scheme}
 \subsection{Quot scheme}
-Maybe the moduli space of projective hypersurfaces is a special case for this.
+The moduli space of projective hypersurfaces is a special case for this.
 \subsection{Misc}The representable functor is also used to construct the fibered product of schemes, see \cite[9.1.6-7]{FOAG} for more details.
+
+We've already met the idea of moduli in plane geometry. For example, fix two points $A$, $B$ on the plane, we wanted to find the set of points $C$ such that $\triangle ABC$ is a right triangle (resp. an isosceles triangle). We used the term ``locus" in junior high school.
+\usetikzlibrary {backgrounds,calc,intersections,through}
+\begin{figure}[th]
+	\begin{minipage}[t]{.36\textwidth}
+		\centering
+
+\begin{tikzpicture}[thick,help lines/.style={thin,draw=black}]
+\def\A{\textcolor{input}{$A$}} \def\B{\textcolor{input}{$B$}}
+\def\C{\textcolor{output}{$C$}} 
+\colorlet{input}{black} \colorlet{output}{red!70!black}
+\colorlet{triangle}{orange}
+\coordinate [label=left:\A] (A) at ($ (0,0) $);
+\coordinate [label=right:\B] (B) at ($ (1.75,0.3)$);
+\coordinate (F) at ($ (A) ! 0.5 ! (B) $);
+\coordinate (G) at ($ (A) ! 2 ! (B) $);
+\node [name path=D,help lines,draw] (D) at (F) [circle through=(B)] {};
+\draw [help lines]($ (A) ! -1.2! 90:(B) $)-- ($ (A) ! 1.2! 90:(B) $);
+\draw [help lines]($ (B) ! -1.2! 90:(A) $)-- ($ (B) ! 1.2! 90:(A) $);
+%\draw [output] (A) -- (C) -- (B);
+\foreach \point in {A,B}
+\fill [white, draw={black},thin] (\point) circle (2pt);
+%\begin{pgfonlayer}{background}
+%\fill[triangle!80] (A) -- (C) -- (B) -- cycle;
+%\end{pgfonlayer}
+\end{tikzpicture}
+	\end{minipage}
+	\begin{minipage}[t]{.36\textwidth}
+\begin{tikzpicture}[thick,help lines/.style={thin,draw=black}]
+\def\A{\textcolor{input}{$A$}} \def\B{\textcolor{input}{$B$}}
+\def\C{\textcolor{output}{$C$}} 
+\colorlet{input}{black} \colorlet{output}{red!70!black}
+\colorlet{triangle}{orange}
+\coordinate [label=left:\A] (A) at ($ (0,0) $);
+\coordinate [label=right:\B] (B) at ($ (1.75,0.3)$);
+\coordinate (F) at ($ (A) ! -1 ! (B) $);
+\coordinate (G) at ($ (A) ! 2 ! (B) $);
+\node [name path=D,help lines,draw] (D) at (A) [circle through=(B)] {};
+\node [name path=E,help lines,draw] (E) at (B) [circle through=(A)] {};
+\path [name intersections={of=D and E,by={C,C'}}];
+\draw [help lines]($ (C) ! -0.2 ! (C') $)-- ($ (C) ! 1.2 ! (C') $);
+%\draw [output] (A) -- (C) -- (B);
+\foreach \point in {A,B,F,G}
+\fill [white, draw={black},thin] (\point) circle (2pt);
+%\begin{pgfonlayer}{background}
+%\fill[triangle!80] (A) -- (C) -- (B) -- cycle;
+%\end{pgfonlayer}
+\end{tikzpicture}
+	\end{minipage}
+
+\caption{``moduli space'' in Euclidean geometry}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Moduli of curve}
 The content of this section is already well written in the course \href{https://johannesschmitt.gitlab.io/moduli_of_curves}{``the moduli space of curves"}. This section is just for the completeness of the survey.
@@ -548,6 +626,7 @@ Here is the result coming from \cite{modulicurve} which we really care:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Moduli of elliptic curve}
 The elliptic curve theory is especially rich compared to the other curves. That's why we'd like to put it a special section.
+
 \cite[\href{https://stacks.math.columbia.edu/tag/072J}{Tag 072J}]{stacks-project}
 \subsection{Differential}
 \subsection{Level structure}
