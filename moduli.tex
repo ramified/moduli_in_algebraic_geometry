@@ -9,6 +9,7 @@
 \usepackage{bm}
 \usepackage{graphicx}
 \usepackage{amsthm}
+\usepackage{physics}
 \usepackage{enumerate}
 \usepackage[mathscr]{eucal}
 \usepackage{float}
@@ -70,7 +71,7 @@
 \DeclareMathOperator{\dist}{dist}
 \DeclareMathOperator{\vol}{vol}
 \DeclareMathOperator{\diag}{diag}
-\DeclareMathOperator{\tr}{tr}
+%\DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\Img}{\operatorname{Im}}
 \DeclareMathOperator{\Id}{\operatorname{Id}}
 \DeclareMathOperator{\Rep}{\operatorname{Rep}}
@@ -627,13 +628,17 @@ Here is the result coming from \cite{modulicurve} which we really care:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Moduli of elliptic curve}
 The elliptic curve theory is especially rich compared to the other curves. That's why we'd like to put it a special section.
-
+\subsection{Definition and basic properties of elliptic curve}
 \begin{defn}[Relative elliptic curve]
 Let $S \in \Ob(\Schk)$. An $S$-group scheme $(E,m)$ is called an elliptic curve over $S$ if the structure map $\pi: E\longrightarrow S$ is proper, smooth of dimension $1$, and has connected fibers. Two elliptic curves are considered as the same if they are isomorphic as the $S$-group scheme.
 \end{defn}
-This data is equivalent to what we described for $\mathcal{M}_{1,1}(S)$ in Definition \ref{def:moduliofcurves}, and also equivalent to the definition in \cite[\href{https://stacks.math.columbia.edu/tag/072J}{Tag 072J}]{stacks-project}. We know that $\mathcal{M}_{1,1}$ is not representable, so we have to introduce extra structures to rigidify elliptic curves.
+This data is equivalent to what we described for $\mathcal{M}_{1,1}(S)$ in Definition \ref{def:moduliofcurves}, and also equivalent to the definition in \cite[\href{https://stacks.math.columbia.edu/tag/072J}{Tag 072J}]{stacks-project}. 
+
+Recall the Cohomology and Base Change Theorem in \cite[28.1.6]{FOAG}:
+
+
 \subsection{Differential}
-The first possible extra structure is the differential.
+We know that $\mathcal{M}_{1,1}$ is not representable, so we have to introduce extra structures to rigidify elliptic curves. The first possible extra structure is the differential.
 \begin{defn}[{Moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ of elliptic curve with differential}]
 For a base scheme $S \in \Ob(\Sch_{\mathbb{Z}\left[\frac{1}{6} \right]})$, we define a moduli problem
 $$\mathcal{A}_S:=\left\{(E,\omega)  \;\middle|\; \begin{aligned}
@@ -651,7 +656,15 @@ $$\mathcal{A}_S:=\left\{(E,\omega)  \;\middle|\; \begin{aligned}
       By doing so we define the moduli functor 
       $$\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]: \Sch_{\mathbb{Z}\left[\frac{1}{6} \right]} \longrightarrow \Set \qquad S \longmapsto \mathcal{A}_S/\sim_S$$
 \end{defn}
-
+\begin{theorem}
+The moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ is represented by $\Spec \mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$ where $\Delta=4a^3+27b^2$. Denote $R=\mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$, the universal family is $(E_R,\omega_R) \in \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](R)$, where
+\begin{equation*}
+\begin{aligned}
+  E_R=\;& \Proj R[x,y,z]/\left( y^2z-(x^3+axz^2+bz^3) \right)  \\ 
+  \omega_R=\;&  \frac{x\dd z-z\dd x}{2yz}=\frac{y\dd z-z\dd y }{3x^2+az^2} =\frac{x\dd y-y\dd x}{y^2-2axz-3bz^2} \quad\text{ whenever it's defined.}\\ 
+\end{aligned}
+\end{equation*}
+\end{theorem}
 \subsection{Level structure}
 \subsection{Complex case}
 In this subsection, we will show that how the moduli is connected to the modular curve $\mathcal{H}/\SL_2(\mathbb{Z})$.
