@@ -99,6 +99,7 @@
 \newcommand{\Pic}{\operatorname{Pic}}
 \newcommand{\Coh}{\operatorname{Coh}}
 \newcommand{\Psh}{\operatorname{Psh}}
+\newcommand{\Sch}{\operatorname{Sch}}
 \newcommand{\Schk}{\operatorname{Sch}_{k}}
 \newcommand{\SchX}{\operatorname{Sch}_{X}}
 \newcommand{\Set}{\operatorname{Set}}
@@ -140,7 +141,7 @@ The personal survey is motivated by the three courses in Bonn: \href{https://joh
 ``Some mathematicians are birds, others
 are frogs." This document is devoted to those ``birds" from a ``frog" who gets stuck in the mud.
 \subsection{Conventions and Notations}
-In this survey,  $\Schk$ is denoted as the category of \textbf{locally Noetherian} schemes over $k$.
+In this survey,  $\Schk$ is denoted as the category of \textbf{locally Noetherian} schemes over $k$, where $k$ is a field or $\mathbb{Z}$.
 \subsection{Representable functor}
 In this subsection we would follow on \cite[Definition 2.2.1]{huybrechts2010geometry} in full generality, but you can always think 
 $$\mathcal{C}=\Schk \qquad \mathcal{C}'=\operatorname{Functor} (\Schk^{op},\Set)$$
@@ -572,7 +573,7 @@ $$\mathcal{A}_S:=\left\{(X,\pi,\sigma_i)  \;\middle|\; \begin{aligned}
  \end{aligned}
   \right\}$$
 \end{defn}
-\begin{defn}[moduli of smooth/stable curves]
+\begin{defn}[moduli of smooth/stable curves]\label{def:moduliofcurves}
 For $g,n \geqslant 0$, the moduli of smooth curves $\mathcal{M}_{g,n}$ and the moduli of smooth curves $\overline{\mathcal{M}}_{g,n}$ are defined as
 $$\mathcal{M}_{g,n}(S)=\mathcal{A}_S/\sim_S \qquad \mathcal{M}_{g,n}(f:T\longrightarrow S)=f^*: \mathcal{A}_S/\sim_S \longrightarrow \mathcal{A}_T/\sim_T.$$
 $$\overline{\mathcal{M}}_{g,n}(S)=\overline{\mathcal{A}}_S/\sim_S \qquad \overline{\mathcal{M}}_{g,n}(f:T\longrightarrow S)=f^*: \overline{\mathcal{A}}_S/\sim_S \longrightarrow \overline{\mathcal{A}}_T/\sim_T.$$
@@ -627,8 +628,30 @@ Here is the result coming from \cite{modulicurve} which we really care:
 \section{Moduli of elliptic curve}
 The elliptic curve theory is especially rich compared to the other curves. That's why we'd like to put it a special section.
 
-\cite[\href{https://stacks.math.columbia.edu/tag/072J}{Tag 072J}]{stacks-project}
+\begin{defn}[Relative elliptic curve]
+Let $S \in \Ob(\Schk)$. An $S$-group scheme $(E,m)$ is called an elliptic curve over $S$ if the structure map $\pi: E\longrightarrow S$ is proper, smooth of dimension $1$, and has connected fibers. Two elliptic curves are considered as the same if they are isomorphic as the $S$-group scheme.
+\end{defn}
+This data is equivalent to what we described for $\mathcal{M}_{1,1}(S)$ in Definition \ref{def:moduliofcurves}, and also equivalent to the definition in \cite[\href{https://stacks.math.columbia.edu/tag/072J}{Tag 072J}]{stacks-project}. We know that $\mathcal{M}_{1,1}$ is not representable, so we have to introduce extra structures to rigidify elliptic curves.
 \subsection{Differential}
+The first possible extra structure is the differential.
+\begin{defn}[{Moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ of elliptic curve with differential}]
+For a base scheme $S \in \Ob(\Sch_{\mathbb{Z}\left[\frac{1}{6} \right]})$, we define a moduli problem
+$$\mathcal{A}_S:=\left\{(E,\omega)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+& E: \text{ elliptic curve over } S \\[-1mm]
+& \omega \in \Gamma(E,\Omega_{E/S}) \text{ global generator }
+\end{aligned}
+ \right\}$$
+ 
+   $(E,\omega) \sim_S (E',\omega')$ if there exists an isomorphism of elliptic curves $\phi:E \longrightarrow E'$ such that $\omega'=\phi^* \circ \omega'$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (E,\omega) \longmapsto \big(f^*E,f^*  \omega\big)$$
+      
+      By doing so we define the moduli functor 
+      $$\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]: \Sch_{\mathbb{Z}\left[\frac{1}{6} \right]} \longrightarrow \Set \qquad S \longmapsto \mathcal{A}_S/\sim_S$$
+\end{defn}
+
 \subsection{Level structure}
 \subsection{Complex case}
 In this subsection, we will show that how the moduli is connected to the modular curve $\mathcal{H}/\SL_2(\mathbb{Z})$.
