@@ -25,9 +25,12 @@
 \usepackage{changepage}
 \usepackage{extpfeil} %for longer arrows
 %\usepackage[notcite,notref]{showkeys}
-
+\usepackage{tikz}
+\usetikzlibrary {backgrounds,calc,intersections,through}
+\usetikzlibrary {positioning,shapes.misc}
 % showkeys  make label explicit on the paper
 
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
 \makeatletter
 \@namedef{subjclassname@2010}{%
   \textup{2010} Mathematics Subject Classification}
@@ -92,6 +95,7 @@
 \newcommand{\Flag}[1]{\operatorname{Flag}_{#1}}
 \newcommand{\Flagstr}[1]{\operatorname{Flag}_{#1,str}}
 \newcommand{\dimvec}[1]{#1}
+\newcommand{\rderiv}[2]{\mathrm{R}^{#1}\! {#2}}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\orde}{\operatorname{ord}_e }
 \newcommand{\representation}[2]{\genfrac{}{}{0pt}{3}{\phantom{000}#2\phantom{00}}{#1}}
@@ -496,7 +500,7 @@ The moduli space of projective hypersurfaces is a special case for this.
 \subsection{Misc}The representable functor is also used to construct the fibered product of schemes, see \cite[9.1.6-7]{FOAG} for more details.
 
 We've already met the idea of moduli in plane geometry. For example, fix two points $A$, $B$ on the plane, we wanted to find the set of points $C$ such that $\triangle ABC$ is a right triangle (resp. an isosceles triangle). We used the term ``locus" in junior high school.
-\usetikzlibrary {backgrounds,calc,intersections,through}
+
 \begin{figure}[th]
 	\begin{minipage}[t]{.36\textwidth}
 		\centering
@@ -630,13 +634,172 @@ Here is the result coming from \cite{modulicurve} which we really care:
 The elliptic curve theory is especially rich compared to the other curves. That's why we'd like to put it a special section.
 \subsection{Definition and basic properties of elliptic curve}
 \begin{defn}[Relative elliptic curve]
-Let $S \in \Ob(\Schk)$. An $S$-group scheme $(E,m)$ is called an elliptic curve over $S$ if the structure map $\pi: E\longrightarrow S$ is proper, smooth of dimension $1$, and has connected fibers. Two elliptic curves are considered as the same if they are isomorphic as the $S$-group scheme.
+Let $S \in \Ob(\Schk)$. An $S$-group scheme $(E,m)$ is called an elliptic curve over $S$ if the structure map $\pi: E\longrightarrow S$ is proper, smooth of relative dimension $1$, and has connected fibers. Two elliptic curves are considered as the same if they are isomorphic as the $S$-group scheme.
 \end{defn}
 This data is equivalent to what we described for $\mathcal{M}_{1,1}(S)$ in Definition \ref{def:moduliofcurves}, and also equivalent to the definition in \cite[\href{https://stacks.math.columbia.edu/tag/072J}{Tag 072J}]{stacks-project}. 
 
-Recall the Cohomology and Base Change Theorem in \cite[28.1.6]{FOAG}:
+Recall the Cohomology and Base Change Theorem in \cite[28.1.6]{FOAG}. Here we just give a simplified version:
+\begin{theorem}[Cohomology and Base Change Theorem, simplified version]\label{thm:cohbc} $\hspace{0cm}$
 
+	\begin{minipage}[t]{.6\textwidth}
+	\vspace{-1cm}
+Suppose		
+\begin{itemize}
+\item $S$ is locally Noetherian;
+\item $\pi: X \longrightarrow S$ is proper;
+\item The coherent sheaf $\mathcal{F}$ over $X$ is flat over $S$.
+\end{itemize}
+	\end{minipage}
+\hfill\vline\hfill
+	\begin{minipage}[b]{.36\textwidth}
+		\centering
+% https://q.uiver.app/?q=WzAsNSxbMCwxLCJYX3EiXSxbMSwxLCJYIl0sWzAsMiwiXFxTcGVjXFwsIFxca2FwcGEocSkiXSxbMSwyLCJTIl0sWzIsMCwiXFxtYXRoY2Fse0Z9Il0sWzAsMV0sWzAsMiwiXFxwaV9xIiwyXSxbMiwzLCJcXGlvdGEiXSxbMSwzLCJcXHBpIl0sWzQsMSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}
+	&[-3mm]&[-5mm] {\mathcal{F}} \\[-6mm]
+	{X_q} & X \\
+	{\hspace{-0.8cm}\Spec\, \kappa(q)} & S
+	\arrow[from=2-1, to=2-2]
+	\arrow["{\pi_q}"', from=2-1, to=3-1]
+	\arrow["\iota", from=3-1, to=3-2]
+	\arrow["\pi", from=2-2, to=3-2]
+	\arrow[no head, from=1-3, to=2-2]
+\end{tikzcd}\]
+	\end{minipage}
+then for any $q \in S$ and $p \in \mathbb{Z}$, we have the  natural map
+$$\phi^p_q: (\rderiv{p}{\pi_*}  \mathcal{F})|_q \longrightarrow H^p(X_q,\mathcal{F}|_{X_q})$$
+which has the following properties:
+$$\phi^p_q \text{ is surj } \Longrightarrow \begin{cases}
+\hspace{2.6mm}\phi^p_q \text{ is iso }\\
+\left(\phi^{p-1}_q \text{ is surj } \Leftrightarrow \rderiv{p}{\pi_*}  \mathcal{F} \text{ is l.f. }\right)
+\end{cases}$$
+\end{theorem}
 
+We can use Theorem \ref{thm:cohbc} to compute some pushforward of sheaves, and the results are shown here:
+\begin{table}[ht]
+\[
+\begin{array}{|r|c|c|c|c|c|c|c|}
+\hline
+n                                   & -3                    & -2                    & -1          & 0             & 1           & 2                     & 3                     \\ \hline
+\rderiv{1}{\pi_*} \mathcal{O}_E(ne) & \text{rank 3} & \text{rank 2} & \text{l.b.} & \text{l.b.}   & 0           & 0                     & 0                     \\ \hline
+\pi_* \mathcal{O}_E(ne)             & 0                     & 0                     & 0           & \mathcal{O}_S & \text{l.b.} & \text{rank 2} & \text{rank 3} \\ \hline
+\rderiv{1}{\pi_*} \Omega_{E/S}(ne)  & \text{rank 3} & \text{rank 2} & \text{l.b.} & \mathcal{O}_S & 0           & 0                     & 0                     \\ \hline
+\pi_* \Omega_{E/S}(ne)              & 0                     & 0                     & 0           & \text{l.b.}   & \text{l.b.} & \text{rank 2} & \text{rank 3} \\ \hline
+\end{array}
+\]
+\end{table}
+\begin{eg}[{case of $\rderiv{p}{\pi_*} \mathcal{O}_E$}]
+Let $X=E$ be an elliptic curve over $S$, $\mathcal{F}=\mathcal{O}_X$. Obviously $\phi_q^2,\phi_q^{-1}$ are surjective; the map $\phi_q^{0}$ is also surjective\footnote{see the hint in \cite[28.1.H]{FOAG}.}. By using Theorem \ref{thm:cohbc} (see the Figure \ref{fig:cohbc1}) we obtain that $$\rderiv{p}{\pi_*} \mathcal{O}_X= \begin{cases}
+0 & p \geqslant 2 \\
+\text{line bundle} & p=0,1
+\end{cases}$$
+\end{eg}
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[node distance=5mm and 15mm, 
+initial/.style={
+color=red,
+}]
+\node (phiq2) [initial] {$\phi_q^2$ is surj};
+\node (phiq1) [below right=of phiq2] {$\phi_q^1$ is surj};
+\node (phiq0) [below right=of phiq1, initial] {$\phi_q^0$ is surj};
+\node (phiq-1) [below right=of phiq0, initial] {$\phi_q^{-1}$ is surj};
+\node (fiber2) [above right=of phiq2] {$\rderiv{2}{\pi_*}\mathcal{F}|_q=0$};
+\node (fiber1) [above right=of phiq1] {$\rderiv{1}{\pi_*}\mathcal{F}|_q \cong \kappa(q)$};
+\node (fiber0) [above right=of phiq0] {$\pi_*\mathcal{F}|_q\cong \kappa(q)$};
+\node (lf2) [right=of phiq2] {$\rderiv{2}{\pi_*}\mathcal{F}$ is l.f.};
+\node (lf1) [right=of phiq1] {$\rderiv{1}{\pi_*}\mathcal{F}$ is l.f.};
+\node (lf0) [right=of phiq0] {${\pi_*}\mathcal{F}$ is l.f.};
+\path ($ (lf2.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq1.north west) + (10mm,0) $);
+\path ($ (lf1.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq0.north west) + (10mm,0) $);
+\path ($ (lf0.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq-1.north west) + (10mm,0) $);
+\path ($ (fiber2.south west) + (10mm,0) $) edge[->,edge label=Nakayama, red] ($ (lf2.north west) + (10mm,0) $);
+\draw [->]
+(phiq2.east)
+-- ($ (phiq2.east) + (12mm,0) $)
+|- (fiber2.west);
+\draw [->]
+($ (phiq2.east) + (12mm,0) $)
+|- ($ (lf2.south west)!0.5!(phiq1.north west) + (8mm,0)$);
+\draw [->]
+(phiq1.east)
+-- ($ (phiq1.east) + (12mm,0) $)
+|- (fiber1.west);
+\draw [->]
+($ (phiq1.east) + (12mm,0) $)
+|- ($ (lf1.south west)!0.5!(phiq0.north west) + (8mm,0)$);
+\draw [->]
+(phiq0.east)
+-- ($ (phiq0.east) + (12mm,0) $)
+|- (fiber0.west);
+\draw [->]
+($ (phiq0.east) + (12mm,0) $)
+|- ($ (lf0.south west)!0.5!(phiq-1.north west) + (8mm,0)$);
+\end{tikzpicture}
+\caption{the process; \textcolor{red}{red} color is the initial condition}
+\label{fig:cohbc1}
+\end{figure}
+\begin{lemma}
+$\pi_*\mathcal{O}_X \cong \mathcal{O}_S$.
+\end{lemma}
+\begin{proof}
+The morphism $\pi: X \longrightarrow S$ induces the map of sheaves
+$$\pi^{\#}: \mathcal{O}_S \longrightarrow \pi_*\mathcal{O}_X$$
+which corresponds a section of $\pi_*\mathcal{O}_X$. Since $\pi_*\mathcal{O}_X$ is a line bundle, this section defines a Cartier divisor $D$ of $S$, i.e. $\pi_*\mathcal{O}_X \cong \mathcal{O}_S(D)$. From the isomorphism 
+$$\pi^{\#}|_q : \kappa(q) \longrightarrow \pi_*\mathcal{O}_X \times_{\mathcal{O}_S} \kappa(q) \textcolor{ashgrey}{ \stackrel{\phi_q^0}{\longrightarrow}H^0(X_q,\mathcal{O}_{X_q}) \cong \kappa(q) }$$
+we get $D=0$, thus $\pi_*\mathcal{O}_X \cong \mathcal{O}_S$.
+\end{proof}
+
+\begin{remark}
+The other cases are similarly solved except $\mathcal{F}=\Omega_{E/S}$. Actually, if we admit the Grothendieck-Serre duality
+$$\rderiv{p}{\pi_*}\Omega_{E/S} \cong (\rderiv{1-p}{\pi_*} \mathcal{O}_S)^{\vee}$$
+this would be easily solved. You can see the discussion \href{https://math.stackexchange.com/questions/1938206/local-freeness-of-the-hodge-bundle}{here} for Exercise \cite[28.1.N]{FOAG}, and \cite[2.1.2]{hida2011geometric} for the ``proof" of Grothendieck-Serre duality. For me the question in stackexchange is still unsolved, and for solving Exercise \cite[28.1.N]{FOAG} one need to assume the base scheme is reduced to use the Grauert’s Theorem in \cite[28.1.5]{FOAG}.(The Figure \ref{fig:cohbc2} shows where we use the Grauert’s Theorem.)
+\end{remark}
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[node distance=5mm and 15mm, 
+initial/.style={
+color=red,
+}]
+\node (phiq2) [initial] {$\phi_q^2$ is surj};
+\node (phiq1) [below right=of phiq2] {$\phi_q^1$ is surj};
+\node (phiq0) [below right=of phiq1] {$\phi_q^0$ is surj};
+\node (phiq-1) [below right=of phiq0, initial] {$\phi_q^{-1}$ is surj};
+\node (fiber2) [above right=of phiq2] {$\rderiv{2}{\pi_*}\mathcal{F}|_q=0$};
+\node (fiber1) [above right=of phiq1] {$\rderiv{1}{\pi_*}\mathcal{F}|_q \cong \kappa(q)$};
+\node (fiber0) [above right=of phiq0] {$\pi_*\mathcal{F}|_q\cong \kappa(q)$};
+\node (lf2) [right=of phiq2] {$\rderiv{2}{\pi_*}\mathcal{F}$ is l.f.};
+\node (lf1) [right=of phiq1] {$\rderiv{1}{\pi_*}\mathcal{F}$ is l.f.};
+\node (lf0) [right=of phiq0] {${\pi_*}\mathcal{F}$ is l.f.};
+\path ($ (lf2.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq1.north west) + (10mm,0) $);
+\path ($ (lf1.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq0.north west) + (10mm,0) $);
+\path ($ (lf0.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq-1.north west) + (10mm,0) $);
+\path ($ (fiber2.south west) + (10mm,0) $) edge[->,edge label=Nakayama, red] ($ (lf2.north west) + (10mm,0) $);
+\path ($ (fiber1.south west) + (10mm,0) $) edge[->,edge label=Grauert, blue] ($ (lf1.north west) + (10mm,0) $);
+\draw [->]
+(phiq2.east)
+-- ($ (phiq2.east) + (12mm,0) $)
+|- (fiber2.west);
+\draw [->]
+($ (phiq2.east) + (12mm,0) $)
+|- ($ (lf2.south west)!0.5!(phiq1.north west) + (8mm,0)$);
+\draw [->]
+(phiq1.east)
+-- ($ (phiq1.east) + (12mm,0) $)
+|- (fiber1.west);
+\draw [->]
+($ (phiq1.east) + (12mm,0) $)
+|- ($ (lf1.south west)!0.5!(phiq0.north west) + (8mm,0)$);
+\draw [->]
+(phiq0.east)
+-- ($ (phiq0.east) + (12mm,0) $)
+|- (fiber0.west);
+\draw [->]
+($ (phiq0.east) + (12mm,0) $)
+|- ($ (lf0.south west)!0.5!(phiq-1.north west) + (8mm,0)$);
+\end{tikzpicture}
+\caption{$\mathcal{F}=\Omega_{E/S}$; \textcolor{red}{red} color is the initial condition}
+\label{fig:cohbc2}
+\end{figure}
 \subsection{Differential}
 We know that $\mathcal{M}_{1,1}$ is not representable, so we have to introduce extra structures to rigidify elliptic curves. The first possible extra structure is the differential.
 \begin{defn}[{Moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ of elliptic curve with differential}]
@@ -690,6 +853,46 @@ For a variant, you may get some informations of moduli of $G$-bundles over ellip
 
 \end{document}
 
-
+%流程图模板
+%\usetikzlibrary {positioning,shapes.misc}
+%\begin{tikzpicture}[node distance=5mm and 10mm, 
+%initial/.style={
+%color=red,
+%}]
+%\node (phiq2) [initial] {$\phi_q^2$ is surj};
+%\node (phiq1) [below right=of phiq2] {$\phi_q^1$ is surj};
+%\node (phiq0) [below right=of phiq1] {$\phi_q^0$ is surj};
+%\node (phiq-1) [below right=of phiq0] {$\phi_q^{-1}$ is surj};
+%\node (fiber2) [above right=of phiq2] {$\rderiv{2}{\pi_*}\mathcal{F}|_q$};
+%\node (fiber1) [above right=of phiq1] {$\rderiv{1}{\pi_*}\mathcal{F}|_q$};
+%\node (fiber0) [above right=of phiq0] {$\pi_*\mathcal{F}|_q$};
+%\node (lf2) [right=of phiq2] {$\rderiv{2}{\pi_*}\mathcal{F}$ is l.f.};
+%\node (lf1) [right=of phiq1] {$\rderiv{1}{\pi_*}\mathcal{F}$ is l.f.};
+%\node (lf0) [right=of phiq0] {${\pi_*}\mathcal{F}$ is l.f.};
+%\path ($ (lf2.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq1.north west) + (10mm,0) $);
+%\path ($ (lf1.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq0.north west) + (10mm,0) $);
+%\path ($ (lf0.south west) + (10mm,0) $) edge[commutative diagrams/Rightarrow, 2tail reversed] ($ (phiq-1.north west) + (10mm,0) $);
+%\draw [->]
+%(phiq2.east)
+%-- ($ (phiq2.east) + (8mm,0) $)
+%|- (fiber2.west);
+%\draw [->]
+%($ (phiq2.east) + (8mm,0) $)
+%|- ($ (lf2.south west)!0.5!(phiq1.north west) + (8mm,0)$);
+%\draw [->]
+%(phiq1.east)
+%-- ($ (phiq1.east) + (8mm,0) $)
+%|- (fiber1.west);
+%\draw [->]
+%($ (phiq1.east) + (8mm,0) $)
+%|- ($ (lf1.south west)!0.5!(phiq0.north west) + (8mm,0)$);
+%\draw [->]
+%(phiq0.east)
+%-- ($ (phiq0.east) + (8mm,0) $)
+%|- (fiber0.west);
+%\draw [->]
+%($ (phiq0.east) + (8mm,0) $)
+%|- ($ (lf0.south west)!0.5!(phiq-1.north west) + (8mm,0)$);
+%\end{tikzpicture}
 
 
