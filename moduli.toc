@@ -19,10 +19,12 @@
 \contentsline {section}{\tocsection {}{4}{Moduli of elliptic curve}}{9}{section.4}% 
 \contentsline {subsection}{\tocsubsection {}{4.1}{Definition and basic properties of elliptic curve}}{9}{subsection.4.1}% 
 \contentsline {subsection}{\tocsubsection {}{4.2}{Differential}}{11}{subsection.4.2}% 
-\contentsline {subsection}{\tocsubsection {}{4.3}{Level structure}}{12}{subsection.4.3}% 
-\contentsline {subsection}{\tocsubsection {}{4.4}{Complex case}}{12}{subsection.4.4}% 
-\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{12}{section.5}% 
-\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{12}{subsection.5.1}% 
-\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{12}{subsection.5.2}% 
-\contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{12}{section.6}% 
-\contentsline {section}{\tocsection {}{}{References}}{12}{section*.2}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{13}{section*.2}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{13}{section*.3}% 
+\contentsline {subsection}{\tocsubsection {}{4.3}{Level structure}}{13}{subsection.4.3}% 
+\contentsline {subsection}{\tocsubsection {}{4.4}{Complex case}}{13}{subsection.4.4}% 
+\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{13}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{13}{subsection.5.1}% 
+\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{13}{subsection.5.2}% 
+\contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{14}{section.6}% 
+\contentsline {section}{\tocsection {}{}{References}}{14}{section*.4}% 

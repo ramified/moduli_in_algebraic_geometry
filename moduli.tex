@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{booktabs}
 \usepackage{bm}
 \usepackage{graphicx}
 \usepackage{amsthm}
@@ -146,7 +147,7 @@ The personal survey is motivated by the three courses in Bonn: \href{https://joh
 ``Some mathematicians are birds, others
 are frogs." This document is devoted to those ``birds" from a ``frog" who gets stuck in the mud.
 \subsection{Conventions and Notations}
-In this survey,  $\Schk$ is denoted as the category of \textbf{locally Noetherian} schemes over $k$, where $k$ is a field or $\mathbb{Z}$.
+In this survey,  $\Schk$ is denoted as the category of \textbf{locally Noetherian} schemes over $k$, where $k$ is a field or $\mathbb{Z}$ or $\mathbb{Z}\left[\textstyle\frac{1}{6}\right]$.
 \subsection{Representable functor}
 In this subsection we would follow on \cite[Definition 2.2.1]{huybrechts2010geometry} in full generality, but you can always think 
 $$\mathcal{C}=\Schk \qquad \mathcal{C}'=\operatorname{Functor} (\Schk^{op},\Set)$$
@@ -754,6 +755,16 @@ The other cases are similarly solved except $\mathcal{F}=\Omega_{E/S}$. Actually
 $$\rderiv{p}{\pi_*}\Omega_{E/S} \cong (\rderiv{1-p}{\pi_*} \mathcal{O}_S)^{\vee}$$
 this would be easily solved. You can see the discussion \href{https://math.stackexchange.com/questions/1938206/local-freeness-of-the-hodge-bundle}{here} for Exercise \cite[28.1.N]{FOAG}, and \cite[2.1.2]{hida2011geometric} for the ``proof" of Grothendieck-Serre duality. For me the question in stackexchange is still unsolved, and for solving Exercise \cite[28.1.N]{FOAG} one need to assume the base scheme is reduced to use the Grauert’s Theorem in \cite[28.1.5]{FOAG}.(The Figure \ref{fig:cohbc2} shows where we use the Grauert’s Theorem.)
 \end{remark}
+\begin{table}[ht]
+\begin{tabular}{@{}lll@{}}
+\toprule
+\multicolumn{1}{c}{Method} & \multicolumn{1}{c}{Result} & \multicolumn{1}{c}{Requirement} \\ \midrule
+Grothendieck-Serre duality & $\rderiv{1}{\pi_*}\mathcal{F} \cong \mathcal{O}_S$ & haven't checked \\
+Grauert's theorem & $\rderiv{1}{\pi_*}\mathcal{F}$ is l.f. & $S$ is reduced \\
+$\Omega_{E/S} \cong \mathcal{O}_S$ locally & $\rderiv{1}{\pi_*}\mathcal{F}$ is l.f. & $E/S$ is group scheme \\ \bottomrule
+\end{tabular}
+\caption{}
+\end{table}
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}[node distance=5mm and 15mm, 
@@ -820,7 +831,7 @@ $$\mathcal{A}_S:=\left\{(E,\omega)  \;\middle|\; \begin{aligned}
       $$\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]: \Sch_{\mathbb{Z}\left[\frac{1}{6} \right]} \longrightarrow \Set \qquad S \longmapsto \mathcal{A}_S/\sim_S$$
 \end{defn}
 \begin{theorem}
-The moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ is represented by $\Spec \mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$ where $\Delta=4a^3+27b^2$. Denote $R=\mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$, the universal family is $(E_R,\omega_R) \in \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](R)$, where
+The moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ is represented by $\Spec \mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$ where $\Delta=-\frac{1}{256}(4a^3+27b^2)$. Denote $R=\mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$, the universal family is $(E_R,\omega_R) \in \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](R)$, where
 \begin{equation*}
 \begin{aligned}
   E_R=\;& \Proj R[x,y,z]/\left( y^2z-(x^3+axz^2+bz^3) \right)  \\ 
@@ -830,6 +841,59 @@ The moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]
 \end{theorem}
 \begin{proof}
 need complement. The idea is, consider it locally, find appropriate $1,x,y$ with respect to the differential $\omega$, and finally glue them.
+\end{proof}
+To be compatible with the notations in modular form, we rewrite
+\begin{equation*}
+\begin{aligned}
+  R=\;&\mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right] \cong \mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[g_2,g_3, \Delta^{-1} \right]  && a=-4g_2, b=-16g_3, \Delta=g_3^2-27g_3^2\\
+  E_R=\;& \Proj R[x,y,z]/\left( y^2z-(4x^3-g_2xz^2-g_3z^3) \right) && \text{\textcolor{ashgrey}{here $x$ is different}}\\ 
+  \omega_R=\;&  \frac{x\dd z-z\dd x}{2yz}=\frac{y\dd z-z\dd y }{12x^2-g_2z^2} =\frac{x\dd y-y\dd x}{y^2+2g_2xz+3g_3z^2} &&\text{whenever it's defined.}\\ 
+\end{aligned}
+\end{equation*}
+
+As an application, we prove that the coarse moduli of functor  $\mathcal{M}\!\left[ \frac{1}{6}\right]:=\mathcal{M}_{1,1}\!\left[ \frac{1}{6}\right]$ is $\mathbb{A}^1_{\mathbb{Z} \!\left[ \frac{1}{6}\right]}$. Recall that $\mathbb{G}_m$ acts on $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ by
+$$R \longrightarrow R \times_{\mathbb{Z}} \mathbb{Z}[t,t^{-1}] \cong R[t,t^{-1}] \qquad g_2\longmapsto t^{-4}g_2 \quad g_3 \longrightarrow t^{-6}g_3,$$
+thus $\mathbb{G}_m(S)$ acts on $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](S)$ by
+$$\mathbb{G}_m(S) \times \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](S) \longrightarrow \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](S) \qquad \big(u, (E,\omega) \big) \longmapsto \big(E, u^{\#}(t) \cdot \omega \big).$$
+Define
+$$j:=1728\frac{g_2^3}{\Delta}=1728\frac{g_2^3}{g_3^2-27g_3^2}\in R^{\mathbb{G}_m},$$
+by tedious check we get
+$$R^{\mathbb{G}_m} = \mathbb{Z} \!\left[ \textstyle\frac{1}{6}\right][j]$$
+which induce the isomorphism 
+$$j: \mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right] \longrightarrow \mathbb{A}^1_{\mathbb{Z} \!\left[ \frac{1}{6}\right]}.$$
+\begin{claim}
+The scheme $\mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right] \cong \mathbb{A}^1_{\mathbb{Z} \!\left[ \frac{1}{6}\right]}$ is the course moduli of $\mathcal{M}\!\left[ \frac{1}{6}\right]$.
+\begin{figure}[ht]
+\centering
+% https://q.uiver.app/?q=WzAsNCxbMCwxLCJcXG1hdGhjYWx7TX1cXCFcXGxlZnRbIFxcZnJhY3sxfXs2fVxccmlnaHRdIl0sWzIsMSwiXFxtYXRoYmJ7R31fbVxcYmFja3NsYXNoIFxcd2lkZXRpbGRle1xcbWF0aGNhbHtNfX1cXCFcXGxlZnRbXFx0ZXh0c3R5bGUgXFxmcmFjezF9ezZ9XFxyaWdodF0iXSxbMiwyLCJoX3tYJ30iXSxbMSwwLCJcXHdpZGV0aWxkZXtcXG1hdGhjYWx7TX19XFwhXFxsZWZ0W1xcdGV4dHN0eWxlIFxcZnJhY3sxfXs2fVxccmlnaHRdIl0sWzAsMSwiXFxldGEiXSxbMSwyLCJcXGV4aXN0cyBcXCwhIFxcLGhfe1xcYmV0YX0iLDAseyJjb2xvdXIiOlszNTgsMTAwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMzU4LDEwMCw1MCwxXV0sWzAsMiwiXFxhbHBoYSciLDJdLFszLDAsIlxcdGV4dHtmb3JnZXR9IiwyLHsibGFiZWxfcG9zaXRpb24iOjYwfV0sWzMsMSwiXFx0ZXh0e3F1b3RpZW50fSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MH1dXQ==
+\[\begin{tikzcd}
+	& {\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right] \makebox[0pt][l]{\textcolor{ashgrey}{$\cong h_{\Spec R}$}}} \\
+	{\mathcal{M}\!\left[ \frac{1}{6}\right]} && {\mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]\makebox[0pt][l]{\textcolor{ashgrey}{$\cong h_{\mathbb{A}^1_{\mathbb{Z}\left[ 1/6\right]}}$}}} \\
+	&& {h_{X'}}
+	\arrow["\eta", from=2-1, to=2-3]
+	\arrow["{\exists \,! \,h_{\beta}}", color={rgb,255:red,255;green,0;blue,8}, dashed, from=2-3, to=3-3]
+	\arrow["{\alpha'}"', from=2-1, to=3-3]
+	\arrow["{\text{forget}}"'{pos=0.6}, from=1-2, to=2-1]
+	\arrow["{\text{quotient}}"{pos=0.6}, from=1-2, to=2-3]
+\end{tikzcd}\]
+\caption{verification of coarse moduli}
+\label{fig:coarsemoduliofell}
+\end{figure}
+\end{claim}
+\begin{proof}
+We check it by the definition of coarse moduli, see Figure \ref{fig:coarsemoduliofell}.
+\subsection*{\underline{Step1}}
+Construct $\eta$. To define \textcolor{ashgrey}{($S \in \Sch_{\mathbb{Z}\left[\frac{1}{6} \right]}$)}
+$$\eta(S): \mathcal{M}\!\left[\textstyle \frac{1}{6}\right] \longrightarrow \mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right] \cong \Gamma(S,\mathcal{O}_S),$$
+we first find differential locally (locally lift to $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$)\footnote{We know that $\Omega_{E/S} \cong \pi^*e^*\Omega_{E/S} \stackrel{loc}{\cong} \pi^*\mathcal{O}_S \cong \mathcal{O}_X$ locally.}, and then take quotient. You need to check:
+\begin{itemize}
+\item $j$-function doesn't depend on the choice of differential, so $\eta(S)$ is well-defined;
+\item $\eta$ is really a functor.
+\end{itemize}
+\subsection*{\underline{Step2}}
+We know that GIT quotient is a categorical quotient, so there exists unique $h_{\beta}$ such that 
+$$h_{\beta} \circ \text{quotient} = \alpha' \circ \text{forget}.$$
+You need to check $\alpha'=h_{\beta} \circ \eta$.
 \end{proof}
 \subsection{Level structure}
 \subsection{Complex case}
