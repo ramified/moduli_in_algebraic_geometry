@@ -70,7 +70,7 @@
 \newtheorem*{easyex}{Easy exercise}
 %\renewcommand\thefootnote{\fnsymbol{footnote}}
 %dont use number as footnote symbol, use this command to change
-
+\DeclareMathOperator{\chara}{\operatorname{char}}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\dist}{dist}
 \DeclareMathOperator{\vol}{vol}
@@ -884,7 +884,7 @@ The scheme $\mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \fr
 We check it by the definition of coarse moduli, see Figure \ref{fig:coarsemoduliofell}.
 \subsection*{\underline{Step1}}
 Construct $\eta$. To define \textcolor{ashgrey}{($S \in \Sch_{\mathbb{Z}\left[\frac{1}{6} \right]}$)}
-$$\eta(S): \mathcal{M}\!\left[\textstyle \frac{1}{6}\right] \longrightarrow \mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right] \cong \Gamma(S,\mathcal{O}_S),$$
+$$\eta(S): \mathcal{M}\!\left[\textstyle \frac{1}{6}\right](S) \longrightarrow \mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](S) \cong \Gamma(S,\mathcal{O}_S),$$
 we first find differential locally (locally lift to $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$)\footnote{We know that $\Omega_{E/S} \cong \pi^*e^*\Omega_{E/S} \stackrel{loc}{\cong} \pi^*\mathcal{O}_S \cong \mathcal{O}_X$ locally.}, and then take quotient. You need to check:
 \begin{itemize}
 \item $j$-function doesn't depend on the choice of differential, so $\eta(S)$ is well-defined;
@@ -895,7 +895,12 @@ We know that GIT quotient is a categorical quotient, so there exists unique $h_{
 $$h_{\beta} \circ \text{quotient} = \alpha' \circ \text{forget}.$$
 You need to check $\alpha'=h_{\beta} \circ \eta$.
 \end{proof}
+\subsection*{\underline{Step3}}
+For any closed field $k=\bar{k}$, $\chara k\neq 2,3$, the map
+$$\eta(k): \mathcal{M}\!\left[\textstyle \frac{1}{6}\right](k) \longrightarrow \mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](k) \cong k$$
+is an isomorphism.
 \subsection{Level structure}
+The second possible extra structure is the level structure.
 \subsection{Complex case}
 In this subsection, we will show that how the moduli is connected to the modular curve $\mathcal{H}/\SL_2(\mathbb{Z})$.
 

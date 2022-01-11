@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  11 JAN 2022 00:30
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  11 JAN 2022 11:00
 entering extended mode
 **./moduli.tex
 (moduli.tex
@@ -1336,27 +1336,20 @@ Overfull \hbox (16.03966pt too wide) detected at line 852
  []
 
 [12] [13] (moduli.bbl) [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 921.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 921.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 926.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 926.
  (moduli.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 921.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 921.
-
-
-Package rerunfilecheck Warning: File `moduli.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `moduli.out':
-(rerunfilecheck)             Before: 0A9011E3286562DAE07DF61251D95159
-(rerunfilecheck)             After:  140FB05FF67E5069F16E1102767AA9DF.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 921.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 926.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 926.
+Package rerunfilecheck Info: File `moduli.out' has not changed.
+(rerunfilecheck)             Checksum: 6E8DFB3AC56C41E3D1FD74FF3E53B0B4.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 926.
  ) 
 Here is how much of TeX's memory you used:
- 36977 strings out of 427748
- 677142 string characters out of 3150981
- 786701 words of memory out of 3000000
- 40355 multiletter control sequences out of 15000+200000
+ 36979 strings out of 427748
+ 677153 string characters out of 3150981
+ 786721 words of memory out of 3000000
+ 40357 multiletter control sequences out of 15000+200000
  547555 words of font info for 101 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  65i,26n,360p,3255b,1151s stack positions out of 5000i,500n,10000p,200000b,50000s
