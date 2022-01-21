@@ -316,6 +316,8 @@ Can we find $(X,\pi,\sigma_1,\sigma_2,\sigma_3)$ satisfying all conditions in $\
 Still unknown. From Dr. Johannes Anschütz, the map
 $$\mathbb{P}_k^1 \longrightarrow \Spec k \longrightarrow \Spec k[t]/t^2$$
 is proper but not flat(sadly we can't find any section). If the base scheme $S$ is reduced, then maybe the flatness can be checked fiberwise?
+
+Another obstruction for the flatness comes from \cite[26.2.11]{FOAG}.
 \end{answer}
 \begin{easyex}\hspace{1cm}
 
@@ -900,6 +902,30 @@ You need to check $\alpha'=h_{\beta} \circ \eta$.
 For any closed field $k=\bar{k}$, $\chara k\neq 2,3$, the map
 $$\eta(k): \mathcal{M}\!\left[\textstyle \frac{1}{6}\right](k) \longrightarrow \mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](k) \cong k$$
 is an isomorphism.
+\subsection{Crash course on Abelian variety}
+When I was reading some materials about the level structure of elliptic curve, I realised that I'm still not so familiar with some fine structure of elliptic curve, such as $E[n]$. It's usually done as the special case of the Abelian variety\footnote{There are thousands of books talking about elliptic curves, but most of them are unrelavent to us: some restrict themselves to the complex field $\mathbb{C}$, some focus on the applications of cryptography, and some prove every result by the Weierestrass equation, in a very down to earth but ugly way. }. The standard reference is \cite{mumford1974abelian,milne1986abelian}, but we would follow instead \cite{edixhoven2012abelian}\footnote{Be careful that there are a lot of versions in the internet, and the latest verion (as far as I know) is \href{http://van-der-geer.nl/~gerard/AV.pdf}{here}.} since it's much less disgusting to read.
+
+As a lazy guy, I would instead list main tasks in \cite{edixhoven2012abelian}:
+\begin{itemize}
+\item State the theorem of cubic, and show that 
+$$[n]^*\mathcal{L} \cong \mathcal{L}^{\otimes \frac{n(n+1)}{2}} \otimes ([-1]^* \mathcal{L})^{\otimes \frac{n(n-1)}{2}}$$
+\item Understand torsion points $X[n]$.
+\begin{itemize}
+\item Define isogeny(5.3) and isogenous(5.13);
+\item Give the canonical factorization of an isogeny(5.8)\footnote{Analog: any field extension can be uniquely written as an inseparable extension with a separable extension.};
+\item Examples of isogeny: $[n], F, V$\footnote{$[n]$ is an isogeny when $n \neq 0$; $F$ and $V$ are defined when $\chara k=p>0$.}. Find their relationships(5.19, 5.20);
+\item Describe the kernel of isogeny: $X[n], X[F], X[V]$(5.11, 5.22, not completed). 
+
+In char $p$ case, define the relevant notions: $p$-rank, ordinary, supersingular(5.23, 5.25). 
+
+When $p=2,3$, describe the criterian for an elliptic curve to be supersingular(5.26, 5.27). 
+
+When $p=2$, describe the action $\alpha_2$ on $X \subseteq \mathbb{P}_k^2: y^2z+yz^2=x^3$, and show that $X[F] \cong \alpha_2$(5.28). 
+
+For more informations about supersingular curve, see \href{https://en.wikipedia.org/wiki/Supersingular_elliptic_curve}{wiki} and \cite[Proposition 8.2]{saito2014fermat}. 
+\end{itemize}
+\item Understand Picard group, dual, Weil pairing and Tate modules. I haven't read about it.
+\end{itemize} 
 \subsection{Level structure}
 The second possible extra structure is the level structure.
 \subsection{Complex case}

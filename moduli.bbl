@@ -1,4 +1,9 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{edixhoven2012abelian}
+Bas Edixhoven, Gerard Van~der Geer, and Ben Moonen.
+\newblock Abelian varieties.
+\newblock \url{http://van-der-geer.nl/~gerard/AV.pdf}, 2012.
 
 \bibitem{frăţilă2020revisiting}
 Dragoş Frăţilă.
@@ -26,6 +31,21 @@ Victoria Hoskins.
 Daniel Huybrechts and Manfred Lehn.
 \newblock {\em The geometry of moduli spaces of sheaves}.
 \newblock Cambridge University Press, 2010.
+
+\bibitem{milne1986abelian}
+James~S Milne.
+\newblock Abelian varieties.
+\newblock {\em Arithmetic geometry}, pages 103--150, 1986.
+
+\bibitem{mumford1974abelian}
+David Mumford, Chidambaran~Padmanabhan Ramanujam, and I︠U︡~I Manin.
+\newblock {\em Abelian varieties}, volume~3.
+\newblock Oxford university press Oxford, 1974.
+
+\bibitem{saito2014fermat}
+Takeshi Saito.
+\newblock {\em Fermat's Last Theorem: The Proof}, volume 245.
+\newblock American Mathematical Soc., 2014.
 
 \bibitem{modulicurve}
 Johannes Schmitt.
