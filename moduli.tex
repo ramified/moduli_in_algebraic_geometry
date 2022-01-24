@@ -236,6 +236,9 @@ From this proposition, we can always view the object as some functor satisfying 
 \item We can define scheme canonically, without explicit constructions;
 \item We can enlarge our area of research, and think them as the defective schemes. We will see some reasonable functors which is represented not by schemes, but by stacks.
 \end{itemize}
+\begin{remark}
+By \cite[1.3.6]{vistoli2004notes}, any representable functor (after restricted to specific subcategory of $\mathcal{C}=\Schk$) is a sheaf in Zariski/étale/fppf/fpqc topology.
+\end{remark}
 \subsection{Corepresentable functor}
 This is the concept "dual to" the representable functor. To motivate, we begin with the equivalent definition of representable functor:
 \begin{defn}[Representatable functor, equivalent definition]
@@ -417,7 +420,9 @@ By \cite[Definition 2.16]{moduliGIT}, the universal family is $(\mathbb{P}_k^1, 
 \end{eg}
 
 coarse moduli space and some related concepts. 
-\subsection{Stack}
+\subsection{Bigger category}
+We need to define Grothendieck Topology and site, discussing how this generalized the language of scheme. Maybe I can follow \cite{moduliGIT}.
+
 We need to define stack, algebraic stack, Deligne-Munford stack and some related concepts. Maybe I can follow \href{https://sites.math.washington.edu/~jarod/moduli.pdf}{Notes on Stacks and Moduli}. It seems like so nicely written.
 \subsection{Goal}
 ???
@@ -436,31 +441,29 @@ See \cite{moduliGIT} for the following concepts:
 \item stable, semistable, unstable, and polystable.
 \item Hilbert-Mumford Criterion and Fundamental Theorem in GIT.
 \end{itemize}
-
-% https://q.uiver.app/?q=WzAsNyxbMCwzLCJcXHN1YnN0YWNre1xcdGV4dHtnZW9tZXRyaWMgcXVvdGllbnR9fSJdLFsxLDMsIlxcc3Vic3RhY2t7XFx0ZXh0e2dvb2QgcXVvdGllbnR9fSJdLFsyLDMsIlxcc3Vic3RhY2t7XFx0ZXh0e2NhdGVnb3JpY2FsIHF1b3RpZW50fX0iXSxbMSwyLCJcXHN1YnN0YWNre1xcdGV4dHtyZWR1Y3RpdmUgR0lUIHF1b3RpZW50fX0iXSxbMiwxLCJcXHN1YnN0YWNre1xcdGV4dHt1bml2ZXJzYWx9XFxcXCBcXHRleHR7Y2F0ZWdvcnVjYWwgcXVvdGllbnR9fSJdLFswLDEsIlxcc3Vic3RhY2t7XFx0ZXh0e3VuaXZlcnNhbH1cXFxcIFxcdGV4dHtnZW9tZXRyaWMgcXVvdGllbnR9fSJdLFswLDAsIlxcc3Vic3RhY2t7XFx0ZXh0e2ZwcGYgcXVvdGllbnR9fSJdLFswLDEsIiIsMCx7ImxldmVsIjoyfV0sWzEsMiwiIiwwLHsibGV2ZWwiOjJ9XSxbMywxLCJcXHRleHR7VGhtIDQuMzB9IiwwLHsibGV2ZWwiOjJ9XSxbMywwLCJcXHRleHR7c3RhYmxlfSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDQsIiIsMCx7ImxldmVsIjoyfV0sWzUsMCwiIiwwLHsibGV2ZWwiOjJ9XSxbNCwyLCIiLDEseyJsZXZlbCI6Mn1dLFs2LDUsIiIsMCx7ImxldmVsIjoyfV0sWzAsNiwiXFx0ZXh0e2Fzc3VtcHRpb259IiwwLHsib2Zmc2V0IjotNSwiY3VydmUiOi01LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+See \cite{edixhoven2012abelian} for the following concepts:
+\begin{itemize}
+\item universal categorical quotients, universal geometric quotients.(4.5(iv), 4.12)
+\item fppf quotient.(4.28)
+\end{itemize}
+% % https://q.uiver.app/?q=WzAsOSxbMCw0LCJcXHN1YnN0YWNre1xcdGV4dHtnZW9tZXRyaWMgcXVvdGllbnR9fSJdLFsxLDQsIlxcc3Vic3RhY2t7XFx0ZXh0e2dvb2QgcXVvdGllbnR9fSJdLFsyLDQsIlxcc3Vic3RhY2t7XFx0ZXh0e2NhdGVnb3JpY2FsIHF1b3RpZW50fX0iXSxbMSwzLCJcXHN1YnN0YWNre1xcdGV4dHtyZWR1Y3RpdmUgR0lUIHF1b3RpZW50fX0iXSxbMiwyLCJcXHN1YnN0YWNre1xcdGV4dHt1bml2ZXJzYWx9XFxcXCBcXHRleHR7Y2F0ZWdvcnVjYWwgcXVvdGllbnR9fSJdLFswLDIsIlxcc3Vic3RhY2t7XFx0ZXh0e3VuaXZlcnNhbH1cXFxcIFxcdGV4dHtnZW9tZXRyaWMgcXVvdGllbnR9fSJdLFswLDEsIlxcc3Vic3RhY2t7XFx0ZXh0e2ZwcGYgcXVvdGllbnR9fSJdLFsxLDEsIlxcc3Vic3RhY2t7XFx0ZXh0e2ZwcWMgcXVvdGllbnR9fSJdLFswLDAsIlxcc3Vic3RhY2t7XFx0ZXh0e8OpdGFsZSBxdW90aWVudH19Il0sWzAsMSwiIiwwLHsibGV2ZWwiOjJ9XSxbMSwyLCIiLDAseyJsZXZlbCI6Mn1dLFszLDEsIlxcc3Vic3RhY2t7XFx0ZXh0e1RobSA0LjMwfX0iLDAseyJsZXZlbCI6Mn1dLFszLDAsIlxcc3Vic3RhY2t7XFx0ZXh0e3N0YWJsZX19IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsNCwiIiwwLHsibGV2ZWwiOjJ9XSxbNSwwLCIiLDAseyJsZXZlbCI6Mn1dLFs0LDIsIiIsMSx7ImxldmVsIjoyfV0sWzYsNSwiIiwwLHsibGV2ZWwiOjJ9XSxbMCw2LCJcXHN1YnN0YWNre1xcdGV4dHthc3N1bXB0aW9uIGlufSBcXFxcIFxcdGV4dHtcXGNpdGVbKDQuMzUpKGlpKV17ZWRpeGhvdmVuMjAxMmFiZWxpYW59fX0iLDAseyJvZmZzZXQiOi01LCJjdXJ2ZSI6LTUsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDcsIiIsMCx7ImxldmVsIjoyfV0sWzgsNiwiIiwwLHsibGV2ZWwiOjJ9XV0=
 \[\begin{tikzcd}
-	{\substack{\text{fppf quotient}}} \\
+	{\substack{\text{étale quotient}}} \\
+	{\substack{\text{fppf quotient}}} & {\substack{\text{fpqc quotient}}} \\
 	{\substack{\text{universal}\\ \text{geometric quotient}}} && {\substack{\text{universal}\\ \text{categorucal quotient}}} \\
 	& {\substack{\text{reductive GIT quotient}}} \\
 	{\substack{\text{geometric quotient}}} & {\substack{\text{good quotient}}} & {\substack{\text{categorical quotient}}}
-	\arrow[Rightarrow, from=4-1, to=4-2]
-	\arrow[Rightarrow, from=4-2, to=4-3]
-	\arrow["{\text{Thm 4.30}}", Rightarrow, from=3-2, to=4-2]
-	\arrow["{\text{stable}}", dashed, from=3-2, to=4-1]
-	\arrow[Rightarrow, from=2-1, to=2-3]
-	\arrow[Rightarrow, from=2-1, to=4-1]
-	\arrow[Rightarrow, from=2-3, to=4-3]
+	\arrow[Rightarrow, from=5-1, to=5-2]
+	\arrow[Rightarrow, from=5-2, to=5-3]
+	\arrow["{\substack{\text{Thm 4.30}}}", Rightarrow, from=4-2, to=5-2]
+	\arrow["{\substack{\text{stable}}}", dashed, from=4-2, to=5-1]
+	\arrow[Rightarrow, from=3-1, to=3-3]
+	\arrow[Rightarrow, from=3-1, to=5-1]
+	\arrow[Rightarrow, from=3-3, to=5-3]
+	\arrow[Rightarrow, from=2-1, to=3-1]
+	\arrow["{\substack{\text{assumption in} \\ \text{\cite[(4.35)(ii)]{edixhoven2012abelian}}}}", shift left=5, curve={height=-30pt}, dashed, from=5-1, to=2-1]
+	\arrow[Rightarrow, from=2-1, to=2-2]
 	\arrow[Rightarrow, from=1-1, to=2-1]
-	\arrow["{\text{assumption}}", shift left=5, curve={height=-30pt}, dashed, from=4-1, to=1-1]
-\end{tikzcd}\]
-% Here something should be verified actually. I haven't read it.
-
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHRleHR7c3RhYmxlfSJdLFsxLDAsIlxcdGV4dHtwb2x5c3RhYmxlfSJdLFsyLDAsIlxcdGV4dHtzZW1pc3RhYmxlfSJdLFsyLDEsIlxcdGV4dHt1bnN0YWJsZX0iXSxbMCwxLCIiLDAseyJsZXZlbCI6Mn1dLFsxLDIsIiIsMCx7ImxldmVsIjoyfV1d
-\[\begin{tikzcd}[row sep=0mm]
-	{\text{stable}} & {\text{polystable}} & {\text{semistable}} \\
-	&& {\text{unstable}}
-	\arrow[Rightarrow, from=1-1, to=1-2]
-	\arrow[Rightarrow, from=1-2, to=1-3]
 \end{tikzcd}\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic object}
