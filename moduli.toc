@@ -20,13 +20,13 @@
 \contentsline {subsection}{\tocsubsection {}{4.1}{Definition and basic properties of elliptic curve}}{10}{subsection.4.1}% 
 \contentsline {subsection}{\tocsubsection {}{4.2}{Differential}}{13}{subsection.4.2}% 
 \contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{14}{section*.2}% 
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{14}{section*.3}% 
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{14}{section*.4}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{15}{section*.3}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{15}{section*.4}% 
 \contentsline {subsection}{\tocsubsection {}{4.3}{Crash course on Abelian variety}}{15}{subsection.4.3}% 
-\contentsline {subsection}{\tocsubsection {}{4.4}{Level structure}}{15}{subsection.4.4}% 
-\contentsline {subsection}{\tocsubsection {}{4.5}{Complex case}}{15}{subsection.4.5}% 
-\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{15}{section.5}% 
-\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{15}{subsection.5.1}% 
-\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{15}{subsection.5.2}% 
+\contentsline {subsection}{\tocsubsection {}{4.4}{Level structure}}{16}{subsection.4.4}% 
+\contentsline {subsection}{\tocsubsection {}{4.5}{Complex case}}{16}{subsection.4.5}% 
+\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{16}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{16}{subsection.5.1}% 
+\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{16}{subsection.5.2}% 
 \contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{16}{section.6}% 
 \contentsline {section}{\tocsection {}{}{References}}{16}{section*.5}% 

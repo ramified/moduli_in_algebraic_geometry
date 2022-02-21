@@ -708,6 +708,8 @@ Here is the result coming from \cite{modulicurve} which we really care:
     \caption{The moduli of curves}
         
 \end{figure} 
+
+If you're interested on the automorphism of these moduli spaces, then you can check \cite{massarenti2013}.%Which I haven't checked
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Moduli of elliptic curve}
 The elliptic curve theory is especially rich compared to the other curves. That's why we'd like to put it a special section.
@@ -754,6 +756,7 @@ $$\phi^p_q \text{ is surj } \Longrightarrow \begin{cases}
 \end{theorem}
 
 We can use Theorem \ref{thm:cohbc} to compute some pushforward of sheaves, and the results are shown here:
+
 \begin{table}[ht]
 \[
 \begin{array}{|r|c|c|c|c|c|c|c|}
@@ -765,6 +768,8 @@ n                                   & -3                    & -2                
 \pi_* \Omega_{E/S}(ne)              & 0                     & 0                     & 0           & \text{l.b.}   & \text{l.b.} & \text{rank 2} & \text{rank 3} \\ \hline
 \end{array}
 \]
+    \caption{results of higher pushforward}
+    \label{table:higherpushforward}
 \end{table}
 \begin{eg}[{case of $\rderiv{p}{\pi_*} \mathcal{O}_E$}]
 Let $X=E$ be an elliptic curve over $S$, $\mathcal{F}=\mathcal{O}_X$. Obviously $\phi_q^2,\phi_q^{-1}$ are surjective; the map $\phi_q^{0}$ is also surjective\footnote{see the hint in \cite[28.1.H]{FOAG}.}. By using Theorem \ref{thm:cohbc} (see the Figure \ref{fig:cohbc1}) we obtain that $$\rderiv{p}{\pi_*} \mathcal{O}_X= \begin{cases}
@@ -893,8 +898,18 @@ color=red,
 In the case that $X=E$ is an elliptic curve over $S$, we know more about the Hodge bundle $\pi_*\Omega_{E/S}$ than just a line bundle:
 \begin{itemize}
 \item $(\pi_*\Omega_{E/S})^{E}=\pi_*\Omega_{E/S}$ since any global differential on an Abelian variety is invarient; % Comes from https://mathoverflow.net/questions/334428/definition-of-an-invariant-differential-of-an-elliptic-curve
-\item By \cite[Proposition 3.15]{saito2014fermat}, the line bundle $\omega_{E/S}:=e^*\Omega_{E/S}$ is isomorphic to the Hodge bundle $\pi_*\Omega_{E/S}$. As a corollary, we get
+\item By \cite[Proposition 3.15]{saito2014fermat}, the line bundle $\omega_{E/S}:=e^*\Omega_{E/S}$ is isomorphic to the Hodge bundle $\pi_*\Omega_{E/S}$.
+By the conormal exact sequence, $\omega_{E/S}$ is also isomorphic to  $\mathcal{I}/\mathcal{I}^2:=e^* \mathcal{I}$ where $\mathcal{I}:= \mathcal{O}_E(-e)$ corresponds to the Cartier divisor cut by $e$. So
+$$\pi_*\Omega_{E/S} \quad\cong\quad \omega_{E/S}:=e^*\Omega_{E/S} \quad\cong\quad \mathcal{I}/\mathcal{I}^2:=e^* \mathcal{I}.$$
+As a corollary, we get
 $$\Omega_{E/S} \stackrel{\text{gp sch}}{\cong} \pi^* e^* \Omega_{E/S} = \pi^* \omega_{E/S} \cong \pi^* \pi_* \Omega_{E/S}.$$
+and
+\begin{equation}\label{eq:pullbackofe}
+\begin{aligned}
+e^* \big(\mathcal{O}_E(ne)\big) &\cong e^* \big(\mathcal{I}^{\otimes (-n)}\big) \cong (e^* \mathcal{I})^{\otimes (-n)} \cong \omega_{E/S}^{\otimes (-n)}\\
+e^*\big(\Omega_{E/S}(ne)\big) &\cong e^*\Omega_{E/S} \otimes e^* \big(\mathcal{O}_E(ne)\big) \cong \omega_{E/S}^{\otimes (-n+1)}
+\end{aligned}
+\end{equation}
 \end{itemize}
 \end{remark}
 \subsection{Differential}
@@ -908,7 +923,10 @@ $$\mathcal{A}_S:=\left\{(E,\omega)  \;\middle|\; \begin{aligned}
 \end{aligned}
  \right\}$$
  
-   $(E,\omega) \sim_S (E',\omega')$ if there exists an isomorphism of elliptic curves $\phi:E \longrightarrow E'$ such that $\omega'=\phi^* \circ \omega'$.
+   $(E,\omega) \sim_S (E',\omega')$ if there exists an isomorphism of elliptic curves $\phi:E \longrightarrow E'$ over $S$ such that $\omega=\phi^* (\omega')$, where
+   \footnote{See \cite[21.2.27]{FOAG} and \cite[18.2.E]{FOAG} for the construction of $\phi^*$.}
+   $$\phi^*: \Gamma(E',\Omega_{E'/S}) \longrightarrow\Gamma(E',\phi_*\Omega_{E/S})\cong \Gamma(E,\Omega_{E/S})$$
+   is got by pulling back $1$-forms from $E'$ to $E$.
    
    For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
       $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (E,\omega) \longmapsto \big(f^*E,f^*  \omega\big)$$
@@ -1026,6 +1044,7 @@ Here we refer to the survey \cite{xu2020kstability}, or the \href{https://math.m
 The course lecture note \href{https://userpage.fu-berlin.de/hoskins/moduli_and_GIT.html}{``Moduli and GIT"} would be a perfect survey to begin with. We also refer to \cite{huybrechts2010geometry}. It's not easy to read, but It's in some sense completed, and everybody refers it.
 
 For a variant, you may get some informations of moduli of $G$-bundles over elliptic curve in \cite{frăţilă2020revisiting}.
+
 \bibliographystyle{plain}
 \bibliography{reference}
 
