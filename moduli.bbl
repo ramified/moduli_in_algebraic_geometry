@@ -37,6 +37,12 @@ Daniel Huybrechts and Manfred Lehn.
 \newblock {\em The geometry of moduli spaces of sheaves}.
 \newblock Cambridge University Press, 2010.
 
+\bibitem{massarenti2013}
+Alex Massarenti.
+\newblock The automorphism group of m̄g,n.
+\newblock {\em Journal of the London Mathematical Society}, 89(1):131–150,
+  Sep 2013.
+
 \bibitem{milne1986abelian}
 James~S Milne.
 \newblock Abelian varieties.
@@ -65,7 +71,7 @@ The {Stacks project authors}.
 \bibitem{FOAG}
 Ravi Vakil.
 \newblock {MATH 216: Foundations of Algebraic Geometry}.
-\newblock \url{https://math.stanford.edu/\textasciitilde vakil/216blog/}.
+\newblock \url{https://math.stanford.edu/~vakil/216blog/}.
 
 \bibitem{xu2020kstability}
 Chenyang Xu.

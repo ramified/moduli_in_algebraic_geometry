@@ -1,0 +1,161 @@
+\section{Basic object}
+In this section, we present some algebraic geometric objects which can be viewed as moduli.
+
+Here is a picture showing the relationships of these objects:
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZABgBpiBdUkANwEMAbAVxiRAB12BbOnACwBGA4AAUAvgDUQY0uky58hFGQCMVWoxZtOPfkNFidvPgGNGwAGJjpskBmx4CRFaTXV6zVog7sA4gCcACn9SCQBKGzkHRWdSACZ1Dy1vTgBFJggcSLt5RyUSeMTNLx8ACSwGAWz7BScUOML3Yu12CwY6AHMoQPDpdRgoDvgiUAAzfwguJDIQHAgkFRkxianEGbmkOKWQccnN6g3EAGZt3dWXWfnj05WkABYDq5PbM-3LpABWMQoxIA
+\[\begin{tikzcd}[row sep={12mm,between origins}, column sep={15mm,between origins}]
+\mathbb{P}V \arrow[d] \arrow[rd] &                                 &           \\
+\mathbb{P}\mathcal{F} \arrow[rd] & {\Gr(r,V)} \arrow[d] \arrow[rd] &           \\
+\Hilb \arrow[r]                  & \Quot                           & \Flagd(V)
+\end{tikzcd}\]
+\subsection{Projective space}
+We begin with a basic extended moduli problem, and then gradually make some variations.
+\begin{eg}[Moduli of line bundle with base-point-free sections is represented by $\mathbb{P}_k^n$]
+Fix $n \geqslant 0$, we define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{L},s_0,\ldots,s_n)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{L} \in \Pic(S)\\[-1mm]
+& s_i \in \Gamma(S,\mathcal{L}) \text{ with no common zero }
+\end{aligned}
+ \right\}$$
+ 
+  $(\mathcal{L},s_0,\ldots,s_n) \sim_S (\mathcal{L}',s_0',\ldots,s_n')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\phi(S):\Gamma(S,\mathcal{L}) \longrightarrow \Gamma(S,\mathcal{L}')$ sends $s_i$ to $s_i'$.
+  
+  For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+     $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},s_0,\ldots,s_n) \longmapsto (f^*\mathcal{L},f^*s_0,\ldots,f^*s_n)$$
+     
+By \cite[15.3.F, 16.4.1]{FOAG}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}_k^n$.
+\end{eg}
+We also have the coordinate-free version.
+\begin{eg}[{Coordinate-free projective space $\mathbb{P}V^{\vee}=\Proj(\Sym^{\bullet} V)$, see \cite[4.5.12]{FOAG}}]
+Fix a $k$-vector spcace $V$ of finite dimension. We define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{L},\lambda)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{L} \in \Pic(S)\\[-1mm]
+& \lambda:V \longrightarrow \Gamma(S,\mathcal{L}) \text{ is base-point-free }
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{L},\lambda) \sim_S (\mathcal{L}',\lambda')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\lambda'=\phi(S) \circ \lambda$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},\lambda) \longmapsto \big(f^*\mathcal{L},f^*\circ \lambda:V \rightarrow \Gamma(T,f^*\mathcal{L})\big)$$
+      
+      By \cite[16.4.E]{FOAG}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}V^{\vee}$.
+\end{eg}
+Now we generalize it to the projective bundle, for this we should fix a scheme $X \in \Ob(\Schk)$ and a locally free coherent sheaf $\mathcal{F} \in \Coh(X)$, and consider the moduli problem in the category $\SchX$ of locally Noetherian schemes over $X$, rather than $\Schk$.
+
+\begin{eg}[{Projective bundle\footnote{There is an notational abuse in \cite{FOAG}. From my personal point of view, it's better to replace $\mathbb{P}\mathcal{F}$ with $\mathbb{P}\mathcal{F}^{\vee}$ or $\mathbb{P}V^{\vee}$ with $\mathbb{P}V$ to make symbols consistent. } $\mathbb{P}\mathcal{F}=\Proj(\Sym^{\bullet} \mathcal{F})$, see \cite[17.2.3]{FOAG}}]\hspace{1cm}
+
+For $(S,\pi_S: S \longrightarrow X) \in \Ob(\SchX)$, we define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{L},\lambda)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{L} \in \Pic(S)\\[-1mm]
+& \lambda:\pi_S^* \mathcal{F} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{L}
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{L},\lambda) \sim_S (\mathcal{L}',\lambda')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\lambda'=\phi \circ \lambda$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},\lambda) \longmapsto \big(f^*\mathcal{L},f^* \lambda:\pi_T^*\mathcal{F} \twoheadrightarrow f^*\mathcal{L}\big)$$
+      
+      By \cite[Proposition 7.12]{hartshorne2013algebraic}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}\mathcal{F}$.
+\end{eg}
+
+Finally, there is also "another" natural moduli problem of $\mathbb{P}_k^n$, see \cite[Example 2.4]{modulicurve}. For the convinience of comparison with Grassmannian, we exhibit it and make some small variations here.\footnote{The reason of the variation is already explained in \cite[16.7, page 442]{FOAG}.}
+
+\begin{eg}[{Moduli of lines through the origin in $\mathbb{A}_k^{n+1}$ is represented by $\mathbb{P}_k^n$}]
+For $n \geqslant 0$, we define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{L},\pi)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{L} \in \Pic(S)\\[-1mm]
+& \pi:\mathcal{O}_S^{\oplus n+1} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{L}
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{L},\pi) \sim_S (\mathcal{L}',\pi')$ if there exists an isomorphism of line bundles $\phi:\mathcal{L} \longrightarrow \mathcal{L}'$ such that $\pi'=\phi \circ \pi$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{L},\pi) \longmapsto \big(f^*\mathcal{L},f^* \pi:\mathcal{O}_T^{\oplus n+1} \twoheadrightarrow f^*\mathcal{L}\big)$$
+      
+      By \cite[Proposition 7.12]{hartshorne2013algebraic}, the moduli functor defined by this extended moduli problem is represented by $\mathbb{P}\mathcal{F}$.
+\end{eg}
+\subsection{Grassmannian}
+It's well-written in \cite[16.7]{FOAG}. We just exhibit(copy) the moduli problem and make a short remark about the existence proof (prove the representability without explicite construction of the scheme)
+\begin{eg}[{Grassmannian $\Gr(k,n)$}]
+For $n \geqslant k \geqslant 0$, we define a moduli problem:
+$$\mathcal{A}_S:=\left\{(\mathcal{F},\pi)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{F} \in \Coh(S) \text{ locally free of rank $k$ }\\[-1mm]
+& \pi:\mathcal{O}_S^{\oplus n} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{F}
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{F},\pi) \sim_S (\mathcal{F}',\pi')$ if there exists an isomorphism of line bundles $\phi:\mathcal{F} \longrightarrow \mathcal{F}'$ such that $\pi'=\phi \circ \pi$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{F},\pi) \longmapsto \big(f^*\mathcal{F},f^* \pi:\mathcal{O}_T^{\oplus n} \twoheadrightarrow f^*\mathcal{F}\big)$$
+      
+      By \cite[16.7, page 442-443]{FOAG}, the moduli functor defined by this extended moduli problem is representable, and we denote it by $\Gr(k,n)$.
+\end{eg}
+\begin{remark}
+The idea of the proof comes from \cite[9.1.I]{FOAG}. First we prove it to be the Zariski sheaf, then we cover it with open subfunctors that are representable.
+\end{remark}
+\subsection{Flag variety, partial flag variety}
+\subsection{Hilbert scheme}
+\subsection{Quot scheme}
+The moduli space of projective hypersurfaces is a special case for this.
+\subsection{Misc}The representable functor is also used to construct the fibered product of schemes, see \cite[9.1.6-7]{FOAG} for more details.
+
+We've already met the idea of moduli in plane geometry. For example, fix two points $A$, $B$ on the plane, we wanted to find the set of points $C$ such that $\triangle ABC$ is a right triangle (resp. an isosceles triangle). We used the term ``locus" in junior high school.
+
+\begin{figure}[th]
+	\begin{minipage}[t]{.36\textwidth}
+		\centering
+
+\begin{tikzpicture}[thick,help lines/.style={thin,draw=black}]
+\def\A{\textcolor{input}{$A$}} \def\B{\textcolor{input}{$B$}}
+\def\C{\textcolor{output}{$C$}} 
+\colorlet{input}{black} \colorlet{output}{red!70!black}
+\colorlet{triangle}{orange}
+\coordinate [label=left:\A] (A) at ($ (0,0) $);
+\coordinate [label=right:\B] (B) at ($ (1.75,0.3)$);
+\coordinate (F) at ($ (A) ! 0.5 ! (B) $);
+\coordinate (G) at ($ (A) ! 2 ! (B) $);
+\node [name path=D,help lines,draw] (D) at (F) [circle through=(B)] {};
+\draw [help lines]($ (A) ! -1.2! 90:(B) $)-- ($ (A) ! 1.2! 90:(B) $);
+\draw [help lines]($ (B) ! -1.2! 90:(A) $)-- ($ (B) ! 1.2! 90:(A) $);
+%\draw [output] (A) -- (C) -- (B);
+\foreach \point in {A,B}
+\fill [white, draw={black},thin] (\point) circle (2pt);
+%\begin{pgfonlayer}{background}
+%\fill[triangle!80] (A) -- (C) -- (B) -- cycle;
+%\end{pgfonlayer}
+\end{tikzpicture}
+	\end{minipage}
+	\begin{minipage}[t]{.36\textwidth}
+\begin{tikzpicture}[thick,help lines/.style={thin,draw=black}]
+\def\A{\textcolor{input}{$A$}} \def\B{\textcolor{input}{$B$}}
+\def\C{\textcolor{output}{$C$}} 
+\colorlet{input}{black} \colorlet{output}{red!70!black}
+\colorlet{triangle}{orange}
+\coordinate [label=left:\A] (A) at ($ (0,0) $);
+\coordinate [label=right:\B] (B) at ($ (1.75,0.3)$);
+\coordinate (F) at ($ (A) ! -1 ! (B) $);
+\coordinate (G) at ($ (A) ! 2 ! (B) $);
+\node [name path=D,help lines,draw] (D) at (A) [circle through=(B)] {};
+\node [name path=E,help lines,draw] (E) at (B) [circle through=(A)] {};
+\path [name intersections={of=D and E,by={C,C'}}];
+\draw [help lines]($ (C) ! -0.2 ! (C') $)-- ($ (C) ! 1.2 ! (C') $);
+%\draw [output] (A) -- (C) -- (B);
+\foreach \point in {A,B,F,G}
+\fill [white, draw={black},thin] (\point) circle (2pt);
+%\begin{pgfonlayer}{background}
+%\fill[triangle!80] (A) -- (C) -- (B) -- cycle;
+%\end{pgfonlayer}
+\end{tikzpicture}
+	\end{minipage}
+
+\caption{``moduli space'' in Euclidean geometry}
+\end{figure}
