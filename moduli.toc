@@ -19,14 +19,14 @@
 \contentsline {section}{\tocsection {}{4}{Moduli of elliptic curve}}{14}{section.4}% 
 \contentsline {subsection}{\tocsubsection {}{4.1}{Definition and basic properties of elliptic curve}}{14}{subsection.4.1}% 
 \contentsline {subsection}{\tocsubsection {}{4.2}{Differential}}{16}{subsection.4.2}% 
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{19}{section*.2}% 
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{19}{section*.3}% 
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{19}{section*.4}% 
-\contentsline {subsection}{\tocsubsection {}{4.3}{Crash course on Abelian variety}}{19}{subsection.4.3}% 
-\contentsline {subsection}{\tocsubsection {}{4.4}{Level structure}}{20}{subsection.4.4}% 
-\contentsline {subsection}{\tocsubsection {}{4.5}{Complex case}}{20}{subsection.4.5}% 
-\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{21}{section.5}% 
-\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{21}{subsection.5.1}% 
-\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{21}{subsection.5.2}% 
-\contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{22}{section.6}% 
-\contentsline {section}{\tocsection {}{}{References}}{23}{section*.5}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{20}{section*.2}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{20}{section*.3}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{21}{section*.4}% 
+\contentsline {subsection}{\tocsubsection {}{4.3}{Crash course on Abelian variety}}{21}{subsection.4.3}% 
+\contentsline {subsection}{\tocsubsection {}{4.4}{Level structure}}{21}{subsection.4.4}% 
+\contentsline {subsection}{\tocsubsection {}{4.5}{Complex case}}{21}{subsection.4.5}% 
+\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{22}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{22}{subsection.5.1}% 
+\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{22}{subsection.5.2}% 
+\contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{23}{section.6}% 
+\contentsline {section}{\tocsection {}{}{References}}{24}{section*.5}% 
