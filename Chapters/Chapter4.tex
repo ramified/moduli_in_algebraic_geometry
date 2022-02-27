@@ -221,8 +221,8 @@ $$\mathcal{A}_S:=\left\{(E,\omega)  \;\middle|\; \begin{aligned}
       By doing so we define the moduli functor 
       $$\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]: \Sch_{\mathbb{Z}\left[\frac{1}{6} \right]} \longrightarrow \Set \qquad S \longmapsto \mathcal{A}_S/\sim_S$$
 \end{defn}
-\begin{theorem}
-The moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ is represented by $\Spec \mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$ where $\Delta=-\frac{1}{256}(4a^3+27b^2)$. Denote $R=\mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$, the universal family is $(E_R,\omega_R) \in \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](R)$, where
+\begin{theorem}[{Originally in \cite[Prop 2.5]{deligne1975courbes}}]
+The moduli functor $\widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right]$ is represented by $\Spec \mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$ where $\Delta=-16(4a^3+27b^2)$. Denote $R=\mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right]$, the universal family is $(E_R,\omega_R) \in \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](R)$, where
 \begin{equation*}
 \begin{aligned}
   E_R=\;& \Proj R[x,y,z]/\left( y^2z-(x^3+axz^2+bz^3) \right)  \\ 
@@ -318,7 +318,7 @@ Let $\tilde{\omega}:= \frac{p_2(\tilde{x_0})}{p_3(\tilde{y_0})} \in \Gamma(U,\om
 \begin{enumerate}
 \item Initially, we have
 $$\tilde{\omega}= \frac{p_2(\tilde{x_0})}{p_3(\tilde{y_0})}=\frac{\displaystyle e^*\left(\frac{x}{z} \right)}{\displaystyle e^*\left(\frac{y}{z} \right)}=e^*\left(\frac{x}{y} \right) \in \Gamma(U,e^* \mathcal{O}_{E_U}(-e))$$
-\item The isomorphism 
+\item The isomorphism \footnote{Notice that $d(x/y)$ is not a global differential on $\Omega_{E_U/U}$.}
 $$e^* \mathcal{O}_{E_U}(-e)=\mathcal{I}/\mathcal{I}^2 \stackrel{\sim}{\longrightarrow} e^* \Omega_{E_U/U} \qquad \tilde{\omega} \longmapsto e^*\Bigg( d\left(\frac{x}{y}\right) \Bigg) = \frac{xdy-ydx}{y^2}\Big|_e=-dx|_e$$
 realizes $\tilde{\omega}$ as a section on $e^*\Omega_{E_U/U}$ over $U$.
 \item The isomorphism
@@ -347,9 +347,9 @@ with $\psi^*(\omega_R)=\omega$. Now it's easy to construct an inverse map $\Psi^
 To be compatible with the notations in modular form, we rewrite
 \begin{equation*}
 \begin{aligned}
-  R=\;&\mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right] \cong \mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[g_2,g_3, \Delta^{-1} \right]  && a=-4g_2, b=-16g_3, \Delta=g_3^2-27g_3^2\\
+  R=\;&\mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[a,b, \Delta^{-1} \right] \cong \mathbb{Z}\!\left[\textstyle \frac{1}{6}\right] \left[g_2,g_3, \Delta^{-1} \right]  && a=-\frac{1}{4}g_2, b=-\frac{1}{4}g_3, \Delta=g_3^2-27g_3^2\\
   E_R=\;& \Proj R[x,y,z]/\left( y^2z-(4x^3-g_2xz^2-g_3z^3) \right) && \text{\textcolor{ashgrey}{here $x$ is different}}\\ 
-  \omega_R=\;&  \frac{x\dd z-z\dd x}{2yz}=\frac{y\dd z-z\dd y }{12x^2-g_2z^2} =\frac{x\dd y-y\dd x}{y^2+2g_2xz+3g_3z^2} &&\text{whenever it's defined.}\\ 
+  \omega_R=\;&  \frac{x\dd z-z\dd x}{yz}=\frac{2(y\dd z-z\dd y) }{12x^2-g_2z^2} =\frac{2(x\dd y-y\dd x)}{y^2+2g_2xz+3g_3z^2} &&\text{whenever it's defined.}\\ 
 \end{aligned}
 \end{equation*}
 
@@ -396,11 +396,11 @@ we first find differential locally (locally lift to $\widetilde{\mathcal{M}}\!\l
 We know that GIT quotient is a categorical quotient, so there exists unique $h_{\beta}$ such that 
 $$h_{\beta} \circ \text{quotient} = \alpha' \circ \text{forget}.$$
 You need to check $\alpha'=h_{\beta} \circ \eta$.
-\end{proof}
 \subsectiondisappear*{\underline{Step3}}
 For any closed field $k=\bar{k}$, $\chara k\neq 2,3$, the map
 $$\eta(k): \mathcal{M}\!\left[\textstyle \frac{1}{6}\right](k) \longrightarrow \mathbb{G}_m\backslash \widetilde{\mathcal{M}}\!\left[\textstyle \frac{1}{6}\right](k) \cong k$$
 is an isomorphism.
+\end{proof}
 \subsection{Crash course on Abelian variety}
 When I was reading some materials about the level structure of elliptic curve, I realised that I'm still not so familiar with some fine structure of elliptic curve, such as $E[n]$. It's usually done as the special case of the Abelian variety\footnote{There are thousands of books talking about elliptic curves, but most of them are unrelavent to us: some restrict themselves to the complex field $\mathbb{C}$, some focus on the applications of cryptography, and some prove every result by the Weierestrass equation, in a very down to earth but ugly way. }. The standard reference is \cite{mumford1974abelian,milne1986abelian}, but we would follow instead \cite{edixhoven2012abelian}\footnote{Be careful that there are a lot of versions in the internet, and the latest verion (as far as I know) is \href{http://van-der-geer.nl/~gerard/AV.pdf}{here}. Unless otherwise specified we cite for the main part of the text rather than the exercises.} since it's much less disgusting to read.
 
