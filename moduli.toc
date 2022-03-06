@@ -29,4 +29,5 @@
 \contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{22}{subsection.5.1}% 
 \contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{22}{subsection.5.2}% 
 \contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{23}{section.6}% 
-\contentsline {section}{\tocsection {}{}{References}}{24}{section*.5}% 
+\contentsline {section}{\tocsection {}{7}{After FOAG: the future plan}}{24}{section.7}% 
+\contentsline {section}{\tocsection {}{}{References}}{25}{section*.5}% 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  2 MAR 2022 00:13
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  7 MAR 2022 00:22
 entering extended mode
 **./moduli.tex
 (moduli.tex
@@ -1350,7 +1350,8 @@ File: pgflibraryshapes.misc.code.tex 2019/01/05 v3.1 (3.1)
 \c@remarks=\count332
  (moduli.aux
 (Chapters/Chapter1.aux) (Chapters/Chapter2.aux) (Chapters/Chapter3.aux)
-(Chapters/Chapter4.aux) (Chapters/Chapter5.aux) (Chapters/Chapter6.aux))
+(Chapters/Chapter4.aux) (Chapters/Chapter5.aux) (Chapters/Chapter6.aux)
+(Chapters/Chapter7.aux))
 \openout1 = `moduli.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 184.
@@ -1518,21 +1519,28 @@ Overfull \vbox (1.35724pt too high) has occurred while \output is active []
 
 
 ]
-(moduli.bbl
+\openout2 = `Chapters/Chapter7.aux'.
+
+
+(Chapters/Chapter7.tex) [24
+
+
+] (moduli.bbl
 Missing character: There is no ︠ in font [lmroman9-regular]:mapping=tex-text;!
 Missing character: There is no ︡ in font [lmroman9-regular]:mapping=tex-text;!
-) [24
+) [25
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
- (moduli.aux (Chapters/Chapter1.aux) (Chapters/Chapter2.aux)
-(Chapters/Chapter3.aux) (Chapters/Chapter4.aux) (Chapters/Chapter5.aux)
-(Chapters/Chapter6.aux))
+ (moduli.aux
+(Chapters/Chapter1.aux) (Chapters/Chapter2.aux) (Chapters/Chapter3.aux)
+(Chapters/Chapter4.aux) (Chapters/Chapter5.aux) (Chapters/Chapter6.aux)
+(Chapters/Chapter7.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 225.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 Package rerunfilecheck Info: File `moduli.out' has not changed.
-(rerunfilecheck)             Checksum: EFBF6C5FA25E161BC5AF23D0B63252F7.
+(rerunfilecheck)             Checksum: F39EB97E5582B50B6F55EA5BE42DDC12.
 
 
 LaTeX Warning: There were undefined references.
@@ -1542,12 +1550,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 37789 strings out of 427748
- 689714 string characters out of 3150981
- 796133 words of memory out of 3000000
- 41113 multiletter control sequences out of 15000+200000
+ 37797 strings out of 427748
+ 689868 string characters out of 3150981
+ 796596 words of memory out of 3000000
+ 41114 multiletter control sequences out of 15000+200000
  547555 words of font info for 101 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  69i,26n,362p,3255b,1151s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on moduli.pdf (24 pages).
+Output written on moduli.pdf (25 pages).
