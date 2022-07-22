@@ -30,6 +30,11 @@ $$\iota: \mathcal{C} \longrightarrow \mathcal{C}' \qquad X \longmapsto h_X:=\Mor
 Recall that the Yoneda's lemma gives us the isomorphism
 $$\Mor_{\mathcal{C}'}(h_X,F)\cong F(X).$$
 \end{proof}
+\begin{warning}
+The functor $\iota: \mathcal{C} \longrightarrow \mathcal{C}'$ may not preserve colimits! For example, for $\mathcal{C}=\Sch_{\mathbb{Z}}$, the colimit of schemes
+$$\Spec \mathbb{Z}/p\mathbb{Z} \longrightarrow \Spec \mathbb{Z}/p^2\mathbb{Z} \longrightarrow\Spec \mathbb{Z}/p^2\mathbb{Z} \longrightarrow \cdots$$
+is $\Spec \mathbb{Z}_p$ (in $\mathcal{C}$) or $\Spf \mathbb{Z}_p$ (in $\mathcal{C}'$).\footnote{By the universal property we have the canonical map $\Spf \mathbb{Z}_p \longrightarrow \Spec \mathbb{Z}_p$ in $\mathcal{C}'$.}
+\end{warning}
 \begin{defn}[Representable functor]\label{def:repfctor}
 The functor $F\in \Ob(\mathcal{C}')$ is called represented by $X$ if $F\cong h_X$.
 \end{defn}
@@ -40,7 +45,7 @@ From this proposition, we can always view the object as some functor satisfying 
 \item We can enlarge our area of research, and think them as the defective schemes. We will see some reasonable functors which is represented not by schemes, but by stacks.
 \end{itemize}
 \begin{remark}
-By \cite[1.3.6]{vistoli2004notes}, any representable functor (after restricted to specific subcategory of $\mathcal{C}=\Schk$) is a sheaf in Zariski/étale/fppf/fpqc topology.
+By \cite[1.3.6]{vistoli2007notes} or \cite[B.2]{alper2021introduction}, any representable functor (after restricted to specific subcategory of $\mathcal{C}=\Schk$) is a sheaf in Zariski/étale/fppf/fpqc topology.
 \end{remark}
 \subsection{Corepresentable functor}
 This is the concept "dual to" the representable functor. To motivate, we begin with the equivalent definition of representable functor:
@@ -254,9 +259,11 @@ The following problems may be not well-stated.
 \end{problem}
 coarse moduli space and some related concepts. 
 \subsection{Bigger category}
-We need to define Grothendieck Topology and site, discussing how this generalized the language of scheme. Maybe I can follow \cite{moduliGIT}.
+I would follow \cite{alper2021introduction}. The \href{https://maths-people.anu.edu.au/~alperj/papers/stacks-guide.pdf}{guide} by Jarod Alper may be also useful.
 
-We need to define stack, algebraic stack, Deligne-Munford stack and some related concepts. Maybe I can follow \cite{alper2021introduction}. It seems like so nicely written.
+We need to define Grothendieck Topology and site, discussing how this generalized the language of scheme. 
+
+We need to define stack, algebraic stack, Deligne-Munford stack and some related concepts. 
 \begin{remark}
 When is a coarse moduli space also a fine moduli space? Take a look on \href{https://mathoverflow.net/questions/10532/when-is-a-coarse-moduli-space-also-a-fine-moduli-space}{mathoverflow} or \href{https://math.stackexchange.com/questions/323190/coarse-moduli-space-with-no-autmorphisms-is-also-a-fine-moduli-space}{stackexchange}.
 
