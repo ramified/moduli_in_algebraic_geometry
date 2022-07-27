@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  22 JUL 2022 23:36
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  22 JUL 2022 23:52
 entering extended mode
 **./moduli.tex
 (moduli.tex
@@ -1466,12 +1466,8 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
  (Chapters/Chapter1.tex [3
 
-]
-
-LaTeX Warning: Citation `vistoli2007notes' on page 4 undefined on input line 48
-.
-
-[4] [5] [6] [7]) [8]
+] [4] [5] [6] [7])
+[8]
 \openout2 = `Chapters/Chapter2.aux'.
 
  (Chapters/Chapter2.tex [9
@@ -1480,8 +1476,7 @@ LaTeX Warning: Citation `vistoli2007notes' on page 4 undefined on input line 48
 ] [10]) [11]
 \openout2 = `Chapters/Chapter3.aux'.
 
-
-(Chapters/Chapter3.tex [12
+ (Chapters/Chapter3.tex [12
 
 
 ]
@@ -1490,7 +1485,8 @@ File: figures/moduliofcurve.png Graphic file (type bmp)
 ) [13]
 \openout2 = `Chapters/Chapter4.aux'.
 
- (Chapters/Chapter4.tex [14
+
+(Chapters/Chapter4.tex [14
 
 
 ] [15] [16]
@@ -1527,6 +1523,7 @@ Overfull \vbox (1.35724pt too high) has occurred while \output is active []
 
 
 ] (moduli.bbl
+Missing character: There is no ̄ in font cmmi9!
 Missing character: There is no ︠ in font [lmroman9-regular]:mapping=tex-text;!
 Missing character: There is no ︡ in font [lmroman9-regular]:mapping=tex-text;!
 ) [25
@@ -1544,17 +1541,14 @@ Package rerunfilecheck Info: File `moduli.out' has not changed.
 (rerunfilecheck)             Checksum: F39EB97E5582B50B6F55EA5BE42DDC12.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 37805 strings out of 427748
- 689937 string characters out of 3150981
- 795757 words of memory out of 3000000
- 41122 multiletter control sequences out of 15000+200000
+ 37807 strings out of 427748
+ 689973 string characters out of 3150981
+ 796799 words of memory out of 3000000
+ 41124 multiletter control sequences out of 15000+200000
  547555 words of font info for 101 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  69i,26n,362p,3255b,1151s stack positions out of 5000i,500n,10000p,200000b,50000s

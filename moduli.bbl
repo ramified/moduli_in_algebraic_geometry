@@ -5,6 +5,12 @@ Jarod Alper.
 \newblock Introduction to stacks and moduli.
 \newblock \url{https://sites.math.washington.edu/~jarod/moduli.pdf}, 2021.
 
+\bibitem{atiyah1957vector}
+Michael~Francis Atiyah.
+\newblock Vector bundles over an elliptic curve.
+\newblock \url{https://math.berkeley.edu/~nadler/atiyah.classification.pdf},
+  1957.
+
 \bibitem{deligne1975courbes}
 Pierre Deligne.
 \newblock Courbes elliptiques: formulaire d’apres j. tate.
@@ -49,9 +55,8 @@ Daniel Huybrechts and Manfred Lehn.
 
 \bibitem{massarenti2013}
 Alex Massarenti.
-\newblock The automorphism group of m̄g,n.
-\newblock {\em Journal of the London Mathematical Society}, 89(1):131–150,
-  Sep 2013.
+\newblock The automorphism group of {$M̄_{g,n}$}.
+\newblock \url{http://dx.doi.org/10.1112/jlms/jdt057}, Sep 2013.
 
 \bibitem{milne1986abelian}
 James~S Milne.
@@ -82,6 +87,12 @@ The {Stacks project authors}.
 Ravi Vakil.
 \newblock {MATH 216: Foundations of Algebraic Geometry}.
 \newblock \url{https://math.stanford.edu/~vakil/216blog/}.
+
+\bibitem{vistoli2007notes}
+Angelo Vistoli.
+\newblock Notes on grothendieck topologies, fibered categories and descent
+  theory.
+\newblock \url{http://homepage.sns.it/vistoli/descent.pdf}, 2007.
 
 \bibitem{xu2020kstability}
 Chenyang Xu.
