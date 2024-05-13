@@ -144,12 +144,13 @@ We've already met the idea of moduli in plane geometry. For example, fix two poi
 \coordinate [label=right:\B] (B) at ($ (1.75,0.3)$);
 \coordinate (F) at ($ (A) ! -1 ! (B) $);
 \coordinate (G) at ($ (A) ! 2 ! (B) $);
+\coordinate (H) at ($ (A) ! 0.5 ! (B) $);
 \node [name path=D,help lines,draw] (D) at (A) [circle through=(B)] {};
 \node [name path=E,help lines,draw] (E) at (B) [circle through=(A)] {};
 \path [name intersections={of=D and E,by={C,C'}}];
 \draw [help lines]($ (C) ! -0.2 ! (C') $)-- ($ (C) ! 1.2 ! (C') $);
 %\draw [output] (A) -- (C) -- (B);
-\foreach \point in {A,B,F,G}
+\foreach \point in {A,B,F,G,H}
 \fill [white, draw={black},thin] (\point) circle (2pt);
 %\begin{pgfonlayer}{background}
 %\fill[triangle!80] (A) -- (C) -- (B) -- cycle;

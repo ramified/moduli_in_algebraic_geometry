@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  8 APR 2024 13:29
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  13 MAY 2024 23:55
 entering extended mode
 **./moduli.tex
 (moduli.tex
@@ -1597,10 +1597,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 37865 strings out of 427748
- 692004 string characters out of 3150981
- 796222 words of memory out of 3000000
- 41128 multiletter control sequences out of 15000+200000
+ 37871 strings out of 427748
+ 692070 string characters out of 3150981
+ 796311 words of memory out of 3000000
+ 41134 multiletter control sequences out of 15000+200000
  547555 words of font info for 101 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  69i,26n,362p,3255b,1151s stack positions out of 5000i,500n,10000p,200000b,50000s
