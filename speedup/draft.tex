@@ -1,0 +1,452 @@
+
+\documentclass[UTF8]{amsart}
+%Typical documenttypes: article/book
+%some examples:
+%\documentclass[reqno,11pt]{book}   %%%for books
+%\documentclass[]{minimal}			%%%for Minimal Working Example
+
+
+%for beamers, you have to change a lot. Especially, remove the package enumitem!!!
+
+
+
+%%%%%%%%%%%%%%%%%%%% setting for fast compiling
+
+%\special{dvipdfmx:config z 0}		% no compression
+
+\includeonly{chapters/chapter9}		% In practice, use an empty document called "chapter9"	% usually for printing books
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we include packages
+
+%%%basic packages for math articles
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[shortlabels]{enumitem}	% It supersedes both enumerate and mdwlist. The package option shortlabels is included to configure the labels like in enumerate.
+
+%%%packages for special symbols
+\usepackage{pifont}					% Access to PostScript standard Symbol and Dingbats fonts
+\usepackage{wasysym}				% additional characters
+\usepackage{bm}						% bold fonts: \bm{...}
+\usepackage{extarrows}				% may be replaced by tikz-cd
+%\usepackage{unicode-math}			% unicode maths for math fonts, now I don't know how to include it
+%\usepackage{ctex}					% Chinese characters, huge difference.
+
+
+%%%basic packages for fancy electronic documents
+\usepackage[colorlinks]{hyperref}
+\usepackage[table,hyperref]{xcolor} 			% before tikz-cd. 
+%\usepackage[table,hyperref,monochrome]{xcolor}	% disable colored output (black and white)
+
+%%%packages for figures and tables (general setting)
+\usepackage{float}				%Improved interface for floating objects
+\usepackage{caption,subcaption}
+\usepackage{adjustbox}			% for me it is usually used in tables 
+\usepackage{stackengine}		%baseline changes
+
+%%%packages for commutative diagrams
+\usepackage{tikz-cd}
+\usepackage{quiver}			% see https://q.uiver.app/
+
+%%%packages for pictures
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usepackage{graphicx}			% Enhanced support for graphics
+
+%%%packages for tables and general settings
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage{longtable}
+
+%%%packages for ToC, LoF and LoT
+
+
+
+
+
+
+
+ %https://tex.stackexchange.com/questions/58852/possible-incompatibility-with-enumitem
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we include theoremstyles
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{setting}[theorem]{Setting}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem{warning}[theorem]{Warning}
+
+
+
+\newtheorem*{bbox}{Black box}
+\newtheorem*{notation}{Conventions and Notations}
+
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{remarks}{Remarks}
+
+%%% for important theorems
+%\newtheoremstyle{theoremletter}{4mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
+%\theoremstyle{theoremletter}
+%\newtheorem{theoremA}{Theorem}
+%\renewcommand{\thetheoremA}{A}
+%\newtheorem{theoremB}{Theorem}
+%\renewcommand{\thetheoremB}{B}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we declare some symbols
+
+%%%%%%%DeclareMathOperator
+%see here for why newcommand is better for DeclareMathOperator: https://tex.stackexchange.com/questions/67506/newcommand-vs-declaremathoperator
+
+%%%%%basic symbols. Keep them!
+
+%%%symbols for sets and maps
+\DeclareMathOperator{\pt}{\operatorname{pt}}	%points. Other possibilities are \{pt\}, \{*\}, pt, * ...
+\DeclareMathOperator{\Id}{\operatorname{Id}}	%identity in groups.
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+
+\DeclareMathOperator{\Ob}{\operatorname{Ob}}
+\DeclareMathOperator{\Mor}{\operatorname{Mor}}	%difference of Mor and Hom: Hom is usually for abelian categories
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}	\DeclareMathOperator{\End}{\operatorname{End}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+
+%%%symbols for linear algebras and 
+%%linear algebras
+\DeclareMathOperator{\tr}{\operatorname{tr}}
+\DeclareMathOperator{\diag}{\operatorname{diag}}	%for diagonal matrices
+
+%%abstract algebras
+\DeclareMathOperator{\ord}{\operatorname{ord}}
+\DeclareMathOperator{\gr}{\operatorname{gr}}
+\DeclareMathOperator{\Frac}{\operatorname{Frac}}
+
+%%%symbols for basic geometries
+\DeclareMathOperator{\vol}{\operatorname{vol}}	%volume
+\DeclareMathOperator{\dist}{\operatorname{dist}}
+\DeclareMathOperator{\supp}{\operatorname{supp}}
+
+%%%symbols for category
+%%names of categories
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Vect}{\operatorname{Vect}}
+
+
+%%%symbols for homological algebras
+\DeclareMathOperator{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\rad}{\operatorname{rad}}
+
+
+%%%symbols for algebraic groups
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+
+%%%symbols for typical varieties
+\DeclareMathOperator{\Gr}{\operatorname{Gr}}
+\DeclareMathOperator{\Flag}{\operatorname{Flag}}
+
+%%%symbols for basic algebraic geometry
+\DeclareMathOperator{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\Coh}{\operatorname{Coh}}
+\newcommand{\Dcoh}{\mathcal{D}_{\operatorname{Coh}}}%%%This one shows the difference between \DeclareMathOperator and \newcommand
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+
+%%%%%advanced symbols. Choose the part you need!
+
+%%%symbols for algebraic representation theory
+\DeclareMathOperator{\ind}{\operatorname{ind}}	%\ind(Q) means the set of  equivalence classes of finite dimensional indecomposable representations
+\DeclareMathOperator{\Res}{\operatorname{Res}}
+\DeclareMathOperator{\Ind}{\operatorname{Ind}}
+\DeclareMathOperator{\cInd}{\operatorname{c-Ind}}
+
+
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\rep}{\operatorname{rep}} %usually rep means the category of finite dimensional representations, while Rep means the category of representations.
+\DeclareMathOperator{\Irr}{\operatorname{Irr}}
+\DeclareMathOperator{\irr}{\operatorname{irr}}
+\DeclareMathOperator{\Adm}{\operatorname{\Pi}}
+\DeclareMathOperator{\Char}{\operatorname{Char}}
+\DeclareMathOperator{\WDrep}{\operatorname{WDrep}}
+
+%%%symbols for algebraic topology
+\DeclareMathOperator{\EGG}{\operatorname{E}\!}
+\DeclareMathOperator{\BGG}{\operatorname{B}\!}
+
+\DeclareMathOperator{\chern}{\operatorname{ch}^{*}}
+\DeclareMathOperator{\Td}{\operatorname{Td}}
+\DeclareMathOperator{\AS}{\operatorname{AS}}	%Atiyah--Segal completion theorem 
+
+%%%symbols for Auslander--Reiten theory 
+\DeclareMathOperator{\Modup}{\overline{\operatorname{mod}}}
+\DeclareMathOperator{\Moddown}{\underline{\operatorname{mod}}}
+\DeclareMathOperator{\Homup}{\overline{\operatorname{Hom}}}
+\DeclareMathOperator{\Homdown}{\underline{\operatorname{Hom}}}
+
+
+%%%symbols for operad
+\DeclareMathOperator{\Com}{\operatorname{\mathcal{C}om}}
+\DeclareMathOperator{\Ass}{\operatorname{\mathcal{A}ss}}
+\DeclareMathOperator{\Lie}{\operatorname{\mathcal{L}ie}}
+\DeclareMathOperator{\calEnd}{\operatorname{\mathcal{E}nd}} %cal=\mathcal
+
+
+%%%%%personal symbols. Use at your own risk!
+
+%%%symbols only for master thesis
+\DeclareMathOperator{\ptt}{\operatorname{par}}	%the partition map
+\DeclareMathOperator{\str}{\operatorname{str}}	%strict case
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Rpt}{\operatorname{R}}
+\DeclareMathOperator{\Rptc}{\operatorname{\mathcal{R}}}
+\DeclareMathOperator{\Spt}{\operatorname{S}}
+\DeclareMathOperator{\Sptc}{\operatorname{\mathcal{S}}}
+\DeclareMathOperator{\Kcurl}{\operatorname{\mathcal{K}}}
+\DeclareMathOperator{\Hcurl}{\operatorname{\mathcal{H}}}
+\DeclareMathOperator{\eu}{\operatorname{eu}}
+\DeclareMathOperator{\Eu}{\operatorname{Eu}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+
+%%%%%symbols which haven't been classified. Add your own math operators here!
+
+
+\DeclareMathOperator{\Modr}{\operatorname{-Mod}}
+
+\DeclareMathOperator{\Quot}{\operatorname{Quot}}
+\DeclareMathOperator{\Sch}{\operatorname{Sch}}
+\DeclareMathOperator{\Hilb}{\operatorname{Hilb}}
+\let\xlongequal\relax
+\usepackage{extpfeil} %for longer arrows
+
+%%%%%%%newcommand
+
+%%%basic symbols
+\newcommand{\norm}[1]{\Vert{#1}\Vert}
+
+%%%symbols only for master thesis
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+\newcommand{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\newcommand{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\newcommand{\Shuffled}{\operatorname{Shuffle}_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+\newcommand{\preimage}[1]{\widetilde{#1}}
+\newcommand{\orde}{\operatorname{ord}_e}
+\newcommand{\fakestar}{*}
+
+%as the subscription of Hom
+\newcommand{\Alggp}{\text{-Alg gp}}
+
+%as automorphic representations
+\newcommand{\Acusp}{\mathcal{A}_{\operatorname{cusp}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some blocks for special features. 
+
+%%%% todo notes %%%%
+\usepackage[colorinlistoftodos,textsize=footnotesize]{todonotes}
+\setlength{\marginparwidth}{2.5cm}
+\newcommand{\leftnote}[1]{\reversemarginpar\marginnote{\footnotesize #1}}
+\newcommand{\rightnote}[1]{\normalmarginpar\marginnote{\footnotesize #1}\reversemarginpar}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some global settings. Understand everything here before you make a document!
+
+\usepackage[a4paper,left=3cm,right=3cm,bottom=4cm]{geometry}
+\usepackage{indentfirst}	% Indent first paragraph after section header
+
+\setcounter{tocdepth}{2}
+
+
+%https://latexref.xyz/_005cparindent-_0026-_005cparskip.html
+\setlength{\parindent}{15pt}	
+\setlength{\parskip}{0pt plus1pt}
+
+%\setlength\intextsep{0cm}
+%\setlength\textfloatsep{0cm}
+\def\arraystretch{1}
+%\setcounter{secnumdepth}{3}
+
+\allowdisplaybreaks
+
+
+\begin{document}
+
+% The beginning depends on the documentclass. Rewrite this part if you use different documentclass!
+\date{\today}
+
+\title
+{\LaTeX\;Template
+}
+\author{Xiaoxiang Zhou}
+\address{Institut für Mathematik\\
+Humboldt-Universität zu Berlin\\
+Berlin, 12489\\ Germany\\} 
+\email{email:xiaoxiang.zhou@hu-berlin.de}
+
+
+\maketitle
+\tableofcontents
+
+
+\subsection{Quot scheme}
+We refer to \href{https://en.wikipedia.org/wiki/Quot_scheme}{wiki} and \href{https://gauss.math.yale.edu/~il282/Siddharth_S16.pdf}{Venkatesh's lecture notes}.
+
+The Quot scheme is a relative version of the Grassmannian. Instead of parameterizing subvector spaces, it parameterizes quotient sheaves of a fixed sheaf.
+
+\begin{eg}[Quot scheme $\Quot_{\mathcal{E}}$]
+In this example, the field $\kappa$ can be generalized to a Noetherian base scheme $S_0$.
+
+For a scheme $X/\kappa$ of finite type and $\mathcal{E} \in \Coh(X)$, we define a moduli problem for $(S,\pi_S: S \longrightarrow \Spec \kappa) \in \Ob(\Sch_{\kappa})$:
+
+$$\mathcal{A}_S:=\left\{(\mathcal{F},\pi)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{F} \in \Coh(X_S) \text{ flat over $S$ }\\[-1mm]
+&\supp(\mathcal{F})  \text{ proper over $S$ }\\[-1mm]
+& \pi:\mathcal{E}_S \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{F}
+\end{aligned}
+ \right\}$$
+ 
+   $(\mathcal{F},\pi) \sim_S (\mathcal{F}',\pi')$ if there exists an isomorphism of vector bundles $\phi:\mathcal{F} \longrightarrow \mathcal{F}'$ such that $\pi'=\phi \circ \pi$.
+   
+   For a map $f:T \longrightarrow S$, the pullback $f^*$ is defined by
+      $$f^*:\mathcal{A}_S \longrightarrow \mathcal{A}_T \qquad (\mathcal{F},\pi) \longmapsto \big((\Id \times f)^*\mathcal{F},f^* \pi:\mathcal{E}_T \twoheadrightarrow (\Id \times f)^*\mathcal{F}\big)$$
+      
+      The moduli functor defined by this extended moduli problem is representable, and we denote it by $\Quot_{\mathcal{E}}$.
+\end{eg}
+
+\begin{remark}
+The requirements of flatness and properness ensure the well-definedness of the Hilbert polynomial $P_{\mathcal{F}}(t) \in \mathbb{Q}[t]$, defines as follows.
+
+When a line bundle $\mathcal{L}$ over $X$ is fixed, take a closed point $s \in S$, then 
+$$P_{\mathcal{F}}(m) = \chi(\mathcal{F}_s \otimes \mathcal{L}_s^{\otimes m}) = \sum_{i=0}^{\dim \mathcal{F}} (-1)^i h^i (X_s, \mathcal{F}_s \otimes \mathcal{L}_s^{\otimes m}).$$
+ By flatness,  the Hilbert polynomial $P_{\mathcal{F}}(m)$ does not depend on the choice of $s \in S$. Furthermore, when $X$ is projective, one can take $\mathcal{L} = \mathcal{O}_X(1)$. This provides us a decomposition of $\Quot_{\mathcal{E}}$:
+ $$\Quot_{\mathcal{E}} = \bigsqcup_{P \in \mathbb{Q}[t]} \Quot_{\mathcal{E}}^P.$$
+\end{remark}
+
+\begin{eg}
+When $X= \Spec \kappa$, $\mathcal{E}= \kappa^n$, one gets
+$$\mathcal{A}_S=\left\{(\mathcal{F},\pi)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{F} \in \Coh(S) \text{ flat over $S$ }\\[-1mm]
+& \pi:\mathcal{O}_S^{\oplus n} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{F}
+\end{aligned}
+ \right\}$$
+ and $P_{\mathcal{F}}(t)= \chi (\mathcal{F}_s)$ is constant, indicating the rank of $\mathcal{F}$. Therefore,
+ $$\Gr(k,n) = \Quot_{\kappa^n}^{k}, \qquad \mathbb{P}V^{\vee}= \Quot_V^{1}.$$
+\end{eg}
+
+\begin{eg}
+In this example, the base scheme $S_0$ is $X$, and $\mathcal{E} \in \Coh(X)$ is locally free. In this setting, the moduli problem for ??? is given by
+$$\mathcal{A}_S=\left\{(\mathcal{F},\pi)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{F} \in \Coh(S) \text{ flat over $S$ }\\[-1mm]
+& \pi:\pi_S^*\mathcal{E} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{F}
+\end{aligned}
+ \right\}$$
+ Since any finitely generated flat module over a commutative local, Noetherian ring is free (see \href{https://math.stackexchange.com/questions/1812584/finitely-generated-flat-modules-over-a-commutative-local-noetherian-ring-are-f}{SE1812584}),
+ $\mathcal{F}$ is locally free of rank $r$, and $P_{\mathcal{F}}(t)=r$. Therefore,
+ $$\mathbb{P}\mathcal{E} = \Quot_{\mathcal{E}}^{1} \text{ (over $X/X$)}.$$
+\end{eg}
+
+\begin{remark}
+The tangent space and smoothness of $\Quot_{\mathcal{E}}$ can be described locally, just like $T_V \Gr(k,n) = \Hom_{\mathbb{C}}(V, \mathbb{C}^n/V)$, see \cite{bibid} for more details.
+\end{remark}
+
+\subsection{Hilbert scheme}
+Since we already defined $\Quot_{\mathcal{E}}$, the Hilbert scheme is just a special case:
+$$\Hilb_X:= \Quot_{\mathcal{O}_X} \qquad \Hilb_X^P:= \Quot_{\mathcal{O}_X}^P$$
+where the moduli problem is given by
+
+$$\mathcal{A}_S=\left\{(\mathcal{F},\pi)  \;\middle|\; \begin{aligned}
+&\\[-5mm]
+&\mathcal{F} \in \Coh(X_S) \text{ flat over $S$ }\\[-1mm]
+&\supp(\mathcal{F})  \text{ proper over $S$ }\\[-1mm]
+& \pi:\mathcal{O}_{X_S} \xtwoheadrightarrow{\hspace{2mm}}  \mathcal{F}
+\end{aligned}
+ \right\}$$
+ 
+ In this case, $\mathcal{F} \cong i_* \mathcal{O}_Z$ for some subvariety (maybe non-reduced) of $X_S$ (of Hilbert polynomial $P$).
+ 
+\begin{eg}
+The Hilbert scheme of $k$ points on $X$ is denoted by $$X^{[k]}:= \Hilb_X^k= \Quot_{\mathcal{O}_X}^k.$$
+It is birational equivalent to $X^k/S_k$.
+\end{eg} 
+
+\begin{eg}
+Recall that $P_{\mathbb{P}^m}(t) = \binom{m+t}{m}$. For any closed integral subvariety $X \subset \mathbb{P}^n$, the Fano variety of $m$-planes $\mathbb{P}^m$ in $X$ is given by
+$$F(X,m):= \Hilb_X^{P_{\mathbb{P}^m}}= \Quot_{\mathcal{O}_X}^{P_{\mathbb{P}^m}}.$$
+\end{eg} 
+\begin{eg}
+Recall that $P_{Z}(t) = \binom{n+t}{n}- \binom{n+t-d}{n}$ for a degree $d$ hypersurface $Z$ in $\mathbb{P}^n$.
+The moduli space of degree $d$ hypersurfaces in $\mathbb{P}^n$ is given by
+$$\Hilb_{\mathbb{P}^n}^{P_{Z}}= \Quot_{\mathcal{O}_{\mathbb{P}^n}}^{P_{Z}} \cong \mathbb{P}\left(\rule{0mm}{3.2mm} \Gamma \left(\rule{0mm}{3mm} \mathbb{P}^n, \mathcal{O}(d) \right) \right) \cong \mathbb{P}^{\binom{n+d}{d}-1}.$$
+\end{eg} 
+\bibliographystyle{plain}
+\bibliography{reference}
+\end{document}

@@ -10,24 +10,24 @@
 \contentsline {subsection}{\tocsubsection {}{2.1}{Projective space}}{9}{subsection.2.1}% 
 \contentsline {subsection}{\tocsubsection {}{2.2}{Grassmannian}}{10}{subsection.2.2}% 
 \contentsline {subsection}{\tocsubsection {}{2.3}{Flag variety, partial flag variety}}{11}{subsection.2.3}% 
-\contentsline {subsection}{\tocsubsection {}{2.4}{Hilbert scheme}}{11}{subsection.2.4}% 
-\contentsline {subsection}{\tocsubsection {}{2.5}{Quot scheme}}{11}{subsection.2.5}% 
-\contentsline {subsection}{\tocsubsection {}{2.6}{Misc}}{12}{subsection.2.6}% 
-\contentsline {section}{\tocsection {}{3}{Moduli of curve}}{13}{section.3}% 
-\contentsline {subsection}{\tocsubsection {}{3.1}{Initial definition}}{13}{subsection.3.1}% 
-\contentsline {subsection}{\tocsubsection {}{3.2}{Result}}{14}{subsection.3.2}% 
-\contentsline {section}{\tocsection {}{4}{Moduli of elliptic curve}}{15}{section.4}% 
-\contentsline {subsection}{\tocsubsection {}{4.1}{Definition and basic properties of elliptic curve}}{15}{subsection.4.1}% 
-\contentsline {subsection}{\tocsubsection {}{4.2}{Differential}}{17}{subsection.4.2}% 
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{21}{section*.2}% 
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{21}{section*.3}% 
-\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{22}{section*.4}% 
-\contentsline {subsection}{\tocsubsection {}{4.3}{Crash course on Abelian variety}}{22}{subsection.4.3}% 
-\contentsline {subsection}{\tocsubsection {}{4.4}{Level structure}}{22}{subsection.4.4}% 
-\contentsline {subsection}{\tocsubsection {}{4.5}{Complex case}}{22}{subsection.4.5}% 
-\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{23}{section.5}% 
-\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{23}{subsection.5.1}% 
-\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{23}{subsection.5.2}% 
-\contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{24}{section.6}% 
-\contentsline {section}{\tocsection {}{7}{After FOAG: the future plan}}{25}{section.7}% 
-\contentsline {section}{\tocsection {}{}{References}}{26}{section*.5}% 
+\contentsline {subsection}{\tocsubsection {}{2.4}{Quot scheme}}{12}{subsection.2.4}% 
+\contentsline {subsection}{\tocsubsection {}{2.5}{Hilbert scheme}}{13}{subsection.2.5}% 
+\contentsline {subsection}{\tocsubsection {}{2.6}{Misc}}{13}{subsection.2.6}% 
+\contentsline {section}{\tocsection {}{3}{Moduli of curve}}{15}{section.3}% 
+\contentsline {subsection}{\tocsubsection {}{3.1}{Initial definition}}{15}{subsection.3.1}% 
+\contentsline {subsection}{\tocsubsection {}{3.2}{Result}}{16}{subsection.3.2}% 
+\contentsline {section}{\tocsection {}{4}{Moduli of elliptic curve}}{17}{section.4}% 
+\contentsline {subsection}{\tocsubsection {}{4.1}{Definition and basic properties of elliptic curve}}{17}{subsection.4.1}% 
+\contentsline {subsection}{\tocsubsection {}{4.2}{Differential}}{19}{subsection.4.2}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{23}{section*.2}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{23}{section*.3}% 
+\contentsline {subsubsection}{\tocsubsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{24}{section*.4}% 
+\contentsline {subsection}{\tocsubsection {}{4.3}{Crash course on Abelian variety}}{24}{subsection.4.3}% 
+\contentsline {subsection}{\tocsubsection {}{4.4}{Level structure}}{24}{subsection.4.4}% 
+\contentsline {subsection}{\tocsubsection {}{4.5}{Complex case}}{24}{subsection.4.5}% 
+\contentsline {section}{\tocsection {}{5}{Moduli of higher dimensional variety, MMP}}{25}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Moduli of algebraic surfaces}}{25}{subsection.5.1}% 
+\contentsline {subsection}{\tocsubsection {}{5.2}{MMP}}{25}{subsection.5.2}% 
+\contentsline {section}{\tocsection {}{6}{Moduli of vector bundle}}{26}{section.6}% 
+\contentsline {section}{\tocsection {}{7}{After FOAG: the future plan}}{27}{section.7}% 
+\contentsline {section}{\tocsection {}{}{References}}{28}{section*.5}% 
