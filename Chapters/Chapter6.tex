@@ -2,3 +2,38 @@
 The course lecture note \href{https://userpage.fu-berlin.de/hoskins/moduli_and_GIT.html}{``Moduli and GIT"} would be a perfect survey to begin with. We also refer to \cite{huybrechts2010geometry}. It's not easy to read, but It's in some sense completed, and everybody refers it.
 
 For a variant, you may get some informations of moduli of vector bundles over elliptic curve in \cite{atiyah1957vector} and $G$-bundles over elliptic curve in \cite{frăţilă2020revisiting}.
+
+\textbf{Update on 2025.07.11:} Three years have gone by, and I’ve come to realize that I still have much to learn about this topic. I’ve fallen behind—there are already some striking classifications for particular cases, even though a complete picture is still missing. Below, I begin assembling a reference list of examples and tools for future learning. The main reference for this update is \cite{MS19}.
+
+The following examples are already thoroughly studied and described in the literature:
+\begin{itemize}
+\item line bundles on any (smooth projective) variety: Picard variety;\footnote{Mention about ample cone and so on.}
+\item vector bundles on $\mathbb{P}^1$;
+\item (semi)stable vector bundles on elliptic curves, see \cite[Example 2.7]{MS19};
+\item rank $2$ semistable vector bundles $E$ over a genus $2$ curve $C$, with either $\det E \cong \mathcal{O}_C$ or $\deg E = 1$, see \cite[Example 2.18,2.19]{MS19};
+\item rank $3$ semistable vector bundles $E$ over a genus $2$ curve $C$, with $\det E \cong \mathcal{O}_C$, see \cite[Example 2.20]{MS19};
+\item stable vector bundles $E$ on a curve $C$, with $\deg E = 0$, see \cite[Theorem 2.14]{MS19};
+\item stable vector bundles $E$ on a curve $C$, see \cite[Theorem 2.10]{MS19};
+\item exceptional coherent sheaves on $\mathbb{P}^2$, see \cite[1.1]{LZ19};
+\item slope-semistable coherent sheaves on $\mathbb{P}^2$, see \cite[Theorem 1.8]{LZ19};
+\item other surfaces: abelian/K3/Enrique, see \cite[p3]{MS19}.
+\end{itemize}
+
+The following invariants give rise to natural stratifications on moduli spaces of sheaves:
+\begin{itemize}
+\item Chern character: basic numerical invariants.
+\item Sheaf cohomology: this is Brill--Noether theory.
+\item Koszul cohomology, Betti table: this applies especially when the ambient space $X$ has a canonical embedding to $\mathbb{P}^n$. When the coherent sheaf is a quotient sheaf, their Koszul cohomology describe the equations defining the subvarieties.
+\end{itemize}
+
+A basic toolkit I need to learn for this area is:
+\begin{itemize}
+\item Bogomolov inequality;
+\item GIT quotient;
+\item vanishing results;
+\item Gieseker stability and slope stability;
+\item stability in abelian categories; Harder--Narasimhan filtration;
+\item Bridgeland stability;
+\item wall crossing techniques.
+\end{itemize}
+
