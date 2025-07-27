@@ -1,3 +1,16 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Potier97}
+Joseph Le~Potier.
+\newblock {\em Lectures on vector bundles}, volume~54 of {\em Camb. Stud. Adv.
+  Math.}
+\newblock Cambridge: Cambridge University Press, 1997.
+
+\bibitem{MS19}
+Emanuele Macr{\`{\i}} and Benjamin Schmidt.
+\newblock Lectures on {Bridgeland} stability.
+\newblock In {\em Moduli of curves. CIMAT Guanajuato, Mexico 2016. Lecture
+  notes of a CIMPA-ICTP school, Guanajuato, Mexico, February 22 -- March 4,
+  2016}, pages 139--211. Cham: Springer, 2017.
 
 \end{thebibliography}

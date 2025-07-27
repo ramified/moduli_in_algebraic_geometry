@@ -349,20 +349,52 @@ Berlin, 12489\\ Germany\\}
 
 
 \maketitle
-\tableofcontents
+%\tableofcontents
+\subsection*{Talk 1: Introduction}
 
-Talk 2: Explicit constructions of semistable bundles on elliptic curves. 
+\subsection*{Talk 2: Explicit constructions of semistable bundles on elliptic curves}
+%\addcontentsline{toc}{section}{Talk 2: Explicit constructions of semistable bundles on elliptic curves}
 
 In this talk, we introduce semistability of vector bundle on curves, and provide first non-trivial example of semistable vector bundles.
 
 \begin{itemize}
-\item Define the slope stability. List some basic properties of slope stability, like ...
+\item Define slope stability \cite[Definition 2.3]{MS19}. State some basic properties, e.g., \cite[Exercise 2.4]{MS19}, \cite[14.1]{Potier97}.
+\item Recall the classification of vector bundles on $\mathbb{P}^1$, and determine when they are (semi)stable.
+\item Show the picture of Ford circles. Fix an elliptic curve $(E, p_0)$. For each rational number $\mu = \frac{d}{r} > 0$, construct a stable vector bundle $V_\mu$ of rank $r$ and degree $d$ such that $\det V_\mu \cong \mathcal{O}_E(dp_0)$. \cite[14.3]{Potier97}
+\item Verify the stability of $V_\mu$ by induction. Shows that
+$$
+\dim \Hom (V_{\mu_1}, V_{\mu_2}) =\dim \Ext (V_{\mu_2}, V_{\mu_1}) = \begin{cases}
+d_2r_1-d_1r_2, & \mu_1 < \mu_2 \\
+1, & \mu_1 = \mu_2 \\
+0, & \mu_1 > \mu_2. \\
+\end{cases}
+$$
+Discuss further properties, including \cite[Corollary 14.11]{Potier97}. In particular, describe $H^{\bullet}(V_\mu)$.
+\item For each $r \geq 1$ and $\mathcal{L} \in \Pic^0(E)$, construct a semistable vector bundle $V_{r, \mathcal{L}}$ of rank $r$ with $\det V_{r, \mathcal{L}} \cong \mathcal{L}$.
+\item Conclude the talk by stating \cite[Example 2.7]{MS19} as a theorem.
 
 \end{itemize}
 
+\subsection*{Talk 3: Fourier--Mukai transform on elliptic curve}
 
+\subsection*{Talk 4: Vector bundles on curves of genus $\geqslant 2$}
 
-% Remember to protect the uppercase of people's name and LaTeX symbols
+\subsection*{Talk 5: Semistable sheaves of degree $0$}\cite[2.4]{MS19}
+
+\subsection*{Talk 6: Stability manifold of $\mathbb{P}^1$}
+
+\subsection*{Talk 7: Equivariant vector bundles on Grassmannian}
+
+\subsection*{Talk 8: Chern class}
+
+\subsection*{Talk 9: Exceptional vector bundles on $\mathbb{P}^2$}
+
+\subsection*{Talk 10: Stbility manifold of surfaces}
+
+\subsection*{Talk 11: vector bundles on K3 surfaces}
+
+\subsection*{Talk 12: vector bundles on threefolds}
+%remember to protect the uppercase of people's name and LaTeX symbols
 
 \bibliographystyle{plain}
 \bibliography{reference}
