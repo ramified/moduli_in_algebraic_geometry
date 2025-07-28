@@ -382,7 +382,8 @@ The goal is to complete the classification of vector bundles on elliptic curves 
 \begin{itemize}
 \item Define Fourier--Mukai transform $\Phi_K$ \cite[Chapter 11]{Potier97}.
 \item Describe $\Phi_K \circ \Phi_L$ and the right adjoint of $\Phi_K$. Show that if $A, B$ are abelian varieties of dimension $n$ and $K \in \Pic(A \times B)$ is a line bundle, then both adjoints of $\Phi_K$ are given by $\Phi_{K^{-1}[n]}$.
-\item Sketch the proof of \cite[Theorem 11.4]{Potier97} in the case $A = B$ is an elliptic curve and $S = \{*\}$, i.e., show that ...
+\item Sketch the proof of \cite[Theorem 11.4]{Potier97} in the case $A = B$ is an elliptic curve and $S = \{*\}$, i.e., show that 
+$$\Phi_K \circ \Phi_{K^{-1}[g]} \cong \Id_{D^b(A)}.$$
 
 \noindent \hspace{-8mm}Assume $A$ is an abelian variety from now on.
 
@@ -420,14 +421,16 @@ This talk is centered on \cite[Theorem 2.14]{MS19} and its surrounding results. 
 \end{itemize}
 
 \subsection*{Talk 6: Stability manifold of $\mathbb{P}^1$}
-This talk introduces Bridgeland stability conditions and discusses $\Stab(\mathbb{P}^1)$ in detail. The standard reference is [...]; you may also consult my notes.
+This talk introduces Bridgeland stability conditions and discusses $\Stab(\mathbb{P}^1)$ in detail. The standard reference is \cite{Okada05,GKR03}; you may also consult \href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2025/2025.07.13_stability_manifold_of_P\%5E1.pdf}{my notes}.
 
 \begin{itemize}
 \item Define (locally finite) stability conditions on a triangulated category $\mathcal{T}$ and denote the space by $\Stab(\mathcal{T})$.
 \item Show that the usual slope stability on $\Coh(\mathbb{P}^1)$ defines a stability condition $(Z_0, \mathcal{P}_0) \in \Stab(\mathbb{P}^1)$.
 \item Discuss the $\mathbb{C}$ action on $\Stab(\mathcal{T})$. In the case of $\mathbb{P}^1$, restrict to the orbit of $(Z_0, \mathcal{P}_0)$ and describe how the heart changes. Note that semistability of objects remains unchanged under this action.
-\item Classify stability conditions where all line bundles and torsion sheaves are semistable. Describe the $\mathbb{Z}$ action via tensoring with $\mathcal{O}(1)$, and the locus where $\mathcal{O}$ is semistable but not stable.
-\item State Lemma 3.1(d).\footnote{Bonus point if you prove this in your notes!} Give a description of all remaining stability conditions.
+\item Classify stability conditions where all line bundles and torsion sheaves are semistable.\footnote{Hint: without loss of generality assume that $Z\left(\rule{0mm}{2.3mm}\mathcal{O}(-1)\right)=1$ and $\phi\left(\rule{0mm}{2.3mm}\mathcal{O}(-1)\right)=0$, show that
+$$Z(\mathcal{O}) \in \mathcal{H} \sqcup \mathbb{R} \smallsetminus \left( \left\{ 1 \pm \frac{1}{n} \;\middle|\; n \in \mathbb{N}_{>0} \right\} \sqcup \{1\} \right).$$
+} Describe the $\mathbb{Z}$ action via tensoring with $\mathcal{O}(1)$, and the locus where $\mathcal{O}$ is semistable but not stable.
+\item State \cite[Lemma 3.1(d)]{Okada05}.\footnote{Bonus point if you prove this in your notes!} Give a description of all remaining stability conditions.
 \item Define walls in $\Stab(\mathbb{P}^1)$ and explain wall-crossing behavior.
 \item If time permits, briefly discuss stability conditions on other curves.
 \end{itemize}

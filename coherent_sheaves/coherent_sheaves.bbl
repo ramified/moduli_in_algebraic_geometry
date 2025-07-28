@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{GKR03}
+A.~L. Gorodentsev, S.~A. Kuleshov, and A.~N. Rudakov.
+\newblock {{\(t\)}}-stabilities and {{\(t\)}}-structures on triangulated
+  categories.
+\newblock {\em Izv. Math.}, 68(4):749--781, 2004.
+
 \bibitem{Potier97}
 Joseph Le~Potier.
 \newblock {\em Lectures on vector bundles}, volume~54 of {\em Camb. Stud. Adv.
@@ -12,5 +18,10 @@ Emanuele Macr{\`{\i}} and Benjamin Schmidt.
 \newblock In {\em Moduli of curves. CIMAT Guanajuato, Mexico 2016. Lecture
   notes of a CIMPA-ICTP school, Guanajuato, Mexico, February 22 -- March 4,
   2016}, pages 139--211. Cham: Springer, 2017.
+
+\bibitem{Okada05}
+So~Okada.
+\newblock Stability manifold of $p^1$.
+\newblock {\em J. Algebr. Geom.}, 15(3):487--505, 2006.
 
 \end{thebibliography}
