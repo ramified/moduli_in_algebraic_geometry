@@ -256,7 +256,7 @@
 
 
 \DeclareMathOperator{\Modr}{\operatorname{-Mod}}
-
+\DeclareMathOperator{\Stab}{\operatorname{Stab}}
 
 
 
@@ -377,11 +377,60 @@ Discuss further properties, including \cite[Corollary 14.11]{Potier97}. In parti
 
 \subsection*{Talk 3: Fourier--Mukai transform on elliptic curve}
 
-\subsection*{Talk 4: Vector bundles on curves of genus $\geqslant 2$}
+The goal is to complete the classification of vector bundles on elliptic curves via the Fourier--Mukai transform.
+
+\begin{itemize}
+\item Define Fourier--Mukai transform $\Phi_K$ \cite[Chapter 11]{Potier97}.
+\item Describe $\Phi_K \circ \Phi_L$ and the right adjoint of $\Phi_K$. Show that if $A, B$ are abelian varieties of dimension $n$ and $K \in \Pic(A \times B)$ is a line bundle, then both adjoints of $\Phi_K$ are given by $\Phi_{K^{-1}[n]}$.
+\item Sketch the proof of \cite[Theorem 11.4]{Potier97} in the case $A = B$ is an elliptic curve and $S = \{*\}$, i.e., show that ...
+
+\noindent \hspace{-8mm}Assume $A$ is an abelian variety from now on.
+
+\item Define the Poincaré line bundle $\mathcal{P} \in \Pic(A \times \hat{A})$ and recall its basic properties.
+\item Set $\mathcal{S} = \mathcal{S}_A = \Phi_{\mathcal{P}}$. List key properties of $\mathcal{S}$, e.g., \cite[(11.3.1)–(11.3.4), Theorem 11.6]{Potier97}, and the convolution identity
+$$\mathcal{S}(\mathcal{F}) \otimes \mathcal{S}(\mathcal{G}) \cong \mathcal{S}(\mathcal{F}*\mathcal{G}) \qquad \text{\cite[p141]{Potier97}}$$
+
+\item  $\mathcal{S}$ induces equivalences between subcategories of $D^b(A)$. Mention \cite[Proposition 11.8, Lemma 14.6, Theorem 14.7]{Potier97}, and explain how they yield a classification of vector bundles on elliptic curves.
+\item Describe $\mathcal{S}(V_{r,\mathcal{L}})$ explicitly.
+\item Fix a non-degenerate line bundle $\mathcal{L} \in \Pic(A)$. Discuss the $\mathrm{SL}_2(\mathbb{Z}) \rtimes \mathbb{Z}$ action on $D^b(A)$ and describe $\gamma(\mathcal{F})$ for special $\gamma \in \mathrm{SL}_2(\mathbb{Z})$ and $\mathcal{F} \in D^b(A)$.
+\end{itemize}
+If time is short, the speaker can focus on the elliptic curve case and skip all technical proofs.
+
+
+\subsection*{Talk 4: Vector bundles on curves of genus $\geqslant 2$}\cite[2.3 \& 2.5]{MS19}
+In this talk, we describe the moduli space of vector bundles over a curve of genus $\geqslant 2$, focusing on some special cases \cite[Examples 2.18–2.20]{MS19}.
+
+\begin{itemize}
+\item Begin by defining the moduli functor \cite[Definition 2.9]{MS19}, and mention its representability \cite[Theorem 2.10]{MS19} (you can also put mention it in the end of the talk).
+
+\noindent \hspace{-8mm} Now fix a curve $C$ of genus $2$.
+\item Explain why $M_C(2, \mathcal{O}_C) \cong \mathbb{P}^3$.
+\item Sketch why $M_C(2, \mathcal{L}) \cong Q_1 \cap Q_2 \subset \mathbb{P}^5$, where $\mathcal{L}$ is a line bundle of degree $1$. Discuss the connection to semiorthogonal decompositions.
+\item If time permits, outline the relation between $M_C(3, \mathcal{O}_C)$ and the Coble cubic hypersurface.
+\end{itemize}
 
 \subsection*{Talk 5: Semistable sheaves of degree $0$}\cite[2.4]{MS19}
+This talk is centered on \cite[Theorem 2.14]{MS19} and its surrounding results. I regard it as the coherent counterpart of the Riemann--Hilbert correspondence.
+
+\begin{itemize}
+\item Present and prove \cite[Theorem 2.14]{MS19}.
+\item Illustrate \cite[Theorem 2.14]{MS19} explicitly in the cases of elliptic curves and curves of genus $2$.
+\item Briefly discuss the generalization in [NS65, Theorem 2].
+\item  Discuss equivalent notions of stability for curves.
+\end{itemize}
 
 \subsection*{Talk 6: Stability manifold of $\mathbb{P}^1$}
+This talk introduces Bridgeland stability conditions and discusses $\Stab(\mathbb{P}^1)$ in detail. The standard reference is [...]; you may also consult my notes.
+
+\begin{itemize}
+\item Define (locally finite) stability conditions on a triangulated category $\mathcal{T}$ and denote the space by $\Stab(\mathcal{T})$.
+\item Show that the usual slope stability on $\Coh(\mathbb{P}^1)$ defines a stability condition $(Z_0, \mathcal{P}_0) \in \Stab(\mathbb{P}^1)$.
+\item Discuss the $\mathbb{C}$ action on $\Stab(\mathcal{T})$. In the case of $\mathbb{P}^1$, restrict to the orbit of $(Z_0, \mathcal{P}_0)$ and describe how the heart changes. Note that semistability of objects remains unchanged under this action.
+\item Classify stability conditions where all line bundles and torsion sheaves are semistable. Describe the $\mathbb{Z}$ action via tensoring with $\mathcal{O}(1)$, and the locus where $\mathcal{O}$ is semistable but not stable.
+\item State Lemma 3.1(d).\footnote{Bonus point if you prove this in your notes!} Give a description of all remaining stability conditions.
+\item Define walls in $\Stab(\mathbb{P}^1)$ and explain wall-crossing behavior.
+\item If time permits, briefly discuss stability conditions on other curves.
+\end{itemize}
 
 \subsection*{Talk 7: Equivariant vector bundles on Grassmannian}
 

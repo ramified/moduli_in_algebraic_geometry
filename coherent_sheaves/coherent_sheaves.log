@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  27 JUL 2025 23:50
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  28 JUL 2025 13:08
 entering extended mode
 **./coherent_sheaves.tex
 (coherent_sheaves.tex
@@ -1676,72 +1676,66 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 382.
+(hyperref)                removing `math shift' on input line 400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\geqslant' on input line 382.
+(hyperref)                removing `\geqslant' on input line 400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 382.
+(hyperref)                removing `math shift' on input line 400.
+
+[1]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 412.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 382.
+(hyperref)                removing `math shift' on input line 412.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 382.
+(hyperref)                removing `math shift' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 386.
+(hyperref)                removing `superscript' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 386.
+(hyperref)                removing `math shift' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 386.
+(hyperref)                removing `math shift' on input line 441.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 392.
+(hyperref)                removing `superscript' on input line 441.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 392.
+(hyperref)                removing `math shift' on input line 441.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 392.
-
-(coherent_sheaves.bbl) [1] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 401.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 401.
+(coherent_sheaves.bbl) [2] [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 450.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 450.
  (coherent_sheaves.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 401.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 401.
-
-
-Package rerunfilecheck Warning: File `coherent_sheaves.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `coherent_sheaves.out':
-(rerunfilecheck)             Before: 233C12EB440A879396A25801D6B07C4E
-(rerunfilecheck)             After:  9DCBD5E55F89E1C1BCEEA68037E03CD7.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 401.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 450.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 450.
+Package rerunfilecheck Info: File `coherent_sheaves.out' has not changed.
+(rerunfilecheck)             Checksum: 9DCBD5E55F89E1C1BCEEA68037E03CD7.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 450.
  ) 
 Here is how much of TeX's memory you used:
- 36700 strings out of 427748
- 680381 string characters out of 3150981
- 732676 words of memory out of 3000000
- 40043 multiletter control sequences out of 15000+200000
- 544173 words of font info for 76 fonts, out of 3000000 for 9000
+ 36705 strings out of 427748
+ 680474 string characters out of 3150981
+ 733693 words of memory out of 3000000
+ 40046 multiletter control sequences out of 15000+200000
+ 544181 words of font info for 77 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,8n,82p,974b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on coherent_sheaves.pdf (2 pages).
+Output written on coherent_sheaves.pdf (3 pages).
