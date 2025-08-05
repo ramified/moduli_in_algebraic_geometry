@@ -257,8 +257,8 @@
 
 \DeclareMathOperator{\Modr}{\operatorname{-Mod}}
 \DeclareMathOperator{\Stab}{\operatorname{Stab}}
-
-
+\DeclareMathOperator{\ch}{\operatorname{ch}}
+\DeclareMathOperator{\td}{\operatorname{td}}
 
 
 %%%%%%%newcommand
@@ -402,7 +402,8 @@ If time is short, the speaker can focus on the elliptic curve case and skip all 
 In this talk, we describe the moduli space of vector bundles over a curve of genus $\geqslant 2$, focusing on some special cases \cite[Examples 2.18–2.20]{MS19}.
 
 \begin{itemize}
-\item Begin by defining the moduli functor \cite[Definition 2.9]{MS19}, and mention its representability \cite[Theorem 2.10]{MS19} (you can also put mention it in the end of the talk).
+\item Begin by defining the moduli functor \cite[Definition 2.9]{MS19}, and mention its representability \cite[Theorem 2.10]{MS19} \cite[Theorem 1.3]{LLPZ24} (you can also put mention about other properties of $M_C(r,d)$ in the end of the talk).
+\item Mention about the topological classification of vector bundles, see \cite[Theorem 3.4.1]{Potier97}.
 
 \noindent \hspace{-8mm} Now fix a curve $C$ of genus $2$.
 \item Explain why $M_C(2, \mathcal{O}_C) \cong \mathbb{P}^3$.
@@ -421,7 +422,7 @@ This talk is centered on \cite[Theorem 2.14]{MS19} and its surrounding results. 
 \end{itemize}
 
 \subsection*{Talk 6: Stability manifold of $\mathbb{P}^1$}
-This talk introduces Bridgeland stability conditions and discusses $\Stab(\mathbb{P}^1)$ in detail. The standard reference is \cite{Okada05,GKR03}; you may also consult \href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2025/2025.07.13_stability_manifold_of_P\%5E1.pdf}{my notes}.
+This talk introduces Bridgeland stability conditions and discusses $\Stab(\mathbb{P}^1)$ in detail. The standard reference is \cite{Okada05,GKR03}; you may also consult my notes [\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2025/2025.07.13_stability_manifold_of_P\%5E1.pdf}{2025.07.13}].
 
 \begin{itemize}
 \item Define (locally finite) stability conditions on a triangulated category $\mathcal{T}$ and denote the space by $\Stab(\mathcal{T})$.
@@ -436,14 +437,26 @@ $$Z(\mathcal{O}) \in \mathcal{H} \sqcup \mathbb{R} \smallsetminus \left( \left\{
 \end{itemize}
 
 \subsection*{Talk 7: Equivariant vector bundles on Grassmannian}
+This talk aims to provide a family of vector bundles for the later discussion.
 
-\subsection*{Talk 8: Chern class}
+
+\subsection*{Talk 8: Chern characters}
+This talk introduces key numerical invariants—Chern characters, the Mukai vector, and exceptional/spherical sheaves—which will play a central role in the theory developed in the upcoming talks. You're encouraged to compute examples from the previous talk or from my notes [\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2025/2025.01.26_Numerical_Chern_class.pdf}{2025.01.26}].
+
+\begin{itemize}
+\item Introduce the invariants $c(E)$, $\ch(E)$, and $\td(E)$, and explain how they behave under short exact sequences and the six functors.
+\item State Grothendieck–Riemann--Roch (GRR), and derive Hirzebruch--Riemann–Roch (HRR), Riemann--Roch for surfaces, and Riemann--Roch for curves.
+\item Recall Serre duality.
+\item Define the Mukai vector and Mukai pairing (see \cite[p133, p172]{Huy06}, \cite[p40]{MS19} and \cite[p6]{Bay16}), and relate them to the Riemann–Roch formula.
+\item Define exceptional and spherical sheaves, and classify such sheaves on smooth projective curves.
+\item Explore how to compute these numerical invariants in practice using Macaulay2.
+\end{itemize}
 
 \subsection*{Talk 9: Exceptional vector bundles on $\mathbb{P}^2$}
 
 \subsection*{Talk 10: Stbility manifold of surfaces}
 
-\subsection*{Talk 11: vector bundles on K3 surfaces}
+\subsection*{Talk 11: vector bundles on curves in K3 surfaces}
 
 \subsection*{Talk 12: vector bundles on threefolds}
 %remember to protect the uppercase of people's name and LaTeX symbols

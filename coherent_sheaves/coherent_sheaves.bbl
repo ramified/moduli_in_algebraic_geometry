@@ -1,16 +1,37 @@
 \begin{thebibliography}{1}
 
+\bibitem{Bay16}
+Arend Bayer.
+\newblock Wall-crossing implies {Brill}-{Noether}: applications of stability
+  conditions on surfaces.
+\newblock In {\em Algebraic geometry: Salt Lake City 2015. 2015 summer research
+  institute in algebraic geometry, University of Utah, Salt Lake City, UT, USA,
+  July 13--31, 2015. Proceedings. Part 1}, pages 3--27. Providence, RI:
+  American Mathematical Society (AMS); Cambridge, MA: Clay Mathematics
+  Institute, 2018.
+
 \bibitem{GKR03}
 A.~L. Gorodentsev, S.~A. Kuleshov, and A.~N. Rudakov.
 \newblock {{\(t\)}}-stabilities and {{\(t\)}}-structures on triangulated
   categories.
 \newblock {\em Izv. Math.}, 68(4):749--781, 2004.
 
+\bibitem{Huy06}
+D.~Huybrechts.
+\newblock {\em Fourier-Mukai transforms in algebraic geometry}.
+\newblock Oxford Math. Monogr. Oxford: Clarendon Press, 2006.
+
 \bibitem{Potier97}
 Joseph Le~Potier.
 \newblock {\em Lectures on vector bundles}, volume~54 of {\em Camb. Stud. Adv.
   Math.}
 \newblock Cambridge: Cambridge University Press, 1997.
+
+\bibitem{LLPZ24}
+Chunyi Li, Yinbang Lin, Laura Pertusi, and Xiaolei Zhao.
+\newblock Higher dimensional moduli spaces on {Kuznetsov} components of {Fano}
+  threefolds.
+\newblock Preprint, {arXiv}:2406.09124 [math.{AG}] (2024), 2024.
 
 \bibitem{MS19}
 Emanuele Macr{\`{\i}} and Benjamin Schmidt.
