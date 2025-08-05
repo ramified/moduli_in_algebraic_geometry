@@ -437,8 +437,32 @@ $$Z(\mathcal{O}) \in \mathcal{H} \sqcup \mathbb{R} \smallsetminus \left( \left\{
 \end{itemize}
 
 \subsection*{Talk 7: Equivariant vector bundles on Grassmannian}
-This talk aims to provide a family of vector bundles for the later discussion.
+This talk aims to construct a family of vector bundles for later discussion.
 
+\begin{itemize}
+\item Realize the Grassmannian as $\GL_n/P$ and the flag variety as $\GL_n/B$. More generally, denote by $X$ a $\GL_n$-homogeneous space.
+\item Introduce the character lattice $X^*(T)$, and for each $\chi \in X^*(T)$, construct a representation of $B$.
+\item Explain how a representation of $G$ decomposes when restricted to $T$, and illustrate this via Lievis.
+\item Introduce the Weyl group $W = N(T)/T$ and show that $W \cong S_n$ in the case of $\GL_n$. Define the Weyl chamber and illustrate it in examples.
+\item State the highest weight theorem: 
+% https://q.uiver.app/#q=WzAsMTEsWzAsMCwiXFxsZWZ0XFx7IFxccnVsZXswbW19ezNtbX1cXHRleHR7ZmluLWRpbSBpcnIgcmVwcyBvZiB9IFxcR0xfbihcXG1hdGhiYntDfSkgXFxyaWdodFxcfSJdLFszLDAsIlxcbGVmdFxceyBcXHJ1bGV7MG1tfXszbW19XFx0ZXh0e2RvbWluYW50IHd0cyBpbiB9IFheKihUKSBcXHJpZ2h0XFx9Il0sWzIsMF0sWzEsMF0sWzIsMV0sWzEsMl0sWzIsMl0sWzEsMV0sWzMsMiwiXFxsYW1iZGEiXSxbMywxLCJcXGxlZnRcXHsgXFxydWxlezBtbX17M21tfSAoXFxsYW1iZGFfMSxcXGxkb3RzLFxcbGFtYmRhX24pIFxcaW4gXFxtYXRoYmJ7Wn1ebiBcXDtcXG1pZGRsZXwgXFw7IFxcbGFtYmRhXzEgXFxnZXFzbGFudCBcXGNkb3RzIFxcZ2Vxc2xhbnQgXFxsYW1iZGFfbiBcXHJpZ2h0XFx9Il0sWzAsMiwiVl97XFxsYW1iZGF9Il0sWzMsMiwiMToxIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzUsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzcsNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV1d
+\[\begin{tikzcd}[column sep=0mm,row sep=-2mm]
+	{\left\{ \rule{0mm}{3mm}\text{fin-dim irr reps of } \GL_n(\mathbb{C}) \right\}} & {} &[10mm] {} & {\left\{ \rule{0mm}{3mm}\text{dominant wts in } X^*(T) \right\}} \\
+	& {} & {} & {\left\{ \rule{0mm}{3mm} (\lambda_1,\ldots,\lambda_n) \in \mathbb{Z}^n \;\middle| \; \lambda_1 \geqslant \cdots \geqslant \lambda_n \right\}} \\[4mm]
+	{V_{\lambda}} & {} & {} & \lambda
+	\arrow["{1:1}", tail reversed, from=1-2, to=1-3]
+	\arrow[tail reversed, from=2-2, to=2-3]
+	\arrow[tail reversed, from=3-2, to=3-3]
+\end{tikzcd}\]
+\item Given $(\rho, V) \in \rep(P)$, construct an associated vector bundle over $\GL_n/P$. What is its rank? When $n=2$, what is its degree?
+\item Define $G$-equivariant vector bundles over $X$, and exhibit an example over $\mathbb{P}^2$ that fails to be $G$-equivariant.
+\item Shows that
+$$
+\hspace{30mm}\rep(P) \qquad\overset{1:1}{\longleftrightarrow}\quad \left\{ \rule{0mm}{3mm}\text{$G$-equiv vector bundles over} \Gr(r,n) \right\}.
+$$
+Identify the representations corresponding to the vector bundles $\mathcal{O}_{\Gr(r,n)}$, $\mathcal{S}$, $\mathcal{Q}$, $\Omega_{\Gr(r,n)}$, and $\omega_{\Gr(r,n)}$.
+\item State the Borel–Weil–Bott theorem, and, if time allows, apply it to the aforementioned vector bundles.
+\end{itemize}
 
 \subsection*{Talk 8: Chern characters}
 This talk introduces key numerical invariants—Chern characters, the Mukai vector, and exceptional/spherical sheaves—which will play a central role in the theory developed in the upcoming talks. You're encouraged to compute examples from the previous talk or from my notes [\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2025/2025.01.26_Numerical_Chern_class.pdf}{2025.01.26}].
@@ -452,13 +476,41 @@ This talk introduces key numerical invariants—Chern characters, the Mukai vect
 \item Explore how to compute these numerical invariants in practice using Macaulay2.
 \end{itemize}
 
-\subsection*{Talk 9: Exceptional vector bundles on $\mathbb{P}^2$}
+\subsection*{Talk 9: Exceptional vector bundles on $\mathbb{P}^2$} \cite{GR87} and \cite[\S 1.1]{LZ19} This talk explores the structure and classification of exceptional vector bundles on $\mathbb{P}^2$.
 
-\subsection*{Talk 10: Stbility manifold of surfaces}
+\begin{itemize}
+\item Recall the definition of an exceptional sheaf. Show that any exceptional vector bundle $E$ on $\mathbb{P}^2$ satisfies 
+$$
+\frac{1}{2} \left( \frac{\ch_1(E)}{\ch_0(E)} \right) ^2 -  \frac{\ch_2(E)}{\ch_0(E)} =0.
+$$
+\item Present the numerical results from \cite[\S 4, \S 5]{GR87}. In particular, show that for an exceptional pair $(E_1, E_2)$ (see \cite[Definition 1.2]{GR87}),
+$$ \chi(E_2,E_1) = r_1r_2\left( 1+ \frac{3}{2}(\mu_1-\mu_2) + \frac{1}{2} (\mu_1-\mu_2)^2 - \Delta_1 - \Delta_2 \right).$$
+Relate this to the Markov equation.
+\item For each dyadic number $\frac{p}{2^m}$, construct a vector bundle $E{\left( \frac{p}{2^m} \right)}$ via induction. Show that $E{\left( \frac{p}{2^m} \right)}$ is exceptional. \cite[Proposition 1.5]{GR87}
+\item Show that all exceptional vector bundles on $\mathbb{P}^2$ arise as $E{\left( \frac{p}{2^m} \right)}$. \cite[Propositions 4.4 \& 4.6]{GR87}
+Include a table of numerical invariants for representative examples.
+\item Compute $\Ext^i\left( \rule{0mm}{3.4mm} E{\left( \frac{p}{2^m} \right)}, E{\left( \frac{q}{2^n} \right)}  \right) $.
+\item Define the Le Potier curve $C_{\mathrm{LP}}$ and state \cite[Theorem 1.8]{LZ19}.
+\item State the Bogomolov inequality and verify it for coherent sheaves on $\mathbb{P}^2$.
+\end{itemize}
 
-\subsection*{Talk 11: vector bundles on curves in K3 surfaces}
+\subsection*{Talk 10: Stbility manifold of surfaces}\cite[\S 3,\S 6, \S 7]{MS19}
+This talk presents examples of Bridgeland stability conditions on surfaces and explicitly describes some walls. If the audience forget the definition of Bridgeland stability, we may consider an additional talk beforehand, focusing on \cite[\S4, \S5]{MS19}.
 
-\subsection*{Talk 12: vector bundles on threefolds}
+\begin{itemize}
+\item Introduce Gieseker stability and slope stability, and illustrate their distinction through an example.
+\item Recall the definition of Bridgeland stability, and explain why $\Coh(X)$ cannot serve as the heart of a Bridgeland stability condition \cite[Example 4.3(2)]{MS19}.
+\item Define the tilted heart and construct a stability condition on it. State \cite[Theorem 6.10]{MS19} to make sure that $\sigma_{\omega,B}$ is indeed a Bridgeland stability condition.
+\item Fix an ample class $H$ and define a slice of $\Stab(X)$ via $\sigma_{\alpha,\beta} = \sigma_{\alpha H, B_0 + \beta H}$. State \cite[Proposition 6.22]{MS19}, and solve \cite[Exercise 7.3]{MS19} to compute walls in concrete examples.
+\item If time permits, present a proof of the Bogomolov inequality.
+\end{itemize}
+
+\subsection*{Talk 11: coherent sheaves on surfaces}
+
+\subsection*{Talk 12: coherent sheaves on threefolds}
+
+\subsection*{Talk 13: TBA} This slot is open for anyone to present on any topic related to vector bundles. The seminar is not exhaustive, and my schedule may miss interesting aspects worth sharing.
+
 %remember to protect the uppercase of people's name and LaTeX symbols
 
 \bibliographystyle{plain}

@@ -16,6 +16,11 @@ A.~L. Gorodentsev, S.~A. Kuleshov, and A.~N. Rudakov.
   categories.
 \newblock {\em Izv. Math.}, 68(4):749--781, 2004.
 
+\bibitem{GR87}
+A.~L. Gorodentsev and A.~N. Rudakov.
+\newblock Exceptional vector bundles on projective spaces.
+\newblock {\em Duke Math. J.}, 54:115--130, 1987.
+
 \bibitem{Huy06}
 D.~Huybrechts.
 \newblock {\em Fourier-Mukai transforms in algebraic geometry}.
@@ -32,6 +37,12 @@ Chunyi Li, Yinbang Lin, Laura Pertusi, and Xiaolei Zhao.
 \newblock Higher dimensional moduli spaces on {Kuznetsov} components of {Fano}
   threefolds.
 \newblock Preprint, {arXiv}:2406.09124 [math.{AG}] (2024), 2024.
+
+\bibitem{LZ19}
+Chunyi Li and Xiaolei Zhao.
+\newblock Birational models of moduli spaces of coherent sheaves on the
+  projective plane.
+\newblock {\em Geom. Topol.}, 23(1):347--426, 2019.
 
 \bibitem{MS19}
 Emanuele Macr{\`{\i}} and Benjamin Schmidt.

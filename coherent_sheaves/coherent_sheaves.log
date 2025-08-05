@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  5 AUG 2025 15:39
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  5 AUG 2025 23:20
 entering extended mode
 **./coherent_sheaves.tex
 (coherent_sheaves.tex
@@ -1708,40 +1708,47 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 425.
 
 [2]
-Overfull \hbox (1.31866pt too wide) in paragraph at lines 448--449
+Overfull \hbox (1.31866pt too wide) in paragraph at lines 472--473
 []\TU/lmr/m/n/10 State Grothendieck–Riemann–Roch (GRR), and derive Hirzebruch–R
 iemann–Roch (HRR),
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 457.
+(hyperref)                removing `math shift' on input line 479.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 457.
+(hyperref)                removing `superscript' on input line 479.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 457.
+(hyperref)                removing `math shift' on input line 479.
 
-(coherent_sheaves.bbl) [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 466.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 466.
+[3] (coherent_sheaves.bbl) [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
  (coherent_sheaves.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 466.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 466.
-Package rerunfilecheck Info: File `coherent_sheaves.out' has not changed.
-(rerunfilecheck)             Checksum: A74CEA2E9C413A984A671BFC0E1845CB.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 466.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 518.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 518.
+
+
+Package rerunfilecheck Warning: File `coherent_sheaves.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `coherent_sheaves.out':
+(rerunfilecheck)             Before: 73C2117EDB52874F6308FEAFA69E3314
+(rerunfilecheck)             After:  B09391523238D30850A9C47A200AB006.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 518.
  ) 
 Here is how much of TeX's memory you used:
- 36714 strings out of 427748
- 680522 string characters out of 3150981
- 734876 words of memory out of 3000000
- 40055 multiletter control sequences out of 15000+200000
+ 36893 strings out of 427748
+ 684957 string characters out of 3150981
+ 738004 words of memory out of 3000000
+ 40234 multiletter control sequences out of 15000+200000
  544181 words of font info for 77 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
- 61i,8n,82p,974b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,18n,82p,974b,1051s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on coherent_sheaves.pdf (3 pages).
+Output written on coherent_sheaves.pdf (4 pages).
