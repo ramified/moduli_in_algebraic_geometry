@@ -1,6 +1,6 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{LLPZ24}
 
-\bibitem{Bay16}
+\bibitem[Bay18]{Bay16}
 Arend Bayer.
 \newblock Wall-crossing implies {Brill}-{Noether}: applications of stability
   conditions on surfaces.
@@ -10,48 +10,48 @@ Arend Bayer.
   American Mathematical Society (AMS); Cambridge, MA: Clay Mathematics
   Institute, 2018.
 
-\bibitem{GKR03}
+\bibitem[GKR04]{GKR03}
 A.~L. Gorodentsev, S.~A. Kuleshov, and A.~N. Rudakov.
 \newblock {{\(t\)}}-stabilities and {{\(t\)}}-structures on triangulated
   categories.
 \newblock {\em Izv. Math.}, 68(4):749--781, 2004.
 
-\bibitem{GR87}
+\bibitem[GR87]{GR87}
 A.~L. Gorodentsev and A.~N. Rudakov.
 \newblock Exceptional vector bundles on projective spaces.
 \newblock {\em Duke Math. J.}, 54:115--130, 1987.
 
-\bibitem{Huy06}
+\bibitem[Huy06]{Huy06}
 D.~Huybrechts.
 \newblock {\em Fourier-Mukai transforms in algebraic geometry}.
 \newblock Oxford Math. Monogr. Oxford: Clarendon Press, 2006.
 
-\bibitem{Potier97}
-Joseph Le~Potier.
-\newblock {\em Lectures on vector bundles}, volume~54 of {\em Camb. Stud. Adv.
-  Math.}
-\newblock Cambridge: Cambridge University Press, 1997.
-
-\bibitem{LLPZ24}
+\bibitem[LLPZ24]{LLPZ24}
 Chunyi Li, Yinbang Lin, Laura Pertusi, and Xiaolei Zhao.
 \newblock Higher dimensional moduli spaces on {Kuznetsov} components of {Fano}
   threefolds.
 \newblock Preprint, {arXiv}:2406.09124 [math.{AG}] (2024), 2024.
 
-\bibitem{LZ19}
+\bibitem[LP97]{Potier97}
+Joseph Le~Potier.
+\newblock {\em Lectures on vector bundles}, volume~54 of {\em Camb. Stud. Adv.
+  Math.}
+\newblock Cambridge: Cambridge University Press, 1997.
+
+\bibitem[LZ19]{LZ19}
 Chunyi Li and Xiaolei Zhao.
 \newblock Birational models of moduli spaces of coherent sheaves on the
   projective plane.
 \newblock {\em Geom. Topol.}, 23(1):347--426, 2019.
 
-\bibitem{MS19}
+\bibitem[MS17]{MS19}
 Emanuele Macr{\`{\i}} and Benjamin Schmidt.
 \newblock Lectures on {Bridgeland} stability.
 \newblock In {\em Moduli of curves. CIMAT Guanajuato, Mexico 2016. Lecture
   notes of a CIMPA-ICTP school, Guanajuato, Mexico, February 22 -- March 4,
   2016}, pages 139--211. Cham: Springer, 2017.
 
-\bibitem{Okada05}
+\bibitem[Oka06]{Okada05}
 So~Okada.
 \newblock Stability manifold of $p^1$.
 \newblock {\em J. Algebr. Geom.}, 15(3):487--505, 2006.
