@@ -1,129 +1,136 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{EVdGM12}
 
-\bibitem{alper2021introduction}
+\bibitem[Alp21]{alper2021introduction}
 Jarod Alper.
 \newblock Introduction to stacks and moduli.
 \newblock \url{https://sites.math.washington.edu/~jarod/moduli.pdf}, 2021.
 
-\bibitem{atiyah1957vector}
+\bibitem[Ati57]{atiyah1957vector}
 Michael~Francis Atiyah.
 \newblock Vector bundles over an elliptic curve.
 \newblock \url{https://math.berkeley.edu/~nadler/atiyah.classification.pdf},
   1957.
 
-\bibitem{deligne1975courbes}
+\bibitem[Del75]{deligne1975courbes}
 Pierre Deligne.
 \newblock Courbes elliptiques: formulaire d’apres j. tate.
 \newblock 476:53--73, 1975.
 
-\bibitem{edixhoven2012abelian}
+\bibitem[EVdGM12]{edixhoven2012abelian}
 Bas Edixhoven, Gerard Van~der Geer, and Ben Moonen.
 \newblock Abelian varieties.
 \newblock \url{http://van-der-geer.nl/~gerard/AV.pdf}, 2012.
 
-\bibitem{frăţilă2020revisiting}
+\bibitem[Fr�20]{frăţilă2020revisiting}
 Dragoş Frăţilă.
 \newblock Revisiting the moduli space of semistable g-bundles over elliptic
   curves.
 \newblock \url{https://arxiv.org/pdf/1703.09959.pdf}, 2020.
 
-\bibitem{HZformula2021}
+\bibitem[GLN21]{HZformula2021}
 Alessandro Giacchetto, Danilo Lewański, and Paul Norbury.
 \newblock An intersection-theoretic proof of the harer-zagier formula, 2021.
 
-\bibitem{harris2006moduli}
-Joe Harris and Ian Morrison.
-\newblock {\em Moduli of curves}, volume 187.
-\newblock Springer Science \& Business Media, 2006.
-
-\bibitem{hartshorne2013algebraic}
+\bibitem[Har13]{hartshorne2013algebraic}
 Robin Hartshorne.
 \newblock {\em Algebraic geometry}, volume~52.
 \newblock Springer Science \& Business Media, 2013.
 
-\bibitem{hida2011geometric}
+\bibitem[Hid11]{hida2011geometric}
 Haruzo Hida.
 \newblock {\em Geometric modular forms and elliptic curves}.
 \newblock World Scientific, 2011.
 
-\bibitem{moduliGIT}
+\bibitem[HL10]{huybrechts2010geometry}
+Daniel Huybrechts and Manfred Lehn.
+\newblock {\em The geometry of moduli spaces of sheaves}.
+\newblock Cambridge University Press, 2010.
+
+\bibitem[HM06]{harris2006moduli}
+Joe Harris and Ian Morrison.
+\newblock {\em Moduli of curves}, volume 187.
+\newblock Springer Science \& Business Media, 2006.
+
+\bibitem[Hos16]{moduliGIT}
 Victoria Hoskins.
 \newblock Algebraic geometry ii: Moduli and git, winter semester 2015/2016.
 \newblock \url{https://userpage.fu-berlin.de/hoskins/moduli_and_GIT.html},
   2015-2016.
 
-\bibitem{Huy23}
+\bibitem[Huy23]{Huy23}
 Daniel Huybrechts.
 \newblock {\em The geometry of cubic hypersurfaces}, volume 206 of {\em Camb.
   Stud. Adv. Math.}
 \newblock Cambridge: Cambridge University Press, 2023.
 
-\bibitem{huybrechts2010geometry}
-Daniel Huybrechts and Manfred Lehn.
-\newblock {\em The geometry of moduli spaces of sheaves}.
-\newblock Cambridge University Press, 2010.
-
-\bibitem{LZ19}
+\bibitem[LZ19]{LZ19}
 Chunyi Li and Xiaolei Zhao.
 \newblock Birational models of moduli spaces of coherent sheaves on the
   projective plane.
 \newblock {\em Geom. Topol.}, 23(1):347--426, 2019.
 
-\bibitem{MS19}
+\bibitem[Mas13]{massarenti2013}
+Alex Massarenti.
+\newblock The automorphism group of {$M̄_{g,n}$}.
+\newblock \url{http://dx.doi.org/10.1112/jlms/jdt057}, Sep 2013.
+
+\bibitem[Mil86]{milne1986abelian}
+James~S Milne.
+\newblock Abelian varieties.
+\newblock {\em Arithmetic geometry}, pages 103--150, 1986.
+
+\bibitem[MRM74]{mumford1974abelian}
+David Mumford, Chidambaran~Padmanabhan Ramanujam, and I︠U︡~I Manin.
+\newblock {\em Abelian varieties}, volume~3.
+\newblock Oxford university press Oxford, 1974.
+
+\bibitem[MS05]{MS05}
+Ezra Miller and Bernd Sturmfels.
+\newblock {\em Combinatorial commutative algebra}, volume 227 of {\em Grad.
+  Texts Math.}
+\newblock New York, NY: Springer, 2005.
+
+\bibitem[MS17]{MS19}
 Emanuele Macr{\`{\i}} and Benjamin Schmidt.
 \newblock Lectures on {Bridgeland} stability.
 \newblock In {\em Moduli of curves. CIMAT Guanajuato, Mexico 2016. Lecture
   notes of a CIMPA-ICTP school, Guanajuato, Mexico, February 22 -- March 4,
   2016}, pages 139--211. Cham: Springer, 2017.
 
-\bibitem{massarenti2013}
-Alex Massarenti.
-\newblock The automorphism group of {$M̄_{g,n}$}.
-\newblock \url{http://dx.doi.org/10.1112/jlms/jdt057}, Sep 2013.
+\bibitem[PP16]{PP16}
+Rita Pardini and Gian~Pietro Pirola, editors.
+\newblock {\em Rationality problems in algebraic geometry. {Levico} {Terme},
+  {Italy}, {June} 22--27 2015. {Lectures} of the {CIME}-{CIRM} course}, volume
+  2172 of {\em Lect. Notes Math.}
+\newblock Cham: Springer; Florence: Fondazione CIME, 2016.
 
-\bibitem{MS05}
-Ezra Miller and Bernd Sturmfels.
-\newblock {\em Combinatorial commutative algebra}, volume 227 of {\em Grad.
-  Texts Math.}
-\newblock New York, NY: Springer, 2005.
-
-\bibitem{milne1986abelian}
-James~S Milne.
-\newblock Abelian varieties.
-\newblock {\em Arithmetic geometry}, pages 103--150, 1986.
-
-\bibitem{mumford1974abelian}
-David Mumford, Chidambaran~Padmanabhan Ramanujam, and I︠U︡~I Manin.
-\newblock {\em Abelian varieties}, volume~3.
-\newblock Oxford university press Oxford, 1974.
-
-\bibitem{saito2014fermat}
+\bibitem[Sai14]{saito2014fermat}
 Takeshi Saito.
 \newblock {\em Fermat's Last Theorem: The Proof}, volume 245.
 \newblock American Mathematical Soc., 2014.
 
-\bibitem{modulicurve}
+\bibitem[Sch20]{modulicurve}
 Johannes Schmitt.
 \newblock The moduli space of curves (v5a4, summer term 2020).
 \newblock \url{https://johannesschmitt.gitlab.io/moduli_of_curves}, 2020.
 
-\bibitem{stacks-project}
+\bibitem[{Sta}21]{stacks-project}
 The {Stacks project authors}.
 \newblock The stacks project.
 \newblock \url{https://stacks.math.columbia.edu}, 2021.
 
-\bibitem{FOAG}
+\bibitem[Vak]{FOAG}
 Ravi Vakil.
 \newblock {MATH 216: Foundations of Algebraic Geometry}.
 \newblock \url{https://math.stanford.edu/~vakil/216blog/}.
 
-\bibitem{vistoli2007notes}
+\bibitem[Vis07]{vistoli2007notes}
 Angelo Vistoli.
 \newblock Notes on grothendieck topologies, fibered categories and descent
   theory.
 \newblock \url{http://homepage.sns.it/vistoli/descent.pdf}, 2007.
 
-\bibitem{xu2020kstability}
+\bibitem[Xu20]{xu2020kstability}
 Chenyang Xu.
 \newblock K-stability of fano varieties: an algebro-geometric approach.
 \newblock \url{https://arxiv.org/pdf/2011.10477.pdf}, 2020.

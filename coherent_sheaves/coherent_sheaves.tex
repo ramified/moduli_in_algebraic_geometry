@@ -286,6 +286,7 @@
 \newcommand{\preimage}[1]{\widetilde{#1}}
 \newcommand{\orde}{\operatorname{ord}_e}
 \newcommand{\fakestar}{*}
+\newcommand{\tor}{\operatorname{tor}}
 
 %as the subscription of Hom
 \newcommand{\Alggp}{\text{-Alg gp}}
@@ -470,6 +471,7 @@ This talk introduces key numerical invariants—Chern characters, the Mukai vect
 \item Introduce the invariants $c(E)$, $\ch(E)$, and $\td(E)$, and explain how they behave under short exact sequences and the six functors.
 \item State Grothendieck–Riemann--Roch (GRR), and derive Hirzebruch--Riemann–Roch (HRR), Riemann--Roch for surfaces, and Riemann--Roch for curves.
 \item Recall Serre duality.
+\item Compute these invariants for the skyscraper sheaf on a surface, and computes $\Ext^{i}(\kappa_p,\mathcal{O}_X)$.
 \item Define the Mukai vector and Mukai pairing (see \cite[p133, p172]{Huy06}, \cite[p40]{MS19} and \cite[p6]{Bay16}), and relate them to the Riemann–Roch formula.
 \item Define exceptional and spherical sheaves, and classify such sheaves on smooth projective curves.
 \item Explore how to compute these numerical invariants in practice using Macaulay2.
@@ -505,10 +507,29 @@ This talk presents examples of Bridgeland stability conditions on surfaces and e
 \end{itemize}
 
 \subsection*{Talk 11: coherent sheaves on surfaces}
+There are definitely a lot of references about this topic, here is one note online: \href{https://www.math.utah.edu/~schwede/Notes/GeneralizedDivisors.pdf}{generalized divisors and reflexive sheaves} 
+
+\begin{itemize}
+\item Define torsion sheaves, the torsion filtration, pure and reflexive sheaves, and the reflexive hull $\mathcal{F}^{\vee\vee}$. Construct the exact sequence
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJcXG1hdGhjYWx7Rn1ee1xcdG9yfSJdLFsyLDAsIlxcbWF0aGNhbHtGfSJdLFszLDAsIlxcbWF0aGNhbHtGfV57XFx2ZWVcXHZlZX0iXSxbNCwwLCJcXG1hdGhjYWx7Rn1ee1xcdmVlXFx2ZWV9L1xcbWF0aGNhbHtGfSJdLFswLDAsIjAiXSxbNSwwLCIwIl0sWzQsMF0sWzAsMV0sWzEsMl0sWzIsM10sWzMsNV1d
+\[\begin{tikzcd}[column sep=10mm]
+	0 & {\mathcal{F}^{\tor}} & {\mathcal{F}} & {\mathcal{F}^{\vee\vee}} & {\mathcal{F}^{\vee\vee}/\mathcal{F}} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=1-5, to=1-6]
+\end{tikzcd}\]
+and give an example in which this sequence does not split.
+\item Read the first answer in this \href{https://mathoverflow.net/questions/112329/vector-bundles-on-normal-surfaces}{MO question}. Give a proof that every reflexive sheaf on a smooth projective surface is locally free. Provide an explicit example of a reflexive sheaf on a smooth threefold that is not locally free.
+\end{itemize}
+
 
 \subsection*{Talk 12: coherent sheaves on threefolds}
 
 \subsection*{Talk 13: TBA} This slot is open for anyone to present on any topic related to vector bundles. The seminar is not exhaustive, and my schedule may miss interesting aspects worth sharing.
+
+\nocite{ABGO25}
 
 %remember to protect the uppercase of people's name and LaTeX symbols
 
