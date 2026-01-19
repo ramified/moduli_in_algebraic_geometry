@@ -358,9 +358,9 @@ Berlin, 12489\\ Germany\\}
 In this talk, we introduce semistability of vector bundle on curves, and provide first non-trivial example of semistable vector bundles.
 
 \begin{itemize}
-\item Define slope stability \cite[Definition 2.3]{MS19}. State some basic properties, e.g., \cite[Exercise 2.4]{MS19}, \cite[14.1]{Potier97}.
+\item Define slope stability \cite[Definition 2.3]{MS19}. State some basic properties, e.g., \cite[Exercise 2.4]{MS19}, \cite[14.1]{PA03}.
 \item Recall the classification of vector bundles on $\mathbb{P}^1$, and determine when they are (semi)stable.
-\item Show the picture of Ford circles. Fix an elliptic curve $(E, p_0)$. For each rational number $\mu = \frac{d}{r} > 0$, construct a stable vector bundle $V_\mu$ of rank $r$ and degree $d$ such that $\det V_\mu \cong \mathcal{O}_E(dp_0)$. \cite[14.3]{Potier97}
+\item Show the picture of Ford circles.\footnote{Bonus question: is there any easy way to compute the distance between two circles?} Fix an elliptic curve $(E, p_0)$. For each rational number $\mu = \frac{d}{r} > 0$, construct a stable vector bundle $V_\mu$ of rank $r$ and degree $d$ such that $\det V_\mu \cong \mathcal{O}_E(dp_0)$. \cite[14.3]{PA03}
 \item Verify the stability of $V_\mu$ by induction. Shows that
 $$
 \dim \Hom (V_{\mu_1}, V_{\mu_2}) =\dim \Ext (V_{\mu_2}, V_{\mu_1}) = \begin{cases}
@@ -369,8 +369,8 @@ d_2r_1-d_1r_2, & \mu_1 < \mu_2 \\
 0, & \mu_1 > \mu_2. \\
 \end{cases}
 $$
-Discuss further properties, including \cite[Corollary 14.11]{Potier97}. In particular, describe $H^{\bullet}(V_\mu)$.
-\item For each $r \geq 1$ and $\mathcal{L} \in \Pic^0(E)$, construct a semistable vector bundle $V_{r, \mathcal{L}}$ of rank $r$ with $\det V_{r, \mathcal{L}} \cong \mathcal{L}$.
+Discuss further properties, including \cite[Corollary 14.11]{PA03}. In particular, describe $H^{\bullet}(V_\mu)$.
+\item For each $r \geq 1$ and $\mathcal{L} \in \Pic^0(E)$, construct a semistable vector bundle $V_{r, \mathcal{L}}$ of rank $r$ with $\det V_{r, \mathcal{L}} \cong \mathcal{L}$.\footnote{hint: You can find $\mathcal{L}'$ satisfying $\mathcal{L}'^{\otimes r} \cong \mathcal{L}$.}
 \item Conclude the talk by stating \cite[Example 2.7]{MS19} as a theorem.
 
 \end{itemize}
@@ -380,18 +380,18 @@ Discuss further properties, including \cite[Corollary 14.11]{Potier97}. In parti
 The goal is to complete the classification of vector bundles on elliptic curves via the Fourier--Mukai transform.
 
 \begin{itemize}
-\item Define Fourier--Mukai transform $\Phi_K$ \cite[Chapter 11]{Potier97}.
+\item Define Fourier--Mukai transform $\Phi_K$ \cite[Chapter 11]{PA03}.
 \item Describe $\Phi_K \circ \Phi_L$ and the right adjoint of $\Phi_K$. Show that if $A, B$ are abelian varieties of dimension $n$ and $K \in \Pic(A \times B)$ is a line bundle, then both adjoints of $\Phi_K$ are given by $\Phi_{K^{-1}[n]}$.
-\item Sketch the proof of \cite[Theorem 11.4]{Potier97} in the case $A = B$ is an elliptic curve and $S = \{*\}$, i.e., show that 
+\item Sketch the proof of \cite[Theorem 11.4]{PA03} in the case $A = B$ is an elliptic curve and $S = \{*\}$, i.e., show that 
 $$\Phi_K \circ \Phi_{K^{-1}[g]} \cong \Id_{D^b(A)}.$$
 
 \noindent \hspace{-8mm}Assume $A$ is an abelian variety from now on.
 
 \item Define the Poincaré line bundle $\mathcal{P} \in \Pic(A \times \hat{A})$ and recall its basic properties.
-\item Set $\mathcal{S} = \mathcal{S}_A = \Phi_{\mathcal{P}}$. List key properties of $\mathcal{S}$, e.g., \cite[(11.3.1)–(11.3.4), Theorem 11.6]{Potier97}, and the convolution identity
-$$\mathcal{S}(\mathcal{F}) \otimes \mathcal{S}(\mathcal{G}) \cong \mathcal{S}(\mathcal{F}*\mathcal{G}) \qquad \text{\cite[p141]{Potier97}}$$
+\item Set $\mathcal{S} = \mathcal{S}_A = \Phi_{\mathcal{P}}$. List key properties of $\mathcal{S}$, e.g., \cite[(11.3.1)–(11.3.4), Theorem 11.6]{PA03}, and the convolution identity
+$$\mathcal{S}(\mathcal{F}) \otimes \mathcal{S}(\mathcal{G}) \cong \mathcal{S}(\mathcal{F}*\mathcal{G}) \qquad \text{\cite[p141]{PA03}}$$
 
-\item  $\mathcal{S}$ induces equivalences between subcategories of $D^b(A)$. Mention \cite[Proposition 11.8, Lemma 14.6, Theorem 14.7]{Potier97}, and explain how they yield a classification of vector bundles on elliptic curves.
+\item  $\mathcal{S}$ induces equivalences between subcategories of $D^b(A)$. Mention \cite[Proposition 11.8, Lemma 14.6, Theorem 14.7]{PA03}, and explain how they yield a classification of vector bundles on elliptic curves.
 \item Describe $\mathcal{S}(V_{r,\mathcal{L}})$ explicitly.
 \item Fix a non-degenerate line bundle $\mathcal{L} \in \Pic(A)$. Discuss the $\mathrm{SL}_2(\mathbb{Z}) \rtimes \mathbb{Z}$ action on $D^b(A)$ and describe $\gamma(\mathcal{F})$ for special $\gamma \in \mathrm{SL}_2(\mathbb{Z})$ and $\mathcal{F} \in D^b(A)$.
 \end{itemize}
