@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  25 JAN 2026 13:11
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  10 FEB 2026 22:22
 entering extended mode
 **./coherent_sheaves.tex
 (coherent_sheaves.tex
@@ -1674,79 +1674,67 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
 (Font)              Font shape `U/wasy/m/n' tried instead on input line 361.
 
-
-Overfull \hbox (7.4296pt too wide) in paragraph at lines 377--379
-\TU/lmr/m/n/10 Describe $\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
-F[]\OT1/cmr/m/n/10 )$\TU/lmr/m/n/10 . If you are clever and hardworking, comput
-e $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 F[]; V[]\OT1/cmr/m/n/10 )$ \TU/lmr/m/n/1
-0 and $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 V[]; F[]\OT1/cmr/m/n/10 )$\TU/lmr/m/
-n/10 . 
- []
-
 [1]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 407.
+(hyperref)                removing `math shift' on input line 421.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\geqslant' on input line 407.
+(hyperref)                removing `\geqslant' on input line 421.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 407.
+(hyperref)                removing `math shift' on input line 421.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 420.
+(hyperref)                removing `math shift' on input line 434.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 420.
+(hyperref)                removing `math shift' on input line 434.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 431.
+(hyperref)                removing `math shift' on input line 445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 431.
+(hyperref)                removing `superscript' on input line 445.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 431.
-
-
-Overfull \vbox (1.70439pt too high) has occurred while \output is active []
-
+(hyperref)                removing `math shift' on input line 445.
 
 [2]
-Overfull \hbox (1.31866pt too wide) in paragraph at lines 478--479
+Overfull \hbox (1.31866pt too wide) in paragraph at lines 492--493
 []\TU/lmr/m/n/10 State Grothendieck–Riemann–Roch (GRR), and derive Hirzebruch–R
 iemann–Roch (HRR),
  []
 
+[3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 486.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 486.
+(hyperref)                removing `math shift' on input line 500.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 486.
+(hyperref)                removing `superscript' on input line 500.
 
-[3] (coherent_sheaves.bbl [4]) [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 544.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 544.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 500.
+
+(coherent_sheaves.bbl [4]) [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 558.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 558.
  (coherent_sheaves.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 544.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 544.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 558.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 558.
 Package rerunfilecheck Info: File `coherent_sheaves.out' has not changed.
 (rerunfilecheck)             Checksum: AC02089C40D41D57825A3EA43F258DE8.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 544.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 558.
  ) 
 Here is how much of TeX's memory you used:
  36958 strings out of 427748

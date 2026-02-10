@@ -363,7 +363,7 @@ In this talk, we introduce semistability of vector bundle on curves, and provide
 \item Show the picture of Ford circles.\footnote{Bonus question: is there any easy way to compute the distance between two circles?} Fix an elliptic curve $(E, p_0)$. For each rational number $\mu = \frac{d}{r} > 0$, construct a stable vector bundle $V_\mu$ of rank $r$ and degree $d$ such that $\det V_\mu \cong \mathcal{O}_E(dp_0)$. \cite[14.3]{PA03}
 \item Verify the stability of $V_\mu$ by induction. Shows that
 $$
-\dim \Hom (V_{\mu_1}, V_{\mu_2}) =\dim \Ext (V_{\mu_2}, V_{\mu_1}) = \begin{cases}
+\dim \Hom (V_{\mu_1}, V_{\mu_2}) =\dim \Ext^1 (V_{\mu_2}, V_{\mu_1}) = \begin{cases}
 d_2r_1-d_1r_2, & \mu_1 < \mu_2 \\
 1, & \mu_1 = \mu_2 \\
 0, & \mu_1 > \mu_2. \\
@@ -371,11 +371,25 @@ d_2r_1-d_1r_2, & \mu_1 < \mu_2 \\
 $$
 Discuss further properties, including \cite[Corollary 14.11]{PA03}. In particular, describe $H^{\bullet}(V_\mu)$.
 \item Fix an elliptic curve $(E, p_0)$. For each $ r \in \mathbb{Z}_{>0}$, construct a semistable vector bundle $F_r$ of rank $r$ and degree $0$ such that $\det F_r \cong \mathcal{O}_E$. 
-\item Verify the semistability of $V_\mu$ by induction. Shows that
+\item Verify the semistability of $F_r$ by induction. Shows that
 $$
-\dim \Hom (F_{r_1}, F_{r_2}) =\dim \Ext (F_{r_2}, F_{r_1}) =1.
+\dim \Hom (F_{r_1}, F_{r_2}) =\dim \Ext^1 (F_{r_2}, F_{r_1}) =1.
 $$
-Describe $H^{\bullet}(F_r)$. If you are clever and hardworking, compute $\Hom (F_r, V_\mu)$ and $\Hom (V_\mu, F_r)$.
+Describe $H^{\bullet}(F_r)$. Using the Riemann--Roch for vector bundles and the ``stability vanishing" (or by the tedious long exact sequences argument), show that 
+$$
+\dim \Hom (F_{r'}, V_\mu) =\dim \Ext^1 (V_\mu, F_{r'}) = \begin{cases}
+0, & \mu < 0 \\
+1, & \mu = 0 \\
+dr', & \mu > 0, \\
+\end{cases}
+$$
+$$
+\dim \Hom (V_\mu, F_{r'}) =\dim \Ext^1 (F_{r'}, V_\mu) = \begin{cases}
+-dr', & \mu < 0 \\
+1, & \mu = 0 \\
+0, & \mu > 0. \\
+\end{cases}
+$$
 \item For each $r \geq 1$ and $\mathcal{L} \in \Pic^0(E)$, construct a semistable vector bundle $V_{r, \mathcal{L}}$ of rank $r$ with $\det V_{r, \mathcal{L}} \cong \mathcal{L}$.\footnote{hint: You can find $\mathcal{L}'$ satisfying $\mathcal{L}'^{\otimes r} \cong \mathcal{L}$.}
 \item Conclude the talk by stating \cite[Example 2.7]{MS19} as a theorem.\footnote{We will not prove this theorem in this talk. The uniqueness of $V_{\mu}$ will be established in the next talk.}
 
