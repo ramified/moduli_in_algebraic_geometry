@@ -251,6 +251,7 @@
 \DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
 \DeclareMathOperator{\St}{\mathcal{Z}}
 
+
 %%%%%symbols which haven't been classified. Add your own math operators here!
 
 
@@ -402,18 +403,29 @@ The goal is to complete the classification of vector bundles on elliptic curves 
 \begin{itemize}
 \item Define Fourier--Mukai transform $\Phi_K$ \cite[Chapter 11]{PA03}.
 \item Describe $\Phi_K \circ \Phi_L$ and the right adjoint of $\Phi_K$. Show that if $A, B$ are abelian varieties of dimension $n$ and $K \in \Pic(A \times B)$ is a line bundle, then both adjoints of $\Phi_K$ are given by $\Phi_{K^{-1}[n]}$.
-\item Sketch the proof of \cite[Theorem 11.4]{PA03} in the case $A = B$ is an elliptic curve and $S = \{*\}$, i.e., show that 
-$$\Phi_K \circ \Phi_{K^{-1}[g]} \cong \Id_{D^b(A)}.$$
+\item (Skip this to save time) Sketch the proof of \cite[Theorem 11.4]{PA03} in the case $A$, $B$ are elliptic curves and $S = \{*\}$, i.e., show that 
+$$\Phi_K \circ \Phi_{K^{-1}[g]} \cong \Id_{D^b(B)}$$
+when the following conditions for $K$ are satisfied: $K \in \Pic(A \times B)$ is a biextension, and the maximal subscheme $S \subseteq B$ satisfying $K_{A \times S} \cong \mathcal{O}_{A \times S}$ is $\{\Id_B\}$. 
 
-\noindent \hspace{-8mm}Assume $A$ is an abelian variety from now on.
+\noindent \hspace{-8mm}Assume $A$ is an abelian variety of dimension $n$ from now on.
 
-\item Define the Poincaré line bundle $\mathcal{P} \in \Pic(A \times \hat{A})$ and recall its basic properties.
-\item Set $\mathcal{S} = \mathcal{S}_A = \Phi_{\mathcal{P}}$. List key properties of $\mathcal{S}$, e.g., \cite[(11.3.1)–(11.3.4), Theorem 11.6]{PA03}, and the convolution identity
+\item Define the Poincaré line bundle $\mathcal{P} \in \Pic(A \times \hat{A})$ \cite[before Theorem 2.5.1]{BL04} and recall its basic properties \cite[Proposition 2.5.2]{BL04}.
+\item Set $\mathcal{S} = \mathcal{S}_A = \Phi_{\mathcal{P}}$. List key properties of $\mathcal{S}$, e.g., \cite[(11.3.1)–(11.3.4), Theorem 11.6, Exercise 7 in p149]{PA03}, and the convolution identity
 $$\mathcal{S}(\mathcal{F}) \otimes \mathcal{S}(\mathcal{G}) \cong \mathcal{S}(\mathcal{F}*\mathcal{G}) \qquad \text{\cite[p141]{PA03}}$$
 
 \item  $\mathcal{S}$ induces equivalences between subcategories of $D^b(A)$. Mention \cite[Proposition 11.8, Lemma 14.6, Theorem 14.7]{PA03}, and explain how they yield a classification of vector bundles on elliptic curves.
 \item Describe $\mathcal{S}(V_{r,\mathcal{L}})$ explicitly.
-\item Fix a non-degenerate line bundle $\mathcal{L} \in \Pic(A)$. Discuss the $\mathrm{SL}_2(\mathbb{Z}) \rtimes \mathbb{Z}$ action on $D^b(A)$ and describe $\gamma(\mathcal{F})$ for special $\gamma \in \mathrm{SL}_2(\mathbb{Z})$ and $\mathcal{F} \in D^b(A)$.
+\item Fix a non-degenerate line bundle $\mathcal{L} \in \Pic(A)$. Discuss the $\widetilde{SL}_2(\mathbb{Z})$-action on $D^b(A)$ and describe $\gamma(\mathcal{F})$ for special $\gamma \in \mathrm{SL}_2(\mathbb{Z})$ and $\mathcal{F} \in D^b(A)$ \cite[11.5]{PA03}. Here, $\widetilde{SL}_2(\mathbb{Z})$ is the central extension of $SL_2(\mathbb{Z})$ by $\mathbb{Z}$:
+$$\widetilde{SL}_2(\mathbb{Z})= \left< \widetilde{S},\widetilde{T},c\;\textcolor{gray}{ =[-1]}  \;\middle|\; \widetilde{S}^4=2g \cdot c,\;\; \left(\widetilde{T}\widetilde{S}\right)^3=\left(\rule{0mm}{3mm}i(\mathcal{L})+n\right)c \right> $$
+% https://q.uiver.app/#q=WzAsNSxbMiwwLCJcXHdpZGV0aWxkZXtTTH1fMihcXG1hdGhiYntafSkiXSxbMywwLCJTTF8yKFxcbWF0aGJie1p9KSJdLFsxLDAsIlxcbWF0aGJie1p9Il0sWzQsMCwiMCJdLFswLDAsIjAiXSxbMiwwXSxbMCwxXSxbMSwzXSxbNCwyXV0=
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=2.25em]
+	0 \& {\mathbb{Z}} \& {\widetilde{SL}_2(\mathbb{Z})} \& {SL_2(\mathbb{Z})} \& 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+where $i(\mathcal{L}) \in \mathbb{Z}$ is the integer such that $H^{i(\mathcal{L})}(A;\mathcal{L}) \neq 0$.
 \end{itemize}
 If time is short, the speaker can focus on the elliptic curve case and skip all technical proofs.
 
